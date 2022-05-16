@@ -6,7 +6,7 @@ function App() {
   return (
     <main>
       <h1>Koe</h1>
-      <Link to= '/Lp'> Saass </Link>
+      <Link to= '/Lp'> Saasss </Link>
     </main>
   );
 }
