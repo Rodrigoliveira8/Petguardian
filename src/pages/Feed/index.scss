@@ -1,0 +1,159 @@
+.page-feed {
+    main{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFCEF;
+    }
+    header{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       box-shadow: 1px 1px 30px 10px #ECEAE0;
+       background-color: white;
+    }
+    
+    .esquerda-he{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-left: 5em;
+        margin-top: 1em;
+        
+        margin-bottom: 2em;
+    }
+    
+    .esquerda-he h4{
+        margin-top: 2.5em;
+        margin-left: 1em;
+        font-family: r1;
+        font-size: 1.7em;
+        color: #8E8E8E;
+    }
+    .link{
+        font-family: PT ;
+        font-size: 1.7em;
+        color: #8E8E8E;
+        text-decoration: none;
+    }
+    .direita-he{
+        margin-top: 5em;
+        margin-right: 3em;
+    }
+    
+    .faixa-1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10em;
+        height: 100vh;
+    }
+    .post1{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15em;
+        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        height: fit-content;
+        border-radius: 1.4em;
+    }
+    
+    .carol{
+        background-color: #F1C40F;
+        width: 500px;
+        padding-top: 14px;
+        padding-bottom: 10px ;
+        border-radius: 1.4em 1.4em 0em 0em ;
+    }
+    .carol h1{
+        font-family: pt;
+        font-size: 2.3em;
+        color: #6D5D22;  
+        margin-left: 1em;
+        margin-bottom: 0;
+    }
+    
+    .info-1{
+        display: flex;
+        background-color: #fff;
+    }
+    .info-1 h1{
+        font-size: 2em;
+        font-family: pt;
+        color: #565656;
+        margin-left: 1em;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+    }
+    .infos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 0em 0em 1.4em 1.4em ;
+    }
+    
+    .esq-1{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1em;
+    
+        font-family: pt;
+        font-size: 2em;
+        color: #565656;
+    }
+    
+    .dir-1{
+        font-family: pt;
+        font-size: 2em;
+        color: #565656;
+        margin-right: 1em;
+    }
+    .dir-1 p{
+        margin-right: -3em;
+    }
+    
+    .foto-1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: black;
+        font-size: 1.5em;
+        margin-left: -0.2em;
+        margin-top: -1.5em;
+    }
+    
+    .quadrado{
+        min-width: 30px;
+        min-height: 30px;
+        margin-right: 10px;
+        margin-top: 0em;
+    }
+    
+    .info-2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: black;
+        font-size: 1.5em;
+        margin-left: -0.2em;
+        margin-top: 0.7em;
+    }
+    
+    .input{
+        font-family: pt;
+        color: #565656;
+        font-size: 0.7em;
+    }
+    .post2{
+        display: flex;
+        flex-direction: column;
+        margin-left: 25em;
+        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        height: fit-content;
+        border-radius: 1.4em;
+    }
+    
+    .faixa-2{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10em;
+    }
+}

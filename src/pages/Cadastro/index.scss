@@ -1,0 +1,115 @@
+.page-cadastro {
+
+
+    
+        display: flex;
+        flex-direction: row;
+    
+        height: 50vh;
+    
+    .sec-1 {
+        background-color: #ffffff;
+        height: 1080px;
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sec-2 {
+        background-color: #9E9A96;
+        height: 1080px;
+        width: 960px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo-sec1 {
+        height: 120px;
+        margin-top: 70px;
+    }
+    
+    .h1-sec1 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    
+    .img-cat {
+        margin-top: 30px;
+        height: 300px;
+    }
+    
+    .div-cadastro {
+        height: 55px;
+        width: 445px;
+        background-color: #ffffff;
+        margin-top: 50px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .h1-divs {
+        margin-top: 70px;
+    }
+    
+    .mail {
+        height: 40px;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .male {
+        height: 40px;
+        margin-top: 7px;
+    }
+    .key {
+        height: 40px;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .calendario {
+        height: 40px;
+        margin-top: 7px;
+        margin-left: 10px;
+    }
+    .map-marker {
+        height: 40px;
+        margin-top: 7px;
+    }
+    
+    .input-cadastro {
+        width: 390px;
+        border-radius: 0px 66px 66px 0px;
+        border-style: none;
+    }
+    
+    .div-cadastro2 {
+        height: 55px;
+        width: 445px;
+        background-color: #ffffff;
+        margin-top: 20px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .bot-cadastrar {
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        height: 30px;
+        width: 100px;
+        border-style: none;
+        border-radius: 20px;
+        padding: 8px;
+        background-color: #ffffff;
+        text-decoration: none;
+    }
+    
+    .entrar-cad {
+        margin-top: 20px;
+    }
+}
