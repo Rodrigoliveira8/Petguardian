@@ -1,7 +1,9 @@
+
+
 .page-lp {
 
     
-
+    
 
     .header-feed {
         background-color: #ffffff;
@@ -29,6 +31,8 @@
 
     .p1-feed {
         font-family: 'Sahitya';
+        color:  #8E8E8E;
+        
         font-size: 25px;
         margin-top: 40px;
     }
@@ -48,7 +52,7 @@
         justify-content: center;
         height: 100vh;
         background-color: #000000;
-        
+        background-image: url('./dog.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
