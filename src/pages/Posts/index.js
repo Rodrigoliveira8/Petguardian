@@ -22,12 +22,12 @@ export default function Posts() {
                 <div className="import">
                     <h2> Importar Arquivo </h2>
                 </div>
-
+                
                 <div className="info">
-                    <h2> Nome: </h2>
-                    <h2> Raça: </h2>
-                    <h2> Localização: </h2>
-                    <h2> Meio de contato: </h2>
+                <input className="senha" type="text" placeholder="nome"/>
+                <input className="senha" type="text" placeholder="raça" />
+                <input className="senha" type="text" placeholder="Localização" />
+                <input className="senha" type="text" placeholder="Meio de Contato" />
                 </div>
             </div>
 
