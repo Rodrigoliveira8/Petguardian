@@ -12,7 +12,7 @@ export default function Feed() {
 
 
                 <div className="direita-he">
-                <Link className="link" to='/'>
+                <Link className="link" to='/login'>
                         Login
                     </Link>
                     <Link className="link" to='/Posts'> Gerenciar Posts </Link>
@@ -28,7 +28,7 @@ export default function Feed() {
                     </div>
 
                     <div className="imgn">
-                        <img width="500px" src="./images/image 5.png"/>
+                        <img width="350px" src="./images/image 5.png"/>
                     </div>
 
                     <div className="info-1">
@@ -39,7 +39,7 @@ export default function Feed() {
                             <p> Cleber </p>
                             <p> São José </p>
                             <div className="foto-1">
-                                <img width="70px" height='70px' src="./images/Instagram.png"/>
+                                <img width="30px" height='30px' src="./images/Instagram.png"/>
                                     <h6> @xzx </h6>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function Feed() {
                     </div>
 
                     <div className="imgn">
-                        <img width="500px" src="./images/image 13.png"/>
+                        <img width="350px" src="./images/image 13.png"/>
                     </div>
 
                     <div className="info-1">
@@ -79,7 +79,7 @@ export default function Feed() {
                             <p> Logan </p>
                             <p> São José </p>
                             <div className="foto-1">
-                                <img width="70px" height='70px' src="./images/Instagram.png"/>
+                                <img width="30px" height='30px' src="./images/Instagram.png"/>
                                     <h6> @xzx </h6>
                             </div>
                         </div>
