@@ -2,7 +2,10 @@
 
 .page-lp {
 
-    
+    @font-face {
+        font-family: 'PalanquinDark';
+        src: url('./PalanquinDark-Bold.ttf');
+    }
     
 
     .header-feed {
@@ -58,7 +61,7 @@
     }
 
     .faixa1 h1 {
-        font-family: 'Palanquin Dark';
+        font-family: 'PalanquinDark';
         font-size: 46.94px;
         width: 442px;
         color: #ffffff;

@@ -1,0 +1,44 @@
+.page-publi{
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        background-color: white;
+     }
+     .esquerda-he{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-left: 5em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+    
+    .esquerda-he h4{
+        margin-top: 2.5em;
+        margin-left: 1em;
+        font-family: r1;
+        font-size: 1.7em;
+        color: #8E8E8E;
+    }
+    .link{
+        font-family: PT ;
+        font-size: 1.7em;
+        color: #8E8E8E;
+        text-decoration: none;
+    }
+    .direita-he{
+        margin-top: 5em;
+        margin-right: 3em;
+    }
+    .Faixa-1{
+        display: flex;
+        flex-direction: row;
+    }
+    
+}

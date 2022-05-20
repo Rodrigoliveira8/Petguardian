@@ -77,6 +77,8 @@
     }
     
     .info{
+        display: flex;
+        flex-direction: column;
         background-color: #c4c4c4;
         width: 110%;
         line-height: 5em;
@@ -191,4 +193,26 @@
         margin-bottom: 1em;
     }
     
+}
+
+.senha{
+    border: none;
+    margin-bottom: em;
+    margin-top: 1em;
+    border-radius: 10px;
+        height: 15px;
+        width: 90%;
+        outline: none;
+        padding: 14px 30px;
+        border: #908787;
+        cursor: pointer;
+        margin-left: em;
+        font-family: r1;
+        font-size:1em;
+        margin-bottom: 5em;
+    
+}
+.senha::placeholder{
+    font-family: r1;
+    color: #000;
 }
