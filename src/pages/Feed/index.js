@@ -12,6 +12,9 @@ export default function Feed() {
 
 
                 <div className="direita-he">
+                <Link className="link" to='/'>
+                        Login
+                    </Link>
                     <Link className="link" to='/Posts'> Gerenciar Posts </Link>
                 </div>
             </header>

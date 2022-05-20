@@ -12,7 +12,9 @@ export default function Posts() {
 
 
             <div className="direita-he">
-                <a className="link" href="gerenciar.html"> Gerenciar Posts </a>
+            <Link className="link" to='/Publicacao'>
+                        Gerenciar Post
+                    </Link>
             </div>
         </header>
 
