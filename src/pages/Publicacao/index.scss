@@ -39,6 +39,53 @@
     .Faixa-1{
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        margin-top: 10em;
     }
-    
+    .card-princ{
+        display: flex;
+        flex-direction: row;
+    }
+    .info-card{
+        display: flex;
+        flex-direction: column;
+        line-height: 1px;
+        margin-left: 1em;
+    }
+    .info-p{
+        color: #616161;
+    }
+    .esquerda{
+        background-color: #f1c40f;
+        padding: 30px;
+        border-radius: 1em;
+    }
+    h3{
+        color: #616161;
+    }
+    .finally{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .final{
+        display: flex;
+        background-color: #fff;
+        height:3vh;
+        width: 6em;
+        padding: 3px;
+        border-radius: 1em;
+        text-decoration: none;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.8em;
+        background-image: url('./Edit.png');
+        background-repeat: no-repeat;
+        background-position: 7px 5.4px;
+    }
+    .final{
+        margin-left: 2em;
+    }
+   
 }
