@@ -5,7 +5,7 @@
         display: flex;
         flex-direction: row;
     
-        height: 50vh;
+        height: 100vh;
     
     .sec-1 {
         background-color: #ffffff;
@@ -18,26 +18,29 @@
     
     .sec-2 {
         background-color: #9E9A96;
-        height: 1080px;
+        height: 100vh;
         width: 960px;
+        
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     
     .logo-sec1 {
-        height: 120px;
+        width: 180px;
         margin-top: 70px;
     }
     
     .h1-sec1 {
-        font-size: 30px;
-        margin-top: 50px;
+        font-size: 3em;
+        margin-top: 2.2em;
+        text-align: center;
     }
     
     .img-cat {
-        margin-top: 30px;
-        height: 300px;
+        margin-top: 3.5em;
+        height: 400px;
     }
     
     .div-cadastro {
@@ -52,6 +55,7 @@
     
     .h1-divs {
         margin-top: 70px;
+        font-size: 2em;
     }
     
     .mail {
