@@ -50,7 +50,7 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        height: 100vh;
+        height: 85vh;
         background-color: #000000;
         background-image: url('./dog.png');
         background-size: 100% 100%;
@@ -79,11 +79,14 @@
 
     .faixa2 {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 95vh;
-        padding: 0em 5em;
+        height: 80vh;
         background-color: #e6e6e6;
+    }
+
+    .faixa2 div {
+        margin: 0em 7em;
     }
 
     .f2-title-img h1 {
@@ -110,10 +113,14 @@
     .faixa3 {
         background-color: #E1DEDE;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        height: 95vh;
+        height: 80vh;
         padding: 0em 5em;
+    }
+
+    .faixa3 div {
+        margin: 0em 7em;
     }
 
     .f3-text {
