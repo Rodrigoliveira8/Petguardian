@@ -69,5 +69,6 @@ export async function editarPost (pet, id) {
     WHERE id_pet = ?`
 
     const [linhas] = await con.query(comando, [pet.nome, pet.raca, pet.localizacao, pet.sexo, pet.descricao, pet.contato,pet.usuario, id]);
-    return linhas;
+    
+    return linhas.affectedRows;
 }

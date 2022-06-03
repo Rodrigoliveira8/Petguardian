@@ -90,12 +90,15 @@ server.put('/usuario/post/:id', async (req, resp) => {
         if(!pet.raca) throw new Error("Raça é OBRIGATÓRIO!")
         if(!pet.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
         if(!pet.sexo) throw new Error("Sexo é OBRIGATÓRIO!")
-        if(!pet.desc) throw new Error("Descrição é OBRIGATÓRIO!")
+        if(!pet.descricao) throw new Error("Descrição é OBRIGATÓRIO!")
         if(!pet.contato) throw new Error("Contato é OBRIGATÓRIO!")
 
-        const resposta = editarPost(pet, id);
+        const resposta = await editarPost(pet, id);
 
-        resp.send(resposta);
+        if (resposta != 1)
+            resp.status(404).send();
+
+        resp.status(204).send();
 
     } catch (err) {
         resp.status(400).send({
