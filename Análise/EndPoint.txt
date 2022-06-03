@@ -15,7 +15,7 @@ request
 
 responce  
 {
-    ok
+    200
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -103,4 +103,59 @@ resposta
     "sexo": "",
     "desc": "",
     "contato": ""
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+(5)
+
+/GET                /usuario/:id/post
+
+responce
+{
+    http://localhost:5000/usuario/:id/post
+}
+
+responce
+{
+       "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+(6)
+
+/DELETE                 /usuario/post/:id
+
+request
+{
+    http://localhost:5000/usuario/post/:id
+}
+
+responce
+{
+    204
 }
