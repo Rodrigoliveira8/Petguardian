@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { Post, Feed, listarPosts, deletarPosts, editarPost} from "../repository/postRepository.js";
+import { Post, Feed, listarPosts, deletarPosts, editarPost, inserirImagem} from "../repository/postRepository.js";
+import multer from 'multer'
 
 const server = Router();
+const upload = multer({dest: 'storage/imgpet'})
 
 server.post('/post/criar', async (req,resp) => {
     try {
@@ -101,6 +103,26 @@ server.put('/usuario/post/:id', async (req, resp) => {
         resp.status(204).send();
 
     } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
+    try {
+        const {id} = req.params;
+
+        const resposta = await inserirImagem(imagem, id);
+        
+
+        if (resposta != 1) throw new Error('Não foi possível alterar/inserir a imagem') 
+
+        
+        resp.status(204).send();
+        
+    } catch (err) {
+        console.log(err)
         resp.status(400).send({
             erro: err.message
         })

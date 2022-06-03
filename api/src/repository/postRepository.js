@@ -72,3 +72,13 @@ export async function editarPost (pet, id) {
     
     return linhas.affectedRows;
 }
+
+export async function inserirImagem (imagem, id) {
+    const comando = 
+    `UPDATE tb_pet
+    SET img_pet             = ?
+    WHERE id_pet            = ?`
+
+    const [resposta] = await con.query(comando, [imagem, id]);
+    return resposta.affectedRows;
+}
