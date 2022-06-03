@@ -159,3 +159,25 @@ responce
 {
     204
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(7)
+
+/PUT                /usuario/post/:id
+
+request
+{
+    http://localhost:5000/usuario/post/:id
+}
+
+responce
+{
+ "nome":,
+ "raca":,
+ "localizacao":,
+ "sexo":,
+ "descricao":,
+ "contato":,
+ "usuario":,
+ "id":  
+}
