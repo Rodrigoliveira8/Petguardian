@@ -1,0 +1,106 @@
+(1)
+
+/POST           /usuario/cadastro
+
+
+request
+{
+    "nome":"",
+    "email":"",
+    "senha":"",
+    "nascimento":"",
+    "telefone":"",
+    "endereco":""
+}
+
+responce  
+{
+    ok
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+(2)
+
+/POST           /usuario/login
+
+
+request
+{
+    "email":,
+    "senha":
+}
+
+responce
+{
+    "id":,
+    "nome":
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+(3)
+
+/POST           /post/criar
+
+
+request
+{
+    "usuario":,
+    "nome":,
+    "raca":,
+    "localizacao":,
+    "sexo":,
+    "desc":,
+    "contato":
+}
+
+responce
+{
+  "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(4)
+
+/GET            /feed
+
+responce
+{
+
+}
+
+resposta
+{
+    "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
