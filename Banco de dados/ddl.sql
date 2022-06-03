@@ -24,7 +24,8 @@ create table tb_pet (
     ds_localizacao    varchar(100),
     ds_sexo            varchar(10),
     ds_pet            varchar(300),
-    im_pet            varchar(800),
+    img_pet            varchar(800),
     ds_contato        varchar(100),
     foreign key (id_usuario) references tb_usuario (id_usuario)
 );
+
