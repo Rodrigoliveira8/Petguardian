@@ -27,7 +27,8 @@ server.post('/post/criar', async (req,resp) => {
 
 
 
-server.get ('/post/feed', async (req,resp) =>{
+
+server.get ('/feed', async (req,resp) =>{
     try{ 
     const resposta = await Feed();
 

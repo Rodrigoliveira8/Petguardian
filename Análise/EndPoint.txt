@@ -1,0 +1,161 @@
+(1)
+
+/POST           /usuario/cadastro
+
+
+request
+{
+    "nome":"",
+    "email":"",
+    "senha":"",
+    "nascimento":"",
+    "telefone":"",
+    "endereco":""
+}
+
+responce  
+{
+    200
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+(2)
+
+/POST           /usuario/login
+
+
+request
+{
+    "email":,
+    "senha":
+}
+
+responce
+{
+    "id":,
+    "nome":
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+(3)
+
+/POST           /post/criar
+
+
+request
+{
+    "usuario":,
+    "nome":,
+    "raca":,
+    "localizacao":,
+    "sexo":,
+    "desc":,
+    "contato":
+}
+
+responce
+{
+  "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+(4)
+
+/GET            /feed
+
+responce
+{
+
+}
+
+resposta
+{
+    "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+(5)
+
+/GET                /usuario/:id/post
+
+responce
+{
+    http://localhost:5000/usuario/:id/post
+}
+
+responce
+{
+       "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+
+      "resposta": {
+    "usuario":,
+    "nome": "",
+    "raca": "",
+    "localizacao": "",
+    "sexo": "",
+    "desc": "",
+    "contato": ""
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+(6)
+
+/DELETE                 /usuario/post/:id
+
+request
+{
+    http://localhost:5000/usuario/post/:id
+}
+
+responce
+{
+    204
+}
