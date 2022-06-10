@@ -1,7 +1,21 @@
+import axios from 'axios'
+
+
+
+
 import { Link } from "react-router-dom";
 import './index.scss'
+import { useState } from 'react';
 
 export default function Feed() {
+   
+
+        async function CadastrarClick(){
+
+            const r = await axios.get('http://localhost:5000/feed');
+            
+
+          }
     return (
         <main className="page-feed">
             <header>
