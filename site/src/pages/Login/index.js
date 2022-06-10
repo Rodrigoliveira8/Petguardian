@@ -9,9 +9,9 @@ export default function Login() {
                 <div className="Esquerda">
                     <div>
                         <div className="Teste">
-                            <img width="180px" src="./images/image 26.png" />
+                            <img className="logo-casinha" width="180px" src="./images/image 26.png" />
                         </div>
-                        <p> Amor não se compra, amor se <span class="conqu"> conquista. </span> </p>
+                        <p> Amor não se compra, amor se conquista!</p>
                     </div>
                     <div className="dog">
 

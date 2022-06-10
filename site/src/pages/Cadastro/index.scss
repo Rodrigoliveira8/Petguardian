@@ -1,16 +1,13 @@
 .page-cadastro {
 
-
-    
         display: flex;
         flex-direction: row;
-    
         height: 100vh;
     
     .sec-1 {
         background-color: #ffffff;
-        height: 1080px;
-        width: 960px;
+        height: 100vh;
+        width: 107vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -19,8 +16,7 @@
     .sec-2 {
         background-color: #9E9A96;
         height: 100vh;
-        width: 960px;
-        
+        width: 110vw;       
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -28,72 +24,82 @@
     }
     
     .logo-sec1 {
-        width: 180px;
-        margin-top: 70px;
+        width: 20vh;
+        margin-top: 5vh;
+        margin-left: 2.5vh;
     }
     
     .h1-sec1 {
-        font-size: 3em;
-        margin-top: 2.2em;
+        font-size: 4vh;
+        margin-top: 2.2vh;
         text-align: center;
+        margin-left: 2.5vh;
     }
     
     .img-cat {
-        margin-top: 3.5em;
-        height: 400px;
+        margin-top: 3vh;
+        height: 90vh;
     }
     
     .div-cadastro {
-        height: 55px;
-        width: 445px;
+        height: 8vh;
+        width: 80vh;
         background-color: #ffffff;
-        margin-top: 50px;
-        border-radius: 25px;
+        margin-top: 5vh;
+        border-radius: 7vh;
         display: flex;
         flex-direction: row;
     }
     
     .h1-divs {
-        margin-top: 70px;
-        font-size: 2em;
+        margin-top: 10vh;
+        font-size: 5vh;
     }
     
     .mail {
-        height: 40px;
-        margin-top: 7px;
-        margin-left: 10px;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
     }
     .male {
-        height: 40px;
-        margin-top: 7px;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
     }
     .key {
-        height: 40px;
-        margin-top: 7px;
-        margin-left: 10px;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
     }
     .calendario {
-        height: 40px;
-        margin-top: 7px;
-        margin-left: 10px;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
     }
     .map-marker {
-        height: 40px;
-        margin-top: 7px;
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
+    }
+
+    .telefone {
+        height: 5vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
     }
     
     .input-cadastro {
-        width: 390px;
-        border-radius: 0px 66px 66px 0px;
+        width: 73vh;
+        border-radius: 7vh;
         border-style: none;
     }
     
     .div-cadastro2 {
-        height: 55px;
-        width: 445px;
+        height: 8vh;
+        width: 80vh;
         background-color: #ffffff;
-        margin-top: 20px;
-        border-radius: 25px;
+        margin-top: 2vh;
+        border-radius: 7vh;
         display: flex;
         flex-direction: row;
     }
@@ -103,17 +109,17 @@
         margin-top: 10px;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
-        height: 30px;
-        width: 100px;
+        margin-top: 5vh;
+        height: 3vh;
+        width: 9vw;
         border-style: none;
-        border-radius: 20px;
-        padding: 8px;
+        border-radius: 7vh;
+        padding: 1.5vh;
         background-color: #ffffff;
         text-decoration: none;
     }
     
     .entrar-cad {
-        margin-top: 20px;
+        margin-top: 5vh;
     }
 }

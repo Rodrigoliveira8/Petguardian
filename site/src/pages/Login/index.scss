@@ -6,16 +6,21 @@
         height: 100vh;
     }
     
-    
+    .logo-casinha {
+        width: 20vh;
+        margin-top: 5vh;
+        margin-left: 5vh;
+    }
+
     .Esquerda{
         position: relative;
         display: flex;
         flex-direction: column;
         background-image: url('./Cachorro.png');
         background-repeat: no-repeat;
-        background-position: 4em 30em;
+        background-position: 3vw 15vh;
         background-color: #F6FBFF;
-        width: 50%;   
+        width: 50%;
     }
     
     .Direita{
@@ -26,43 +31,39 @@
     }
     .Teste{
         position: relative;
-        margin-top: 5em;
-        margin-left: 23em;
-        
+        margin-top: 5vh;
+        margin-left: 37vh;
     }
     
     .Esquerda p{
         font-family: One;
-        font-size: 3em;
-        line-height: 1em;
-        width: 15em;
-        margin-left: 3em;
-        margin-top: 5em;
+        font-size: 5vh;
+        line-height: 4vh;
+        width: 100vh;
+        margin-left: 13vh;
+        margin-top: 1vh;
     }
-    .conqu{
-        margin-left: 4.5em;
-    }
-    
+
     .Direita h1{
         font-family: p1;
-        margin-top: 7.5em;
-        margin-left: 9.7em;
-        margin-bottom: 3em;
-        font-size: 2em;
+        margin-top: 15vh;
+        margin-left: 27vh;
+        margin-bottom: 7vh;
+        font-size: 5vh;
         color: #ffffff;
     }
     .users{
-        border-radius: 50px;
-        height: 30px;
-        width: 45%;
+        border-radius: 7vh;
+        height: 2vh;
+        width: 25vw;
         outline: none;
-        padding: 14px 30px;
+        padding: 2vh 3vw;
         border: #908787;
-        cursor: pointer;
-        margin-left: 15em;
+        cursor: auto;
+        margin-left: 20vh;
         font-family: r1;
-        font-size:1em;
-        margin-bottom: 5em;
+        font-size:2.5vh;
+        margin-bottom: 2vh;
     }
     
     .users::placeholder{
@@ -72,16 +73,17 @@
     
     
     .senha{
-        border-radius: 50px;
-        height: 30px;
-        width: 45%;
+        border-radius: 7vh;
+        height: 2vh;
+        width: 25vw;
         outline: none;
-        padding: 14px 30px;
+        padding: 2vh 3vw;
         border: #908787;
-        cursor: pointer;
-        margin-left: 15em;
+        cursor: auto;
+        margin-left: 20vh;
         font-family: r1;
-        font-size:1em;
+        font-size:2.5vh;
+        margin-bottom: 3vh;
     }
     
     .senha::placeholder{
@@ -92,38 +94,38 @@
     
     
     .bolinha{
-        margin-top: 3em;
-        margin-left: 27em;
+        margin-top: 4vh;
+        margin-left: 20vh;
         display: flex;
         flex-direction: row;
-        width: 30vh;
+        width: 30vw;
     }
     .bolinha h6{
         font-family: r1;
-        margin-left: 0.5em;
-        font-size: 0.8em;
-        margin-top: 0px;
+        margin-left: 0.5vh;
+        font-size: 2vh;
+        margin-top: 1vh;
     }
     
     
     .conect{
         display: flex;
         align-items: center;
-        margin-left: 19em;
-        margin-top: 3em;
+        margin-left: 45vh;
+        margin-top: 3vh;
         background-color: #ffffff;
         width: 13vh;
-        height: 0.2em;
-        padding: 20px;
-        border-radius: 80px;
+        height: 0.2vh;
+        padding: 3vh;
+        border-radius: 7vh;
         font-family: r1;
-        font-size: 1.3em;
+        font-size: 3vh;
         cursor: pointer;
     }
     
     
     .link{
-        margin-left: 1em;
+        margin-left: 1vh;
         font-family: p1;
         text-decoration: none;
         color: #000;
@@ -135,8 +137,8 @@
     }
     
     .cadastro{
-        margin-left: 20em;
-        margin-top: 3em;
+        margin-left: 35vh;
+        margin-top: 5vh;
         font-family: p1;
         text-decoration: none;
         color: #000;

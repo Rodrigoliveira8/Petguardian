@@ -1,5 +1,3 @@
-
-
 .page-lp {
 
     @font-face {
@@ -13,8 +11,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 100px;
-
+        height: 10vh;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
     .div1-feed {
@@ -25,25 +23,32 @@
     .div2-feed {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+        width: 8vw;
+        height: 5vh;
+        background-color: #D1A800;
+        border-radius: 7vh; 
+        margin-right: 8vh;
+        margin-top: 3vh;
+        border: none;
+        cursor: pointer;
+        padding: 1vh;
     }
 
     .img1-feed {
-        margin-left: 60px;
-        height: 90px;
+        margin-left: 3vw;
+        height: 9vh;
     }
 
     .p1-feed {
         font-family: 'Sahitya';
         color:  #8E8E8E;
-        
-        font-size: 25px;
-        margin-top: 40px;
+        font-size: 2.5vh;
+        margin-top: 4vh;
     }
 
     .p2-feed {
-        margin-right: 70px;
-        font-size: 23px;
-        margin-top: 35px;
+        font-size: 2.5vh;
         text-decoration: none;
         color: #000000;
     }
@@ -53,7 +58,7 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        height: 85vh;
+        height: 90vh;
         background-color: #000000;
         background-image: url('./dog.png');
         background-size: 100% 100%;
@@ -62,22 +67,22 @@
 
     .faixa1 h1 {
         font-family: 'PalanquinDark';
-        font-size: 46.94px;
-        width: 442px;
+        font-size: 7vh;
+        width: 39vw;
         color: #ffffff;
     }
 
     .faixa1 a {
 
         font-weight: 700;
-        font-size: 2em;
-        background-color: #F1C40F;
+        font-size: 3vh;
+        background-color: #D1A800;
         text-decoration: none;
         color: #000000;
-        padding: 10px 26px;
-        border-radius: 30px;
-        margin-top: 1em;
-        margin-right: 6.2em;
+        padding: 1.5vh 1.5vw;
+        border-radius: 7vh;
+        margin-top: 1vh;
+        margin-right: 17vw;
     }
 
     .faixa2 {
@@ -89,24 +94,24 @@
     }
 
     .faixa2 div {
-        margin: 0em 7em;
+        margin: 100vh 7vw;
     }
 
     .f2-title-img h1 {
         font-family: 'Palanquin Dark';
-        font-size: 36px;
+        font-size: 5vh;
         font-weight: 700;
-        margin-bottom: 1em;
+        margin-bottom: 4vh;
     }
 
     .f2-txt {
-        width: 529.78px;
-        font-size: 16px;
+        width: 30vw;
+        font-size: 3vh;
 
     }
 
     .f2-txt p {
-        margin: 1em 0em;
+        margin: 3vh 0vw;
     }
 
     span {
@@ -119,24 +124,24 @@
         justify-content: center;
         align-items: center;
         height: 80vh;
-        padding: 0em 5em;
     }
 
     .faixa3 div {
-        margin: 0em 7em;
+        margin: 0vh 8vw;
     }
 
     .f3-text {
-        width: 505.2px;
+        font-size: 5vh;
+        width: 30vw;
     }
 
     .f3-text h1 {
         font-family: 'Palanquin Dark';
-        font-size: 36px;
+        font-size: 5.5vh;
     }
 
     .f3-text p {
-        font-size: 16px;
+        font-size: 3vh;
     }
 
     .faixa4 {
@@ -149,36 +154,36 @@
 
     .f4-title h1 {
         font-family: 'Palanquin Dark';
-        font-size: 48px;
+        font-size: 5vh;
         text-align: center;
-        width: 746.61px;
-        margin-top: 1em;
+        width: 50vw;
+        margin-top: 5vh;
     }
 
     .f4-steps {
         display: flex;
         justify-content: space-between;
-        width: 60em;
-        margin-top: 2.5em;
+        width: 65vw;
+        margin-top: 10vh;
     }
 
     .f4-steps p {
-        width: 174px;
+        width: 30vh;
         text-align: center;
     }
 
     .f4-cadastre {
-        margin-top: 10em;
+        margin-top:9vh;
     }
 
     .f4-cadastre h1 {
         font-family: 'Palanquin Dark';
-        font-size: 48px;
+        font-size: 5vh;
     }
 
     .f4-cadastre a {
         font-family: 'Palanquin Dark';
-        color: #F1C40F;
+        color: #D1A800;
         text-decoration: underline;
     }
 
@@ -187,7 +192,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 30vh;
+        height: 20vh;
         padding: 0em 2em;
     }
 
@@ -201,8 +206,12 @@
     }
 
     .f-text p {
-        font-size: 20px;
-        margin: 10px 0px;
+        font-size: 2.5vh;
+        margin: 1vh 5vw;
+    }
+    .casinha-footer {
+        height: 10vh;
+        margin-left: 3vw;
     }
 
 
