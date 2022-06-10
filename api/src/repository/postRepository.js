@@ -52,7 +52,6 @@ export async function deletarPosts (id) {
     WHERE id_pet = ?`
 
     const [resposta] = await con.query(comando, [id]);
-    console.log(resposta)
     return resposta.affectedRows; 
 }
 
@@ -80,5 +79,6 @@ export async function inserirImagem (imagem, id) {
     WHERE id_pet            = ?`
 
     const [resposta] = await con.query(comando, [imagem, id]);
+    console.log(imagem)
     return resposta.affectedRows;
 }
