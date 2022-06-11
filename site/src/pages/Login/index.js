@@ -1,33 +1,51 @@
 import axios from 'axios'
 
-import {toast, ToastContainer} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+
+import LoadingBar from 'react-top-loading-bar'
+import { useNavigate } from 'react-router-dom';
 
 import { Link } from "react-router-dom";
 import './index.scss'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Login() {
     
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');
+
+    const navigate = useNavigate();
+    const ref = useRef();
    
 
         async function CadastrarClick(){
-
+            ref.current.continuousStart();
+            try{
             const r = await axios.post('http://localhost:5000/usuario/login', {
                 email: email,
                 senha: senha
-                
+            
+        });
 
-        })
-        toast.dark('Logado com sucesso ✔️')
+                setTimeout(() => {
+                    navigate('/Feed');
+                }, 3000)            
+                
+            
+    }   catch(err){
+        ref.current.complete();
+        if(err.response.status === 401) {
+            setErro(err.response.data.Erro)
+        }
+    }
+        
 
           }
           
     return (
         <main className="page-login">
-            <ToastContainer />
+            <LoadingBar color='#f119646' ref={ref} />
+            
             <section className="faixa">
 
                 <div className="Esquerda">
@@ -55,10 +73,15 @@ export default function Login() {
                    
 
                     <div className="conect">
-                        <Link onClick={CadastrarClick} className="link" to='/Feed'> Conectar </Link>
+                        <button className="link" onClick={CadastrarClick}> Conectar </button>
+                       
+                    </div>
+                    <div className="conect">
+                    {erro}
                     </div>
                     <p className="cadastro"> Ainda não tem uma conta? <span class="cad"> <Link to='/Cadastro'>Cadastre-se </Link></span> </p>
                 </div>
+                
 
             </section>/
         </main>
