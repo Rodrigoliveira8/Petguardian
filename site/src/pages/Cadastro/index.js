@@ -70,6 +70,6 @@ export default function Cadastro() {
                 </div>
                 <p class="entrar-cad">Já tem uma conta? <Link to='/Login' >Entrar</Link></p>
             </section>
-        </main>
+        </main> 
     );
 }

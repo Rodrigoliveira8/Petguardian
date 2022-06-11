@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom";
 import './index.scss'
+import {useState} from 'react'
 
 export default function Posts() {
+    const [nome, Setnome] = useState('');
+    const [raca, Setraca] = useState('');
+    const [localizacao, Setlocalizacao] = useState('');
+    const [contato, Setcontato] = useState('');
+
+    async function SalvarClick (){
+        try {
+
+        } catch (err) {
+            
+        }
+    }
+
+
+
     return (
         <main className='page-posts'>
             <header>
@@ -25,10 +40,10 @@ export default function Posts() {
                     </div>
 
                     <div className="info">
-                    <input className="senha" type="text" placeholder="NOME"/>
-                    <input className="senha" type="text" placeholder="RAÇA" />
-                    <input className="senha" type="text" placeholder="LOCALIZAÇÃO" />
-                    <input className="senha" type="text" placeholder="MEIO DE CONTATO" />
+                    <input className="senha" type="text" placeholder="NOME" value={nome} onChange = {e => Setnome(e.target.value)}/>
+                    <input className="senha" type="text" placeholder="RAÇA" value={raca} onChange = {e => Setraca(e.target.value)}/>
+                    <input className="senha" type="text" placeholder="LOCALIZAÇÃO" value={localizacao} onChange = {e => Setlocalizacao(e.target.value)}/>
+                    <input className="senha" type="text" placeholder="MEIO DE CONTATO"value={contato} onChange = {e => Setcontato(e.target.value)} />
                     </div>
                 </div>  
 
@@ -63,6 +78,9 @@ export default function Posts() {
                                 <div className="info-2">
                                     <input className="quadrado" type="checkbox"/>
                                     <h1 className="input"> Interessado </h1>
+                                    <div>
+                                        <button onClick={SalvarClick}> Salvar </button>
+                                    </div>
                                 </div>
                             </div>
 
