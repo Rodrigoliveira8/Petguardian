@@ -6,16 +6,16 @@ export default function Feed() {
         <main className="page-feed">
             <header>
                 <div className="esquerda-he">
-                    <img width="150px" height="140px" src="./images/image 26.png"/>
+                    <img src="./images/image 26.png"/>
                         <h4> PETGUARDIAN </h4>
                 </div>
 
-
                 <div className="direita-he">
-                <Link className="link" to='/login'>
-                        Login
-                    </Link>
-                    <Link className="link" to='/Posts'> Gerenciar Posts </Link>
+                    <a href="/Posts">
+                        <button className="login-gerenciar">
+                            Gerenciar Posts
+                        </button>
+                    </a>
                 </div>
             </header>
 
@@ -27,12 +27,12 @@ export default function Feed() {
                         <h1> Carol Fernanda </h1>
                     </div>
 
-                    <div className="imgn">
-                        <img width="350px" src="./images/image 5.png"/>
+                    <div>
+                        <img className="imgn" src="./images/image 5.png"/>
                     </div>
 
                     <div className="info-1">
-                        <h1> Coelho bege de 2 anos de idade  </h1>
+                        <h1> Coelho bege de 2 anos de idade </h1>
                     </div>
                     <div className="infos">
                         <div className="esq-1">
@@ -67,8 +67,8 @@ export default function Feed() {
                         <h1> João Carlos </h1>
                     </div>
 
-                    <div className="imgn">
-                        <img width="350px" src="./images/image 13.png"/>
+                    <div>
+                        <img className="imgn" src="./images/image 13.png"/>
                     </div>
 
                     <div className="info-1">

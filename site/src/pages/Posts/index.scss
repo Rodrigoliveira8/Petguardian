@@ -8,148 +8,168 @@
        display: flex;
        flex-direction: row;
        justify-content: space-between;
-       box-shadow: 1px 1px 30px 10px #ECEAE0;
+       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
        background-color: white;
+       height: 10vh;
+    }
+
+    .feed-d{
+        width: 8vw;
+        height: 5vh;
+        background-color: #D1A800;
+        border-radius: 7vh; 
+        margin-right: 8vh;
+        margin-top: 3vh;
+        border: none;
+        cursor: pointer;
+        padding: 1vh;
+        color: #8E8E8E;
+    }
+    .logo-img {
+        height: 9vh;
     }
     
     .esquerda-he{
         display: flex;
         flex-direction: row;
         width: auto;
-        margin-left: 5em;
-        margin-top: 1em;
-        margin-bottom: 2em;
+        margin-left: 5vh;
+        margin-top: 1vh;
     }
     
     .esquerda-he h4{
-        margin-top: 2.5em;
-        margin-left: 1em;
+        margin-top: 4vh;
         font-family: r1;
-        font-size: 1.7em;
+        font-size: 2.5vh;
         color: #8E8E8E;
     }
     .link{
         font-family: PT ;
-        font-size: 1.7em;
+        font-size: 2.5vh;
         color: #8E8E8E;
         text-decoration: none;
     }
     .direita-he{
-        margin-top: 5em;
-        margin-right: 3em;
+        margin-top: 3vh;
+        margin-right: 5vw;
     }
     
     .faixa1{
         display:flex;
         flex-direction: row;
+        height: 70px;
     }
     
     .esquerda{
         display: flex;
         flex-direction: column;
-        margin-left: 10em;
-        margin-top: 4em;
+        margin-left: 10vh;
+        margin-top: 4vh;
     }
     
     .esquerda h1{
         font-family: pt;
-        font-size: 3em;
-        margin-left: 3em;
-        margin-bottom: 2em;
+        font-size: 4vh;
+        margin-left: 3vh;
+        margin-bottom: 5vh;
     }
     
     .import{
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         background-repeat: no-repeat;
         background-color: #F1C40F;
-        background-position: 1em 2.5em;
-        height: 15vh;
-        width: 40vh;
-        border-radius: 1em;
+        background-position: 1vh 2.5vh;
+        height: 10vh;
+        width: 30vh;
+        border-radius: 1vh;
         font-family: p1;
-        margin-bottom: 5em;
+        margin-bottom: 5vh;
+        background-image: url('../../../public/images/arquivo.png');
+        background-size: 5vh;
     }
     
     .import h2{
-        margin-left: 4em;
-        margin-top: 1.5em;
-        font-size: 2em;
+        margin-left: 8vh;
+        margin-top: 3.3vh;
+        font-size: 2.5vh;
     }
     
     .info{
         display: flex;
         flex-direction: column;
         background-color: #c4c4c4;
-        width: 110%;
-        line-height: 5em;
+        width: 25vw;
+        line-height: 5vh;
         font-family: p1;
-        padding: 30px;
-        border-radius: 2em;
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        padding: 3vh;
+        border-radius: 1vh;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     .post2{
         display: flex;
         flex-direction: column;
-        margin-left: 25em;
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
-        height: fit-content;
-        border-radius: 1.4em;
+        margin-left: 25vh;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        height: 2vh;
+        border-radius: 1vh;
         margin-bottom: 3em;
+        width: 35vh;
     }
     
     .carol{
         background-color: #F1C40F;
-        width: 500px;
-        padding-top: 14px;
-        padding-bottom: 10px ;
-        border-radius: 1.4em 1.4em 0em 0em ;
+        width: 20vw;
+        border-radius: 1vh 1vh 0vh 0vh;
     }
     .carol h1{
         font-family: pt;
-        font-size: 2.3em;
+        font-size: 3vh;
         color: #6D5D22;  
-        margin-left: 1em;
-        margin-bottom: 0;
+        margin-left: 1vw;
+    }
+    .img-post{
+        height: 30vh;
+        width: 20vw;
     }
     
     .info-1{
         display: flex;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
+        width: 20vw;
+        margin-top: -1vh;
     }
     .info-1 h1{
-        font-size: 2em;
+        font-size: 3vh;
         font-family: pt;
         color: #565656;
-        margin-left: 1em;
-        margin-top: 0.4em;
-        margin-bottom: 0.4em;
+        margin-left: 0.5vw;
+        margin-top: 0.5vh;
     }
     .infos{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: #fff;
-        border-radius: 0em 0em 1.4em 1.4em ;
+        border-radius: 0vh 0vh 1.4vh 1.4vh ;
     }
     
     .esq-1{
         display: flex;
         flex-direction: column;
-        margin-left: 1em;
-    
+        margin-left: 1vh;
         font-family: pt;
-        font-size: 2em;
+        font-size: 3vh;
         color: #565656;
     }
     
     .dir-1{
         font-family: pt;
-        font-size: 2em;
+        font-size: 3vh;
         color: #565656;
-        margin-right: 1em;
+        margin-left: 10vh;
     }
     .dir-1 p{
-        margin-right: -3em;
+        margin-right: -30vh;
     }
     
     .foto-1{
@@ -157,16 +177,15 @@
         flex-direction: row;
         align-items: center;
         color: black;
-        font-size: 1.5em;
-        margin-left: -0.2em;
-        margin-top: -1.5em;
+        font-size: 5vh;
+        margin-left: -0.2vw;
+        margin-top: -2vw;
     }
     
     .quadrado{
-        min-width: 30px;
-        min-height: 30px;
-        margin-right: 10px;
-        margin-top: 0.6em;
+        min-width: 5vw;
+        min-height: 5vh;
+        margin-top: 0.6vh;
     }
     
     .info-2{
@@ -174,45 +193,44 @@
         flex-direction: row;
         align-items: center;
         color: black;
-        font-size: 1.5em;
-        margin-left: -0.2em;
-        margin-top: 0.7em;
+        font-size: 4vh;
+        margin-left: 3vw;
+        margin-top: 7vh;
     }
     
     .input{
         font-family: pt;
         color: #565656;
-        font-size: 0.7em;
+        font-size: 3.5vh;
     }
     
     .titulo{
         font-family: p1;
-        font-size: 3em;
-        margin-left: 11.2em;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        font-size: 4vh;
+        margin-left: 30vh;
+        margin-top: 9vh;
+        margin-bottom: 10vh;
     }
     
-}
-
-.senha{
-    border: none;
-    margin-bottom: em;
-    margin-top: 1em;
-    border-radius: 10px;
-        height: 15px;
-        width: 90%;
+    .senha{
+        border: none;
+        margin-bottom: 10vh;
+        margin-top: 1vh;
+        border-radius: 1vh;
+        height: 1vh;
+        width: 45vh;
         outline: none;
-        padding: 14px 30px;
+        padding: 2vh 1vw;
         border: #908787;
-        cursor: pointer;
-        margin-left: em;
+        cursor: auto;
         font-family: r1;
-        font-size:1em;
-        margin-bottom: 5em;
+        font-size: 2vh;
+        margin-bottom: 4vh;
+        
+    }
+    .senha::placeholder{
+        font-family: r1;
+        color: #000;
+    }
     
-}
-.senha::placeholder{
-    font-family: r1;
-    color: #000;
 }
