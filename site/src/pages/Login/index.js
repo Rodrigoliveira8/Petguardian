@@ -1,51 +1,55 @@
-import axios from 'axios'
-
-
-import LoadingBar from 'react-top-loading-bar'
+import { EfetuarLogin } from '../../api/UsuarioAPI'
 import { useNavigate } from 'react-router-dom';
 
+
+
 import { Link } from "react-router-dom";
-import './index.scss'
+import LoadingBar from 'react-top-loading-bar'
 import { useState, useRef } from 'react';
+import './index.scss'
 
 export default function Login() {
-    
+
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');
+    const [carregando, setCarregando] = useState(false);
 
     const navigate = useNavigate();
     const ref = useRef();
-   
 
-        async function CadastrarClick(){
-            ref.current.continuousStart();
-            try{
-            const r = await axios.post('http://localhost:5000/usuario/login', {
-                email: email,
-                senha: senha
-            
-        });
 
-                setTimeout(() => {
-                    navigate('/Feed');
-                }, 3000)            
-                
-            
-    }   catch(err){
-        ref.current.complete();
-        if(err.response.status === 401) {
-            setErro(err.response.data.Erro)
+    async function entrarClick() {
+        ref.current.continuousStart();
+        setCarregando(true);
+
+        try {
+            const r = await EfetuarLogin(email, senha)
+
+            setTimeout(() => {
+                navigate('/feed')
+            }, 3000)
+
+
         }
-    }
-        
+        catch (err) {
+            ref.current.complete()
+            setCarregando(false)
+            if (err.message.status === 401) {
+                setErro(err.response.data.Erro)
+            }
 
-          }
-          
+        }
+
+
+    }
+
+
+
     return (
         <main className="page-login">
-            <LoadingBar color='#f119646' ref={ref} />
-            
+            <LoadingBar color='#000' ref={ref} />
+
             <section className="faixa">
 
                 <div className="Esquerda">
@@ -64,24 +68,24 @@ export default function Login() {
                 <div className="Direita">
                     <h1> Conecte-se em sua conta </h1>
                     <div className="input-users">
-                        <input className="users" type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
+                        <input className="users" type="email " placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
 
                     <div class="input-senha">
-                        <input className="senha" value={senha} onChange={e => setSenha(e.target.value)} placeholder="Senha" />
+                        <input className="senha" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
                     </div>
-                   
+
 
                     <div className="conect">
-                        <button className="link" onClick={CadastrarClick}> Conectar </button>
-                       
+                        <button className="link" onClick={entrarClick} disabled={carregando}> Conectar </button>
+
                     </div>
                     <div className="conect">
-                    {erro}
+                        {erro}
                     </div>
                     <p className="cadastro"> Ainda não tem uma conta? <span class="cad"> <Link to='/Cadastro'>Cadastre-se </Link></span> </p>
                 </div>
-                
+
 
             </section>/
         </main>
