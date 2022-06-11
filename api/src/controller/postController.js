@@ -112,17 +112,18 @@ server.put('/usuario/post/:id', async (req, resp) => {
 server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
     try {
         const {id} = req.params;
+        const imagem = req.file.path
 
         const resposta = await inserirImagem(imagem, id);
-        
+
+        resp.status(204).send();
 
         if (resposta != 1) throw new Error('Não foi possível alterar/inserir a imagem') 
 
         
-        resp.status(204).send();
+        
         
     } catch (err) {
-        console.log(err)
         resp.status(400).send({
             erro: err.message
         })
