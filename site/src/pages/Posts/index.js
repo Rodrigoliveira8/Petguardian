@@ -1,7 +1,16 @@
+import storage from 'local-storage'
 import './index.scss'
-import {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
+import {useEffect, useState} from 'react'
 
 export default function Posts() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        if(!storage('usuario-logado')){
+            navigate('/Login');
+        }
+    }, [])
+
     const [nome, Setnome] = useState('');
     const [raca, Setraca] = useState('');
     const [localizacao, Setlocalizacao] = useState('');

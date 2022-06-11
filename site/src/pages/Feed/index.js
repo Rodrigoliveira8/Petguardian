@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+import storage from 'local-storage'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -8,6 +9,13 @@ import './index.scss'
 import { useState } from 'react';
 
 export default function Feed() {
+
+    const navigate = useNavigate()
+
+    function sairClick(){
+        storage.remove('usuario-logado');
+        navigate('/Login');
+    }
    
 
         async function CadastrarClick(){
@@ -29,6 +37,11 @@ export default function Feed() {
                         <button className="login-gerenciar">
                             Gerenciar Posts
                         </button>
+                    </a>
+                </div>
+                <div onClick={sairClick}>  
+                    <a href='/login'> 
+                    <button className='login-gerenciar'> Sair </button>
                     </a>
                 </div>
             </header>

@@ -1,11 +1,11 @@
 import { EfetuarLogin } from '../../api/UsuarioAPI'
 import { useNavigate } from 'react-router-dom';
 
-
+import storage from 'local-storage'
 
 import { Link } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './index.scss'
 
 export default function Login() {
@@ -18,6 +18,12 @@ export default function Login() {
     const navigate = useNavigate();
     const ref = useRef();
 
+    useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/feed')
+        }
+    } ,[])
+
 
     async function entrarClick() {
         ref.current.continuousStart();
@@ -25,6 +31,7 @@ export default function Login() {
 
         try {
             const r = await EfetuarLogin(email, senha)
+            storage('usuario-logado', r)
 
             setTimeout(() => {
                 navigate('/feed')
