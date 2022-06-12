@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
 .page-posts {
     main{
         display: flex;
@@ -66,9 +68,10 @@
         flex-direction: column;
         margin-top: 4vh;
     }
+
     
     .esquerda h1{
-        font-family: pt;
+        font-family: 'PT Sans Caption', sans-serif;
         font-size: 4vh;
         margin-left: 3vh;
         margin-bottom: 5vh;
@@ -92,6 +95,7 @@
         margin-left: 8vh;
         margin-top: 3.3vh;
         font-size: 2.5vh;
+        font-family: 'PT Sans Caption', sans-serif;
     }
     
     .info{
@@ -104,48 +108,56 @@
         padding: 3vh;
         border-radius: 0.8vh;
     }
+    
     .post2{
         display: flex;
         flex-direction: column;
-        margin-left: h;
-        height: 2vh;
-        border-radius: 1vh;
-        margin-bottom: 3em;
-        width: 35vh;
-    }
+        margin-left: 15vw;
+        width: 35vw;
+        height: fit-content;
+        border-radius: 1.4vh;
+        filter: drop-shadow(0vh 10vh 10vh #00000040);
+    }   
+    
     
     .carol{
         background-color: #F1C40F;
-        width: 25vw;
-        border-radius: 1vh 1vh 0vh 0vh;
+        width: 40.9vh;
+        height: 5vh;
+        padding-bottom: 3vh ;
+        border-radius: 1.4vh 1.4vh 0vh 0vh ;
+        display: flex;
+        align-items: center;
     }
     .carol h1{
-        font-family: pt;
+        font-family: 'PT Sans Caption', sans-serif;
         font-size: 3vh;
         color: #6D5D22;  
         margin-left: 1vw;
+        margin-bottom: 0;
     }
     .img-post{
         height: 30vh;
-        width: 25vw;
+        width: 23vw;
     }
     
     .info-1{
         display: flex;
         justify-content: center;
-        margin-left: 1em;
+        margin-left: em;
         background-color: rgb(255, 255, 255);
-        width: 20vw;
-        margin-top: 1vh;
+        width: 23vw;
+        margin-top: -0.5vh;
     }
     .info-1 h1{
         font-size: 3vh;
-        font-family: pt;
+        font-family: 'PT Sans Caption', sans-serif;
         color: #565656;
         margin-left: 0.5vw;
         margin-top: 0.5vh;
     }
     .infos{
+        width: 23vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -157,14 +169,14 @@
         display: flex;
         flex-direction: column;
         margin-left: 1vh;
-        font-family: pt;
-        font-size: 3vh;
+        font-family: 'PT Sans Caption', sans-serif;
+        font-size: 2.5vh;
         color: #565656;
     }
     
     .dir-1{
-        font-family: pt;
-        font-size: 3vh;
+        font-family: 'PT Sans Caption', sans-serif;
+        font-size: 2vh;
         color: #565656;
         margin-left: 10vh;
     }
@@ -194,7 +206,7 @@
         align-items: center;
         color: black;
         font-size: 4vh;
-        margin-left: 3vw;
+        margin-left: 10vw;
         margin-top: 7vh;
     }
     
@@ -205,7 +217,7 @@
     }
     
     .titulo{
-        font-family: p1;
+        font-family: 'PT Sans Caption', sans-serif;
         font-size: 4vh;
         margin-top: 7.5vh;
         margin-bottom: 10vh;
@@ -224,10 +236,11 @@
         font-family: r1;
         font-size: 2vh;
         margin-bottom: 4vh;
+        font-family: 'Palanquin Dark', sans-serif;
         
     }
     .senha::placeholder{
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;
         color: #000;
     }
     

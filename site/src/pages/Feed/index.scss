@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 .page-feed {
     main{
         display: flex;
@@ -76,7 +77,7 @@
     
     .carol{
         background-color: #F1C40F;
-        width: 50vh;
+        width: 40.9vh;
         height: 5vh;
         padding-bottom: 3vh ;
         border-radius: 1.4vh 1.4vh 0vh 0vh ;
@@ -85,7 +86,7 @@
     }
 
     .carol h1{
-        font-family: pt;
+        font-family: 'PT Sans Caption', sans-serif;
         font-size: 3vh;
         color: #6D5D22;  
         margin-left: 1vw;
@@ -100,7 +101,7 @@
     }
     .info-1 h1{
         font-size: 3vh;
-        font-family: pt;
+        font-family: 'PT Sans Caption', sans-serif;
         text-align: center;
         color: #565656;
         margin: 0vh 1vw;
@@ -122,14 +123,14 @@
         flex-direction: column;
         margin-left: 1vw;
         margin-top: 1vh;
-        font-family: pt;
+        font-family:'PT Sans Caption', sans-serif;
         font-size: 3vh;
         color: #565656;
     }
 
     
     .dir-1{
-        font-family: pt;
+        font-family:'PT Sans Caption', sans-serif;
         font-size: 3vh;
         color: #565656;
         margin-right: 1vh;
@@ -153,6 +154,7 @@
     .quadrado{
         min-width: 5vh;
         min-height: 4vh;
+        margin-left: 10em;
     }
     
     .info-2{
@@ -162,6 +164,7 @@
         color: black;
         font-size: 4vh;
         margin-top: 3.5vh;
+        margin-left: -10vw;
     }
     
     .input{

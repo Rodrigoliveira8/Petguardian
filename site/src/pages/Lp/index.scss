@@ -1,9 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
 .page-lp {
-
-    @font-face {
-        font-family: 'PalanquinDark';
-        src: url('./PalanquinDark-Bold.ttf');
-    }
     
 
     .header-feed {
@@ -67,7 +63,7 @@
     }
 
     .faixa1 h1 {
-        font-family: 'PalanquinDark';
+        font-family: 'Palanquin Dark', sans-serif;
         font-size: 7vh;
         width: 39vw;
         color: #ffffff;

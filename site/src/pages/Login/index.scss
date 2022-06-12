@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
 .page-login {
     
     section{
@@ -36,7 +39,7 @@
     }
     
     .Esquerda p{
-        font-family: One;
+        font-family: 'Text Me One', sans-serif;
         font-size: 5vh;
         line-height: 4vh;
         width: 100vh;
@@ -45,7 +48,7 @@
     }
 
     .Direita h1{
-        font-family: p1;
+        font-family: 'Palanquin Dark', sans-serif;
         margin-top: 15vh;
         margin-left: 27vh;
         margin-bottom: 7vh;
@@ -61,13 +64,13 @@
         border: #908787;
         cursor: auto;
         margin-left: 20vh;
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;
         font-size:2.5vh;
         margin-bottom: 2vh;
     }
     
     .users::placeholder{
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;;
         color: #000;
     }
     
@@ -81,13 +84,13 @@
         border: #908787;
         cursor: auto;
         margin-left: 20vh;
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;
         font-size:2.5vh;
         margin-bottom: 3vh;
     }
     
     .senha::placeholder{
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;
         color: #000;
     }
     
@@ -139,7 +142,7 @@
     .cadastro{
         margin-left: 35vh;
         margin-top: 5vh;
-        font-family: p1;
+        font-family: 'Roboto Flex', sans-serif;
         text-decoration: none;
         color: #000;
 
