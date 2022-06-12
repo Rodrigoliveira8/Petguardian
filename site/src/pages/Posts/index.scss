@@ -57,13 +57,13 @@
     .faixa1{
         display:flex;
         flex-direction: row;
+        justify-content: space-around;
         height: 70px;
     }
     
     .esquerda{
         display: flex;
         flex-direction: column;
-        margin-left: 10vh;
         margin-top: 4vh;
     }
     
@@ -98,18 +98,16 @@
         display: flex;
         flex-direction: column;
         background-color: #c4c4c4;
-        width: 25vw;
+        width: 100%;
         line-height: 5vh;
         font-family: p1;
         padding: 3vh;
-        border-radius: 1vh;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 0.8vh;
     }
     .post2{
         display: flex;
         flex-direction: column;
-        margin-left: 25vh;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-left: h;
         height: 2vh;
         border-radius: 1vh;
         margin-bottom: 3em;
@@ -207,20 +205,18 @@
     .titulo{
         font-family: p1;
         font-size: 4vh;
-        margin-left: 30vh;
-        margin-top: 9vh;
+        margin-top: 7.5vh;
         margin-bottom: 10vh;
     }
     
     .senha{
         border: none;
-        margin-bottom: 10vh;
-        margin-top: 1vh;
+        background-color: #fff;
         border-radius: 1vh;
         height: 1vh;
-        width: 45vh;
+        width: 85%;
         outline: none;
-        padding: 2vh 1vw;
+        padding: 1.7vh 1vw;
         border: #908787;
         cursor: auto;
         font-family: r1;
@@ -233,4 +229,12 @@
         color: #000;
     }
     
+    .botao{
+        border: none;
+        background-color: #D1A800;
+        padding: 10px;
+        font-size: 1.5em;
+        margin-top: 35em;
+        margin-left: -8em;
+    }
 }

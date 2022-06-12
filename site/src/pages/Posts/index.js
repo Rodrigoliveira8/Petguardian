@@ -10,11 +10,12 @@ export default function Posts() {
             navigate('/Login');
         }
     }, [])
-
+  
     const [nome, Setnome] = useState('');
     const [raca, Setraca] = useState('');
     const [localizacao, Setlocalizacao] = useState('');
     const [contato, Setcontato] = useState('');
+    const [sexo, setSexo] = useState('');
 
     async function SalvarClick (){
         try {
@@ -28,6 +29,7 @@ export default function Posts() {
 
     return (
         <main className='page-posts'>
+            
             <header>
                 <div className="esquerda-he">
                     <img className="logo-img" src="./images/image 26.png"/>
@@ -53,6 +55,7 @@ export default function Posts() {
                     <input className="senha" type="text" placeholder="RAÇA" value={raca} onChange = {e => Setraca(e.target.value)}/>
                     <input className="senha" type="text" placeholder="LOCALIZAÇÃO" value={localizacao} onChange = {e => Setlocalizacao(e.target.value)}/>
                     <input className="senha" type="text" placeholder="MEIO DE CONTATO"value={contato} onChange = {e => Setcontato(e.target.value)} />
+                    <input className="senha" type="text" placeholder="Sexo"value={sexo} onChange = {e => setSexo(e.target.value)} />
                     </div>
                 </div>  
 
@@ -73,30 +76,30 @@ export default function Posts() {
                         </div>
                         <div className="infos">
                             <div className="esq-1">
-                                <p> Logan </p>
-                                <p> São José </p>
+                                <p> {nome} </p>
+                                <p> {localizacao} </p>
                                 <div className="foto-1">
                                     <img width="30vw" src="./images/Instagram.png"/>
-                                    <h6> @xzx </h6>
+                                    <h6> {contato} </h6>
                                 </div>
                             </div>
 
                             <div className="dir-1">
-                                <p> Sphynx </p>
-                                <p> Macho </p>
+                                <p> {raca} </p>
+                                <p> {sexo} </p>
                                 <div className="info-2">
-                                    <input className="quadrado" type="checkbox"/>
-                                    <h1 className="input"> Interessado </h1>
-                                    <div>
-                                        <button onClick={SalvarClick}> Salvar </button>
-                                    </div>
+                                   
                                 </div>
+                                
                             </div>
 
                         </div>
                     </div>
 
                 </div>
+                <div>
+                                        <button className='botao' onClick={SalvarClick}> Salvar </button>
+                                    </div>
             </section>
         </main>
     );
