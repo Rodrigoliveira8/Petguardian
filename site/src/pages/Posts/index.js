@@ -1,7 +1,13 @@
-import storage from 'local-storage'
 import './index.scss'
+
 import { useNavigate } from 'react-router-dom'
+
 import {useEffect, useState} from 'react'
+
+import { cadastraPet, EnviarImagem } from '../../api/PostAPI'
+
+import  storage from 'local-storage'
+
 
 export default function Posts() {
     const navigate = useNavigate();
@@ -10,23 +16,28 @@ export default function Posts() {
             navigate('/Login');
         }
     }, [])
-  
+
+
     const [nome, Setnome] = useState('');
     const [raca, Setraca] = useState('');
     const [localizacao, Setlocalizacao] = useState('');
     const [contato, Setcontato] = useState('');
     const [sexo, setSexo] = useState('');
+        
+    async function SalvarClick(){
+        try{
+            const usuario = storage('usuario-logado').id;
+            const r = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario);
+            console.log(r)
 
-    async function SalvarClick (){
-        try {
-
-        } catch (err) {
-            
+            alert("foi")
+        }
+        catch(err){
+            alert(err.message)
         }
     }
 
-
-
+  
     return (
         <main className='page-posts'>
             
@@ -98,7 +109,7 @@ export default function Posts() {
 
                 </div>
                 <div>
-                                        <button className='botao' onClick={SalvarClick}> Salvar </button>
+                                        <button onClick={SalvarClick} className='botao'> Salvar </button>
                                     </div>
             </section>
         </main>

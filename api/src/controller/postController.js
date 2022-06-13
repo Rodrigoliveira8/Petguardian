@@ -13,7 +13,6 @@ server.post('/post/criar', async (req,resp) => {
         if(!publi.raca) throw new Error("Raça é OBRIGATÓRIO!")
         if(!publi.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
         if(!publi.sexo) throw new Error("Sexo é OBRIGATÓRIO!")
-        if(!publi.desc) throw new Error("Descrição é OBRIGATÓRIO!")
         if(!publi.contato) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await Post(publi);
@@ -92,7 +91,6 @@ server.put('/usuario/post/:id', async (req, resp) => {
         if(!pet.raca) throw new Error("Raça é OBRIGATÓRIO!")
         if(!pet.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
         if(!pet.sexo) throw new Error("Sexo é OBRIGATÓRIO!")
-        if(!pet.descricao) throw new Error("Descrição é OBRIGATÓRIO!")
         if(!pet.contato) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await editarPost(pet, id);
