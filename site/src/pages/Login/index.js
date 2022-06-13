@@ -66,9 +66,7 @@ export default function Login() {
                         </div>
                         <p> Amor não se compra, amor se conquista!</p>
                     </div>
-                    <div className="dog">
-
-                    </div>
+                    
 
                 </div>
 
@@ -83,18 +81,18 @@ export default function Login() {
                     </div>
 
 
-                    <div className="conect">
+                    
                         <button className="link" onClick={entrarClick} disabled={carregando}> Conectar </button>
 
-                    </div>
-                    <div className="conect">
+                    
+                    <div>
                         {erro}
                     </div>
                     <p className="cadastro"> Ainda não tem uma conta? <span class="cad"> <Link to='/Cadastro'>Cadastre-se </Link></span> </p>
                 </div>
 
 
-            </section>/
+            </section>
         </main>
     );
 }

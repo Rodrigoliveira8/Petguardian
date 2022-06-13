@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
 .page-login {
+
+    height: 100vh;
+
+    * {
+        border: solid 0px green;
+    }
+    
     
     section{
         display: flex;
@@ -10,18 +17,18 @@
     }
     
     .logo-casinha {
-        width: 20vh;
-        margin-top: 5vh;
-        margin-left: 5vh;
+        width: 12em;
+        
     }
 
     .Esquerda{
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-image: url('./Cachorro.png');
         background-repeat: no-repeat;
-        background-position: 3vw 15vh;
+        background-position: 3vw 49vh;
         background-color: #F6FBFF;
         width: 50%;
     }
@@ -29,28 +36,36 @@
     .Direita{
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-color: #AD7343;
         width: 50%;
     }
+    
     .Teste{
-        position: relative;
-        margin-top: 5vh;
-        margin-left: 37vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 5em;
+    }
+
+    .Esquerda div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .Esquerda p{
         font-family: 'Text Me One', sans-serif;
-        font-size: 5vh;
+        font-size: 3em;
         line-height: 4vh;
-        width: 100vh;
-        margin-left: 13vh;
-        margin-top: 1vh;
+        width: 50vh;
+        text-align: center;
+        margin-top: 3em;
     }
 
     .Direita h1{
         font-family: 'Palanquin Dark', sans-serif;
         margin-top: 15vh;
-        margin-left: 27vh;
+        
         margin-bottom: 7vh;
         font-size: 5vh;
         color: #ffffff;
@@ -63,7 +78,7 @@
         padding: 2vh 3vw;
         border: #908787;
         cursor: auto;
-        margin-left: 20vh;
+        
         font-family: 'Palanquin Dark', sans-serif;
         font-size:2.5vh;
         margin-bottom: 2vh;
@@ -83,7 +98,7 @@
         padding: 2vh 3vw;
         border: #908787;
         cursor: auto;
-        margin-left: 20vh;
+        
         font-family: 'Palanquin Dark', sans-serif;
         font-size:2.5vh;
         margin-bottom: 3vh;
@@ -104,10 +119,12 @@
         width: 30vw;
     }
     .bolinha h6{
+
         font-family: r1;
         margin-left: 0.5vh;
         font-size: 2vh;
         margin-top: 1vh;
+
     }
     
     
@@ -132,6 +149,11 @@
         font-family: p1;
         text-decoration: none;
         color: #000;
+        background-color: #ffffff;
+        width: fit-content;
+        padding: 1.5em;
+        border-radius: 4em;
+        font-family: 'Palanquin Dark', sans-serif;
     }
     .cad{
         color: blue;
@@ -140,7 +162,7 @@
     }
     
     .cadastro{
-        margin-left: 35vh;
+        
         margin-top: 5vh;
         font-family: 'Roboto Flex', sans-serif;
         text-decoration: none;
