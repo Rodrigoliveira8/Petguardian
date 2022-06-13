@@ -24,8 +24,8 @@ AND   ds_senha          ='1234';
 
 
 -- Criar Post
-Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_pet,ds_contato)
-VALUES (1,'Léu', 'PitBull', 'Rua dos Loucos 55', 'Macho', 'ruf ruf', '(11) 1324-1324');
+Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato)
+VALUES (1,'Léu', 'PitBull', 'Rua dos Loucos 55', 'Macho', '(11) 1324-1324');
 
 
 
