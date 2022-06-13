@@ -12,8 +12,8 @@ export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuari
         sexo:sexo,
         contato:contato
     })
-    return respota.data;
-    console.log(respota)
+    
+
 }
 
  

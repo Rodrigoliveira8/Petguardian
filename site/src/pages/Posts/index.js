@@ -4,6 +4,10 @@ import { useNavigate } from 'react-router-dom'
 
 import {useEffect, useState} from 'react'
 
+
+import { toast } from 'react-toastify'
+
+
 import { cadastraPet, EnviarImagem } from '../../api/PostAPI'
 
 import  storage from 'local-storage'
@@ -27,20 +31,19 @@ export default function Posts() {
     async function SalvarClick(){
         try{
             const usuario = storage('usuario-logado').id;
+            
             const r = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario);
-            console.log(r)
 
-            alert("foi")
+            toast.dark("O pet foi cadastrado 🐶")
         }
         catch(err){
-            alert(err.message)
+            toast.error(err.response.data.Erro)
         }
     }
 
   
     return (
-        <main className='page-posts'>
-            
+        <main className='page-posts'>            
             <header>
                 <div className="esquerda-he">
                     <img className="logo-img" src="./images/image 26.png"/>

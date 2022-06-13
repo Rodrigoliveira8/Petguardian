@@ -20,7 +20,6 @@ SELECT id_pet           id,
        ds_raca          raca,
        ds_localizacao   localizacao,
        ds_sexo          sexo,
-       ds_pet           descricao,
        img_pet          imagem,
        ds_contato       contato
 FROM tb_pet`

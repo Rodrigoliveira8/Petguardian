@@ -13,9 +13,7 @@ server.post('/usuario/cadastro', async (req,resp) => {
     if(!telefone) throw new Error('O telefone é Obrigatório!')
     if(!endereco) throw new Error('O endereço é Obrigatório!')
     const resposta = await Cadastro(nome,email,senha,nascimento,telefone,endereco);
-    resp.send({
-        resposta
-    })
+    resp.send(resposta)
 }
 catch(err){
     resp.status(400).send({
@@ -30,9 +28,7 @@ server.post('/usuario/login', async (req,resp) => {
 
         const resposta = await Login(email,senha)
         if(!resposta) throw new Error ("Credenciais inválidas!")
-        resp.status(200).send({
-            resposta
-        })
+        resp.status(200).send(resposta)
         
     } catch (err) {
         resp.status(401).send({

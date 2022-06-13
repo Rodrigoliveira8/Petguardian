@@ -49,7 +49,6 @@ request
     "raca":,
     "localizacao":,
     "sexo":,
-    "desc":,
     "contato":
 }
 
