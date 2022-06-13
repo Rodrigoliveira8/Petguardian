@@ -16,9 +16,9 @@ server.post('/post/criar', async (req,resp) => {
         if(!publi.contato) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await Post(publi);
-        resp.status(200).send({
+        resp.status(200).send(
             resposta
-        })
+        )
     } catch (err) {
         resp.status(400).send({
             Erro:err.message

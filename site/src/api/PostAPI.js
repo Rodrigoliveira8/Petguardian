@@ -17,7 +17,7 @@ export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuari
 }
 
  
-export async function EnviarImagem (id, imagem){
+export async function enviarimagem (id, imagem){
     const formData = new FormData();
     formData.append('imgpet', imagem);
     

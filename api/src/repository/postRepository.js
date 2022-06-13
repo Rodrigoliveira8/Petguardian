@@ -5,8 +5,8 @@ export async function Post (post){
     Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato)
     VALUES (?,?,?,?,?,?);    
      `
-     const [linhas] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato])
-     post.id = linhas.insetID;
+     const [resposta] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato])
+     post.id = resposta.insertId;
      return post
     }
 
