@@ -188,4 +188,132 @@
         flex-direction: row;
         margin-top: 10vh;
     }
+
+    @media (max-width: 1280px) {
+        header{
+            height: 10vh;
+        }
+        
+        header link {
+            margin: 0vh 2vw;
+        }
+    
+        .esquerda-he{
+            width: auto;
+            margin-left: 3vw;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            height: 9vh;
+        }
+        
+        .esquerda-he h4{
+            margin-top: 3.5vh;
+            margin-left: 0.5vw;
+            font-size: 2.5vh;
+        }
+        .login-gerenciar {
+            width: 10vw;
+            height: 5vh;
+            border-radius: 7vh;
+        }
+        .link{
+            font-size: 2.5vh;
+        }
+        .direita-he{
+            margin-top: 3vh;
+            margin-right: 10vh;
+        }
+        
+        .faixa-1{
+            margin-top: 10vh;
+            height: 1000vh;
+        }
+        .imgn {
+            height: 30vh;
+            width: 23vw;
+        }
+        .post1{
+            margin-left: 15vw;
+            width: 35vw;
+            height: fit-content;
+            border-radius: 1.4vh;
+        }
+        
+        .carol{
+            width: 40.9vh;
+            height: 5vh;
+            padding-bottom: 3vh ;
+            border-radius: 1.4vh 1.4vh 0vh 0vh ;
+        }
+    
+        .carol h1{
+            font-size: 3vh;
+            margin-left: 1vw;
+        }
+        
+        .info-1{
+            margin-top: -1vh;
+            width: 23vw;
+        }
+        .info-1 h1{
+            font-size: 3vh;
+            margin: 0vh 1vw;
+            margin-top: 1vh;
+            margin-bottom: 0.4vh;
+            width: 23vw;
+        }
+        .infos{
+            border-radius: 0vh 0vh 1.4vh 1.4vh;
+            width: 23vw;
+        }
+        
+        .esq-1{
+            margin-left: 1vw;
+            margin-top: 1vh;
+            font-size: 3vh;
+        }
+    
+        
+        .dir-1{
+            font-size: 3vh;
+            margin-right: 1vh;
+            height: 1vh;
+            margin-top: 4vh;
+        }
+        .dir-1 p{
+            margin-right: 0vw;
+            margin-top: 0.5vh;
+        }
+        
+        .foto-1{
+            margin-top: -8vh;
+        }
+        
+        .quadrado{
+            min-width: 5vh;
+            min-height: 4vh;
+            margin-left: 10em;
+        }
+        
+        .info-2{
+            font-size: 4vh;
+            margin-top: 3.5vh;
+            margin-left: -10vw;
+        }
+        
+        .input{
+            font-size: 3vh;
+            margin-right: 1vw;
+        }
+        .post2{
+            margin-left: 25vh;
+            width: 50vw;
+            height: fit-content;
+            border-radius: 7vh;
+        }
+        
+        .faixa-2{
+            margin-top: 10vh;
+        }
+    }
 }
