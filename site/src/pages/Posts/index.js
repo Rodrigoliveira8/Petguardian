@@ -32,20 +32,22 @@ export default function Posts() {
 
     async function SalvarClick(){
         try{
+            if(!img) throw new Error("Escolha a imagem do Post")
+
             const usuario = storage('usuario-logado').id;
             
-            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario);
-
+            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario)
             const r = await enviarimagem (NovoPost.id, img)
-            console.log(r)
 
              
             toast.dark("O pet foi cadastrado 🐶")
         }
         catch(err){
-
+            if(err.response)
             toast.dark(err.response.data.Erro)
-
+            else{
+                toast.dark(err.message)
+            }
         }
     }
 
