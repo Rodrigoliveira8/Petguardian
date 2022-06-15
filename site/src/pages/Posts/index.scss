@@ -114,7 +114,7 @@
         flex-direction: column;
         margin-left: 15vw;
         width: 35vw;
-        height: fit-content;
+        height: 5em;
         border-radius: 1.4vh;
         filter: drop-shadow(0vh 10vh 10vh #00000040);
     }   
@@ -156,6 +156,8 @@
         margin-left: 0.5vw;
         margin-top: 0.5vh;
     }
+
+    
     .infos{
         width: 23vw;
         display: flex;
@@ -176,13 +178,15 @@
     
     .dir-1{
         font-family: 'PT Sans Caption', sans-serif;
-        font-size: 2vh;
+        font-size: 2.5vh;
         color: #565656;
-        margin-left: 10vh;
+        
     }
-    .dir-1 p{
-        margin-right: -30vh;
+
+    .p1 {
+        margin-top: 2em;
     }
+    
     
     .foto-1{
         display: flex;

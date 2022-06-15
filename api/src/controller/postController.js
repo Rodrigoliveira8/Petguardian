@@ -12,7 +12,7 @@ server.post('/post/criar', async (req,resp) => {
         if(!publi.nome) throw new Error("Nome é OBRIGATÓRIO!")
         if(!publi.raca) throw new Error("Raça é OBRIGATÓRIO!")
         if(!publi.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
-        if(!publi.sexo) throw new Error("Sexo é OBRIGATÓRIO!")
+        if(!publi.sexo) throw new Error("SEXO é OBRIGATÓRIO!")
         if(!publi.contato) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await Post(publi);
@@ -110,6 +110,7 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
         if(!req.file) throw new Error('Não foi possível alterar/inserir a imagem') 
         const {id} = req.params;
         const imagem = req.file.path
+        console.log(imagem)
 
         const resposta = await inserirImagem(imagem, id);
 
