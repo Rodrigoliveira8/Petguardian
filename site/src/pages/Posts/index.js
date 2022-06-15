@@ -28,7 +28,7 @@ export default function Posts() {
     const [contato, Setcontato] = useState('');
     const [sexo, setSexo] = useState('');
     const [img, SetImg] = useState();
-    const UserLogado = storage('usuario-logado').nome;
+    const UserLogado = storage('usuario-logado').Nome;
 
     async function SalvarClick(){
         try{
@@ -94,7 +94,7 @@ export default function Posts() {
 
                 <div className="direta">
                     <h1 className="titulo"> Pré visualização </h1>
-                    <div className="post2">
+                    <div className="post2" >
 
                         <div className="carol">
                             <h1> {UserLogado} </h1>

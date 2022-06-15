@@ -8,12 +8,12 @@ const upload = multer({dest: 'storage/imgpet'})
 server.post('/post/criar', async (req,resp) => {
     try {
         const publi = req.body;
-        if(!publi.usuario) throw new Error("Usuário é OBRIGATÓRIO!")
-        if(!publi.nome) throw new Error("Nome é OBRIGATÓRIO!")
-        if(!publi.raca) throw new Error("Raça é OBRIGATÓRIO!")
-        if(!publi.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
-        if(!publi.sexo) throw new Error("SEXO é OBRIGATÓRIO!")
-        if(!publi.contato) throw new Error("Contato é OBRIGATÓRIO!")
+        if(!publi.usuario.Trim()) throw new Error("Usuário é OBRIGATÓRIO!")
+        if(!publi.nome.Trim()) throw new Error("Nome é OBRIGATÓRIO!")
+        if(!publi.raca.Trim()) throw new Error("Raça é OBRIGATÓRIO!")
+        if(!publi.localizacao.Trim()) throw new Error("Localização é OBRIGATÓRIO!")
+        if(!publi.sexo.Trim()) throw new Error("SEXO é OBRIGATÓRIO!")
+        if(!publi.contato.Trim()) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await Post(publi);
         resp.status(200).send(
