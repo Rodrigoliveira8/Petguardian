@@ -27,16 +27,6 @@ export default function Feed() {
 
           }
 
-    async function carregarPosts () {
-        const resp = await listarFeed();
-        console.log(resp);
-        setPost(resp);
-    }
-
-    useEffect(() => {
-        carregarPosts();
-    }, [])
-
     return (
         <main className="page-feed">
             <header>

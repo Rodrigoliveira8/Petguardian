@@ -111,17 +111,44 @@ export default function Posts() {
                         </div>
                         <div className="infos">
                             <div className="esq-1">
-                                <p> {nome} </p>
+                                    {!nome &&
+                                    <p> Nome </p>
+                                    }
+                                    {nome &&
+                                    <p> {nome} </p>
+                                    }
+                                    {! localizacao &&
+                                    <p> Localização </p> 
+                                    }
+                                    {localizacao &&
                                 <p> {localizacao} </p>
+                                    }
                                 <div className="foto-1">
                                     <img width="30vw" src="./images/Instagram.png"/>
+                                    {!contato &&
+                                    <h6> Contato </h6>
+                                    }
+                                    {contato &&
                                     <h6> {contato} </h6>
+                                    }
                                 </div>
                             </div>
 
                             <div className="dir-1">
+                                {!raca &&
+                                <p>  Raça</p>
+                                }
+                                {raca &&
                                 <p> {raca} </p>
+                                }
+                                {!sexo &&
+                                
+                                <p> Sexo </p>
+
+                                }
+                                {sexo &&
                                 <p> {sexo} </p>
+                                }   
                                 <div className="info-2">
                                    
                                 </div>
