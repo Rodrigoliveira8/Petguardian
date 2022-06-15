@@ -8,7 +8,7 @@ import {useEffect, useState} from 'react'
 import { toast } from 'react-toastify'
 
 
-import { cadastraPet, enviarimagem } from '../../api/PostAPI'
+import { cadastraPet, enviarimagem } from '../../api/PostAPI.js'
 
 import  storage from 'local-storage'
 
@@ -21,7 +21,7 @@ export default function Posts() {
         }
     }, [])
 
-
+    const [titulo, SetTitulo] = useState('');
     const [nome, Setnome] = useState('');
     const [raca, Setraca] = useState('');
     const [localizacao, Setlocalizacao] = useState('');
@@ -37,6 +37,7 @@ export default function Posts() {
             const usuario = storage('usuario-logado').id;
             
             const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario)
+
             const r = await enviarimagem (NovoPost.id, img)
 
              
@@ -82,11 +83,12 @@ export default function Posts() {
                     </div>
 
                     <div className="info">
-                    <input className="senha" type="text" placeholder="NOME" value={nome} onChange = {e => Setnome(e.target.value)}/>
-                    <input className="senha" type="text" placeholder="RAÇA" value={raca} onChange = {e => Setraca(e.target.value)}/>
-                    <input className="senha" type="text" placeholder="LOCALIZAÇÃO" value={localizacao} onChange = {e => Setlocalizacao(e.target.value)}/>
-                    <input className="senha" type="text" placeholder="MEIO DE CONTATO"value={contato} onChange = {e => Setcontato(e.target.value)} />
-                    <input className="senha" type="text" placeholder="Sexo"value={sexo} onChange = {e => setSexo(e.target.value)} />
+                    <input  data-ls-module="charCounter"  maxlength="25" className="senha" type="text" placeholder="NOME" value={nome} onChange = {e => Setnome(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="20" className="senha" type="text" placeholder="RAÇA" value={raca} onChange = {e => Setraca(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="25" className="senha" type="text" placeholder="LOCALIZAÇÃO" value={localizacao} onChange = {e => Setlocalizacao(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="16" className="senha" type="text" placeholder="MEIO DE CONTATO"value={contato} onChange = {e => Setcontato(e.target.value)} />
+                    <input  data-ls-module="charCounter"  maxlength="5" className="senha" type="text" placeholder="Sexo"value={sexo} onChange = {e => setSexo(e.target.value)} />
+                    <input  data-ls-module="charCounter"  maxlength="25" className='senha' type='text' placeholder="Título" value={titulo} onChange = { e => SetTitulo(e.target.value)}/>
                     </div>
                 </div>  
 
@@ -107,7 +109,13 @@ export default function Posts() {
                         </div>
 
                         <div className="info-1">
+                            {! titulo && 
+                            
                             <h1> Gato Sphynx muito fofo </h1>
+                            }              
+                            {titulo &&
+                            <h1> {titulo} </h1>
+                            }         
                         </div>
                         <div className="infos">
                             <div className="esq-1">
@@ -130,6 +138,7 @@ export default function Posts() {
                                     }
                                     {contato &&
                                     <h6> {contato} </h6>
+
                                     }
                                 </div>
                             </div>
@@ -139,11 +148,11 @@ export default function Posts() {
                                 <p>  Raça</p>
                                 }
                                 {raca &&
-                                <p> {raca} </p>
+                                <p id='p1'> {raca} </p>
                                 }
                                 {!sexo &&
                                 
-                                <p> Sexo </p>
+                                <p className='p1'> Sexo </p>
 
                                 }
                                 {sexo &&

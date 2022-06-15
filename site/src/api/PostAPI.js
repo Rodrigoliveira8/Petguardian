@@ -12,7 +12,7 @@ export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuari
         sexo:sexo,
         contato:contato
     })
-    
+    return respota.data;
 
 }
 export async function EnviarImagem (id, imagem){
