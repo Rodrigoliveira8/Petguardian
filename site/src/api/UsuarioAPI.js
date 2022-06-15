@@ -14,3 +14,14 @@ export async function EfetuarLogin (email,senha){
         
         return r.data;
 }
+
+export async function EfetuarCadastro (nome,email,senha,nascimento,telefone,endereco){
+    const r = await api.post('/usuario/cadastro', {
+        nome: nome,
+        email:email,
+        senha: senha,
+        nascimento: nascimento,
+        telefone: telefone,
+        endereco: endereco
+    })
+}

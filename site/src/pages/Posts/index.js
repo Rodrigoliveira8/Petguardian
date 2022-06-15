@@ -1,7 +1,17 @@
-import storage from 'local-storage'
 import './index.scss'
+
 import { useNavigate } from 'react-router-dom'
+
 import {useEffect, useState} from 'react'
+
+
+import { toast } from 'react-toastify'
+
+
+import { cadastraPet, enviarimagem } from '../../api/PostAPI'
+
+import  storage from 'local-storage'
+
 
 export default function Posts() {
     const navigate = useNavigate();
@@ -10,26 +20,46 @@ export default function Posts() {
             navigate('/Login');
         }
     }, [])
-  
+
+
     const [nome, Setnome] = useState('');
     const [raca, Setraca] = useState('');
     const [localizacao, Setlocalizacao] = useState('');
     const [contato, Setcontato] = useState('');
     const [sexo, setSexo] = useState('');
+    const [img, SetImg] = useState();
+    const UserLogado = storage('usuario-logado').nome;
 
-    async function SalvarClick (){
-        try {
+    async function SalvarClick(){
+        try{
+            if(!img) throw new Error("Escolha a imagem do Post")
 
-        } catch (err) {
+            const usuario = storage('usuario-logado').id;
             
+            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario)
+            const r = await enviarimagem (NovoPost.id, img)
+
+             
+            toast.dark("O pet foi cadastrado 🐶")
+        }
+        catch(err){
+            if(err.response)
+            toast.dark(err.response.data.Erro)
+            else{
+                toast.dark(err.message)
+            }
         }
     }
 
+    function escolherimg (){
+        document.getElementById('imgpet').click();
+    }
 
-
+  function mostrarImagem(){
+        return URL.createObjectURL(img);
+  }
     return (
-        <main className='page-posts'>
-            
+        <main className='page-posts'>            
             <header>
                 <div className="esquerda-he">
                     <img className="logo-img" src="./images/image 26.png"/>
@@ -46,8 +76,9 @@ export default function Posts() {
             <section className="faixa1">
                 <div className="esquerda">
                     <h1> Informações do Post </h1>
-                    <div className="import">
+                    <div className="import" onClick={escolherimg}>
                         <h2> Importar Arquivo </h2>
+                        <input type='file' id='imgpet' onChange={e => SetImg (e.target.files[0])}  />
                     </div>
 
                     <div className="info">
@@ -64,11 +95,15 @@ export default function Posts() {
                     <div className="post2">
 
                         <div className="carol">
-                            <h1> João Carlos </h1>
+                            <h1> {UserLogado} </h1>
                         </div>
-
                         <div className="imgn">
-                            <img className="img-post" src="./images/image 13.png"/>
+                            {!img && 
+                            <img className='img-post' src='./images/image 13.png' alt=''/>
+                            }
+                            {img &&
+                            <img className='img-post' src={mostrarImagem()} alt=''/>
+                            }   
                         </div>
 
                         <div className="info-1">
@@ -98,7 +133,7 @@ export default function Posts() {
 
                 </div>
                 <div>
-                                        <button className='botao' onClick={SalvarClick}> Salvar </button>
+                                        <button onClick={SalvarClick} className='botao'> Salvar </button>
                                     </div>
             </section>
         </main>

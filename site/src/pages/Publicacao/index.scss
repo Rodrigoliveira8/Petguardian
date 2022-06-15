@@ -115,5 +115,76 @@
         height: 2vh;
         width: 10vh;
     }
-   
+    
+    @media (max-width: 1280px) {
+
+         .esquerda-he{
+            margin-left: 7vh;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            height: 10vh;
+        }
+        
+        .esquerda-he h4{
+            margin-top: 4vh;
+            margin-left: 1vh;
+            font-size: 2.5vh;
+        }
+        .link{
+            font-size: 2.5vh;
+            width: 150vw;
+            height: 10vh;
+            border-radius: 3vh; 
+            margin-right: 8vh;
+            margin-top: 3vh;
+            padding: 2vh;
+        }
+        .direita-he{
+            margin-top: 6vh;
+            margin-right: 7vh;
+            font-size: 2.5vh;
+        }
+        .Faixa-1{
+            margin-top: 10vh;
+        }
+        .h1-cards {
+            font-size: 2.5vh;
+        }
+        .info-card{
+            line-height: 1vh;
+            margin-left: 1vh;
+        }
+        .info-p{
+            font-size: 3vh;
+        }
+        .esquerda{
+            padding: 2vh;
+            border-radius: 2vh;
+            height: 50vh;
+            width: 40vw;
+        }
+        .img-pets {
+            height: 30vh;
+            width: 30vh;
+            border-radius: 2vh;
+            margin-top: 1vh;
+            margin-left: 1vh;
+        }
+        .finally{
+            font-size: 3vh;
+        }
+        .final{
+            height:3vh;
+            width: 6vw;
+            padding: 3vh;
+            border-radius: 7vh;
+            margin-top: 0.8vh;
+            background-position: 7vh 5.4vw;
+        }
+        .final{
+            margin-left: 2vh;
+            height: 2vh;
+            width: 10vh;
+        }
+    }
 }

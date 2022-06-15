@@ -154,6 +154,7 @@
         padding: 1.5em;
         border-radius: 4em;
         font-family: 'Palanquin Dark', sans-serif;
+        cursor: pointer;
     }
     .cad{
         color: blue;
@@ -168,5 +169,49 @@
         text-decoration: none;
         color: #000;
 
+    }
+
+    @media (max-width: 1280px) {
+    
+    .logo-casinha {
+        width: 12vh;
+        margin-top: 10vh;
+    }
+
+    .Esquerda{
+        background-position: 0vw 46vh;
+    }
+    
+    
+    .Teste{
+        margin-top: 7vh;
+    }
+    
+    .Esquerda p{
+        font-size: 5vh;
+        margin-top: 5vh;
+    }
+
+    .Direita h1{
+        margin-top: 25vh;
+        margin-bottom: 7vh;
+        font-size: 3vh;
+    }
+    .users{
+        height: 1vh;
+        font-size: 2vh;
+    }
+    
+    .senha{
+        height: 1vh;
+        font-size: 2vh;
+    }    
+    
+    .link{
+        margin-left: 1vh;
+        padding: 1vh;
+        border-radius: 5vh;
+        cursor: pointer;
+    }
     }
 }

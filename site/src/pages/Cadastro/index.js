@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import {toast, ToastContainer} from 'react-toastify'
+import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import './index.scss'
@@ -32,8 +32,8 @@ export default function Cadastro() {
           }
 
     return (
+        
         <main className="page-cadastro">
-            <ToastContainer />
             <section class="sec-1">
                 <img class="logo-sec1" src="./images/Logo.png.crdownload" alt="" />
                 <h1 class="h1-sec1">Amor de verdade não se <br /> compra, se encontra.</h1>
