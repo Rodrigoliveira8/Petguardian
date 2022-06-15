@@ -1,14 +1,16 @@
 import axios from 'axios'
 import storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
+import {listarFeed} from '../../api/PostAPI'
 
 
 
 import { Link } from "react-router-dom";
 import './index.scss'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Feed() {
+    const [post, setPost] = useNavigate([]);
 
     const navigate = useNavigate()
 
@@ -24,6 +26,17 @@ export default function Feed() {
             
 
           }
+
+    async function carregarPosts () {
+        const resp = await listarFeed();
+        console.log(resp);
+        setPost(resp);
+    }
+
+    useEffect(() => {
+        carregarPosts();
+    }, [])
+
     return (
         <main className="page-feed">
             <header>

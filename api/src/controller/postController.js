@@ -34,9 +34,7 @@ server.get ('/feed', async (req,resp) =>{
     try{ 
     const resposta = await Feed();
 
-    resp.status(200).send({
-        resposta
-    })
+    resp.status(200).send(resposta)
 }
 catch(err){
     resp.status(400).send({

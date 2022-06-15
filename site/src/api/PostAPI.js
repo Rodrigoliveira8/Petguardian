@@ -16,11 +16,16 @@ export async function cadastraPet(nome, raca, localizacao, meiodecontato, usuari
     return respota.data;
 }
 export async function EnviarImagem (id, imagem){
-    const formData = new FormData();;
+    const formData = new FormData();
     const resposta = await api.put(`/post/${id}/imagem` , formData, {
         headers:{
             "Content-Type": "multipart/form-data"
         }
     });
     return resposta.status;
+}
+
+export async function listarFeed () {
+    const resposta = await api.get('/filme');
+    return resposta.data;
 }
