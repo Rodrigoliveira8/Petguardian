@@ -15,9 +15,6 @@ export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuari
     return respota.data;
 
 }
-export async function EnviarImagem (id, imagem){
-    const formData = new FormData();
-}
 
  
 export async function enviarimagem (id, imagem){
@@ -33,3 +30,7 @@ export async function enviarimagem (id, imagem){
 }
 
 
+export async function ListarTodosPosts(){
+     const resposta = await api.get('/feed');
+     return resposta.data;
+}

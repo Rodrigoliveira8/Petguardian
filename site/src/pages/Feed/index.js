@@ -1,7 +1,7 @@
 import axios from 'axios'
 import storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
-import {listarFeed} from '../../api/PostAPI'
+import { ListarTodosPosts } from '../../api/PostAPI'
 
 
 
@@ -10,7 +10,7 @@ import './index.scss'
 import { useEffect, useState } from 'react';
 
 export default function Feed() {
-    const [post, setPost] = useNavigate([]);
+    const [post, setPost] = useState([])
 
     const navigate = useNavigate()
 
@@ -20,12 +20,15 @@ export default function Feed() {
     }
    
 
-        async function CadastrarClick(){
-
-            const r = await axios.get('http://localhost:5000/feed');
+       async function CarregarTodosPosts (){
+            const resp = await ListarTodosPosts();
             
+            setPost(resp);
+        }
 
-          }
+        useEffect (() => {
+            CarregarTodosPosts();
+        }, [])
 
     return (
         <main className="page-feed">
@@ -125,10 +128,6 @@ export default function Feed() {
 
                     </div>
 
-                    <div>
-
-
-                    </div>
                 </div>
 
 
