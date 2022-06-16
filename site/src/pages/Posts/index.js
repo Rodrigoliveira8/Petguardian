@@ -35,8 +35,9 @@ export default function Posts() {
             if(!img) throw new Error("Escolha a imagem do Post")
 
             const usuario = storage('usuario-logado').id;
+            console.log(usuario)
             
-            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario)
+            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario, titulo)
 
             const r = await enviarimagem (NovoPost.id, img)
 
@@ -111,7 +112,7 @@ export default function Posts() {
                         <div className="info-1">
                             {! titulo && 
                             
-                            <h1> Gato Sphynx muito fofo </h1>
+                            <h1>Título </h1>
                             }              
                             {titulo &&
                             <h1> {titulo} </h1>

@@ -2,11 +2,12 @@ import {con} from './connection.js'
 
 export async function Post (post){
     const comando = `
-    Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato)
-    VALUES (?,?,?,?,?,?);    
+    Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato, ds_titulo)
+    VALUES (?,?,?,?,?,?,?);    
      `
-     const [resposta] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato])
+     const [resposta] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato, post.titulo])
      post.id = resposta.insertId;
+     console.log(resposta)
      return post
     }
 

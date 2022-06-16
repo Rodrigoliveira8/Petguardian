@@ -31,7 +31,6 @@ export default function Login() {
 
         try {
             const r = await EfetuarLogin(email, senha)
-            console.log(r);
             storage('usuario-logado', r)
 
             setTimeout(() => {

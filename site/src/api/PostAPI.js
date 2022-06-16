@@ -3,8 +3,9 @@ const api = axios.create({
     baseURL:'http://localhost:5000'
 })
 
-export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuario){
+export async function cadastraPet(nome, raca, localizacao, contato, sexo, usuario,titulo){
     const respota = await api.post('/post/criar', {
+        titulo: titulo,
         usuario:usuario,
         nome:nome,
         raca: raca,
