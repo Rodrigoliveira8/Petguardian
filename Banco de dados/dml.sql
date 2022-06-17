@@ -53,7 +53,7 @@ WHERE id_pet = 1;
 DELETE FROM tb_pet
 WHERE id_pet = 1;
 
-
+select * from tb_pet;
 
 -- Listar Post
 SELECT id_pet           id,
