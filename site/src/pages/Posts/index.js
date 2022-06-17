@@ -8,9 +8,9 @@ import {useEffect, useState} from 'react'
 import { toast } from 'react-toastify'
 
 
-import { cadastraPet, enviarimagem } from '../../api/PostAPI.js'
+import { cadastraPet, enviarimagem, AlterarPet} from '../../api/PostAPI.js'
 
-import  storage from 'local-storage'
+import  storage, { set } from 'local-storage'
 
 
 export default function Posts() {
@@ -29,6 +29,7 @@ export default function Posts() {
     const [sexo, setSexo] = useState('');
     const [img, SetImg] = useState();
     const UserLogado = storage('usuario-logado').Nome;
+    const [id, SetId] = useState(0);
 
     async function SalvarClick(){
         try{
@@ -36,13 +37,25 @@ export default function Posts() {
 
             const usuario = storage('usuario-logado').id;
             console.log(usuario)
-            
-            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario, titulo)
 
+            if(id === 0){ 
+
+            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario, titulo)
             const r = await enviarimagem (NovoPost.id, img)
+            toast.dark("O pet foi cadastrado 🐶")
+
+            SetId(NovoPost.id);
+            }
+
+            else{
+                const NovoPost = await AlterarPet(id,nome,raca,localizacao,contato,sexo,usuario, titulo)
+                const r = await enviarimagem (id, img)
+                toast.dark("O pet foi Alterardo 🐶")
+            }
+          
 
              
-            toast.dark("O pet foi cadastrado 🐶")
+            
         }
         catch(err){
             if(err.response)
@@ -60,6 +73,21 @@ export default function Posts() {
   function mostrarImagem(){
         return URL.createObjectURL(img);
   }
+
+
+  function NovoClick(){
+    SetId(0);
+    setSexo('');
+    Setnome('');
+    SetImg();
+    SetTitulo('');
+    Setraca('');
+    Setlocalizacao('');
+    Setcontato('');
+  }
+
+
+
     return (
         <main className='page-posts'>            
             <header>
@@ -170,7 +198,8 @@ export default function Posts() {
 
                 </div>
                 <div>
-                                        <button onClick={SalvarClick} className='botao'> Salvar </button>
+                                        <button onClick={SalvarClick} className='botao'> {id === 0 ? 'Salvar' : 'Alterar'} </button> &nbsp; &nbsp;
+                                        <button onClick={NovoClick}> NOVO </button>
                                     </div>
             </section>
         </main>

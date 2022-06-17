@@ -9,13 +9,13 @@ server.post('/post/criar', async (req,resp) => {
     try {
         const publi = req.body;
         
-        if(!publi.titulo) throw new Error("Título é OBRIGATÓRIO!")
+        if(!publi.titulo.trim())throw new Error("Título é OBRIGATÓRIO!")
         if(!publi.usuario) throw new Error("Usuário é OBRIGATÓRIO!")
-        if(!publi.nome) throw new Error("Nome é OBRIGATÓRIO!")
-        if(!publi.raca) throw new Error("Raça é OBRIGATÓRIO!")
-        if(!publi.localizacao) throw new Error("Localização é OBRIGATÓRIO!")
-        if(!publi.sexo) throw new Error("SEXO é OBRIGATÓRIO!")
-        if(!publi.contato) throw new Error("Contato é OBRIGATÓRIO!")
+        if(!publi.nome.trim()) throw new Error("Nome é OBRIGATÓRIO!")
+        if(!publi.raca.trim()) throw new Error("Raça é OBRIGATÓRIO!")
+        if(!publi.localizacao.trim()) throw new Error("Localização é OBRIGATÓRIO!")
+        if(!publi.sexo.trim()) throw new Error("SEXO é OBRIGATÓRIO!")
+        if(!publi.contato.trim()) throw new Error("Contato é OBRIGATÓRIO!")
 
         const resposta = await Post(publi);
         resp.status(200).send(

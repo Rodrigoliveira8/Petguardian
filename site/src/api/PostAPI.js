@@ -35,3 +35,17 @@ export async function ListarTodosPosts(){
      const resposta = await api.get('/feed');
      return resposta.data;
 }
+
+export async function AlterarPet(id, nome, raca, localizacao, contato, sexo, usuario,titulo){
+    const respota = await api.put(`/usuario/post/${id}`, {
+        titulo: titulo,
+        usuario:usuario,
+        nome:nome,
+        raca: raca,
+        localizacao:localizacao,
+        sexo:sexo,
+        contato:contato
+    })
+    return respota.data;
+
+}
