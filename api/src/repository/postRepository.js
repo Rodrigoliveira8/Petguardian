@@ -22,6 +22,7 @@ SELECT id_pet           id,
        ds_localizacao   localizacao,
        ds_sexo          sexo,
        img_pet          imagem,
+       ds_titulo        titulo,
        ds_contato       contato
 FROM tb_pet`
 const [linhas] = await con.query(comando);

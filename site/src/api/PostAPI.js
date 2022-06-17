@@ -31,10 +31,7 @@ export async function enviarimagem (id, imagem){
 }
 
 
-export async function ListarTodosPosts(){
-     const resposta = await api.get('/feed');
-     return resposta.data;
-}
+
 
 export async function AlterarPet(id, nome, raca, localizacao, contato, sexo, usuario,titulo){
     const respota = await api.put(`/usuario/post/${id}`, {
@@ -48,4 +45,9 @@ export async function AlterarPet(id, nome, raca, localizacao, contato, sexo, usu
     })
     return respota.data;
 
+}
+
+export async function ListarTodosPosts(){
+    const resposta = await api.get('/feed');
+    return resposta.data;
 }
