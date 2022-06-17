@@ -7,40 +7,54 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
-        background-color: white;
+        background-color: #ffffff;
+        filter: drop-shadow(0px 4px 4px #00000040);
      }
      .esquerda-he{
         display: flex;
         flex-direction: row;
         width: auto;
-        margin-left: 5em;
-        margin-top: 1em;
-        margin-bottom: 2em;
+        margin-left: 7vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        height: 10vh;
     }
     
     .esquerda-he h4{
-        margin-top: 2.5em;
-        margin-left: 1em;
+        margin-top: 4vh;
+        margin-left: 1vh;
         font-family: r1;
-        font-size: 1.7em;
+        font-size: 2.5vh;
         color: #8E8E8E;
     }
     .link{
         font-family: PT ;
-        font-size: 1.7em;
-        color: #8E8E8E;
+        font-size: 2.5vh;
+        color: #000000;
         text-decoration: none;
+        width: 150vw;
+        height: 10vh;
+        background-color: #D1A800;
+        border-radius: 3vh; 
+        margin-right: 8vh;
+        margin-top: 3vh;
+        border: none;
+        cursor: pointer;
+        padding: 2vh;
     }
     .direita-he{
-        margin-top: 5em;
-        margin-right: 3em;
+        margin-top: 6vh;
+        margin-right: 7vh;
+        font-size: 2.5vh;
     }
     .Faixa-1{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-top: 10em;
+        margin-top: 10vh;
+    }
+    .h1-cards {
+        font-size: 2.5vh;
     }
     .card-princ{
         display: flex;
@@ -49,17 +63,28 @@
     .info-card{
         display: flex;
         flex-direction: column;
-        line-height: 1px;
-        margin-left: 1em;
+        line-height: 1vh;
+        margin-left: 1vh;
     }
     .info-p{
         color: #616161;
+        font-size: 3vh;
     }
     .esquerda{
         background-color: #f1c40f;
-        padding: 30px;
-        border-radius: 1em;
+        padding: 2vh;
+        border-radius: 2vh;
+        height: 50vh;
+        width: 40vw;
     }
+    .img-pets {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 2vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
+    }
+
     h3{
         color: #616161;
     }
@@ -67,25 +92,92 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        font-size: 3vh;
     }
     .final{
         display: flex;
         background-color: #fff;
         height:3vh;
-        width: 6em;
-        padding: 3px;
-        border-radius: 1em;
+        width: 6vw;
+        padding: 3vh;
+        border-radius: 7vh;
         text-decoration: none;
         color: black;
         justify-content: center;
         align-items: center;
-        margin-top: 0.8em;
+        margin-top: 0.8vh;
         background-image: url('./Edit.png');
         background-repeat: no-repeat;
-        background-position: 7px 5.4px;
+        background-position: 7vh 5.4vw;
     }
     .final{
-        margin-left: 2em;
+        margin-left: 2vh;
+        height: 2vh;
+        width: 10vh;
     }
-   
+    
+    @media (max-width: 1280px) {
+
+         .esquerda-he{
+            margin-left: 5vh;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+            height: 5vh;
+        }
+        
+        .esquerda-he h4{
+            margin-top: 2.3vh;
+            margin-left: 1vh;
+            font-size: 1.5vh;
+        }
+        .link{
+            font-size: 1.5vh;
+            width: 15vw;
+            height: 3vh;
+            border-radius: 2vh; 
+            margin-right: 5vh;
+        }
+        .direita-he{
+            margin-top: 1.5vh;
+            margin-right: 4vh;
+            height: 1vh;
+            width: 10vw;
+        }
+        .h1-cards {
+            font-size: 2vh;
+        }
+        .info-card{
+            line-height: 0.5vh;
+            margin-left: 1vh;
+        }
+        .info-p{
+            font-size: 2vh;
+        }
+        .esquerda{
+            padding: 1vh;
+            border-radius: 1vh;
+            height: 45vh;
+            width: 40vw;
+        }
+        .img-pets {
+            height: 20vh;
+            width: 20vh;
+            border-radius: 1vh;
+        }
+        .finally{
+            font-size: 2vh;
+        }
+        .final{
+            height: 3vh;
+            width: 4vw;
+            padding: 1vh;
+            border-radius: 3vh;
+            margin-top: 17vh;
+        }
+        .final{
+            margin-left: 1vh;
+            height: 2vh;
+            width: 8vh;
+        }
+    }
 }

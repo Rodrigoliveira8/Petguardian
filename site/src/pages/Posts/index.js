@@ -1,82 +1,178 @@
-import { Link } from "react-router-dom";
 import './index.scss'
 
+import { useNavigate } from 'react-router-dom'
+
+import {useEffect, useState} from 'react'
+
+
+import { toast } from 'react-toastify'
+
+
+import { cadastraPet, enviarimagem } from '../../api/PostAPI.js'
+
+import  storage from 'local-storage'
+
+
 export default function Posts() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        if(!storage('usuario-logado')){
+            navigate('/Login');
+        }
+    }, [])
+
+    const [titulo, SetTitulo] = useState('');
+    const [nome, Setnome] = useState('');
+    const [raca, Setraca] = useState('');
+    const [localizacao, Setlocalizacao] = useState('');
+    const [contato, Setcontato] = useState('');
+    const [sexo, setSexo] = useState('');
+    const [img, SetImg] = useState();
+    const UserLogado = storage('usuario-logado').Nome;
+
+    async function SalvarClick(){
+        try{
+            if(!img) throw new Error("Escolha a imagem do Post")
+
+            const usuario = storage('usuario-logado').id;
+            console.log(usuario)
+            
+            const NovoPost = await cadastraPet(nome,raca,localizacao,contato,sexo,usuario, titulo)
+
+            const r = await enviarimagem (NovoPost.id, img)
+
+             
+            toast.dark("O pet foi cadastrado 🐶")
+        }
+        catch(err){
+            if(err.response)
+            toast.dark(err.response.data.Erro)
+            else{
+                toast.dark(err.message)
+            }
+        }
+    }
+
+    function escolherimg (){
+        document.getElementById('imgpet').click();
+    }
+
+  function mostrarImagem(){
+        return URL.createObjectURL(img);
+  }
     return (
-        <main className='page-posts'>
-        <header>
-            <div className="esquerda-he">
-                <img width="150px" height="140px" src="./images/image 26.png"/>
-                <h4> PETGUARDIAN </h4>
-            </div>
-
-
-            <div className="direita-he">
-            <Link className="link" to='/Publicacao'>
-                        Gerenciar Post
-                    </Link>
-            </div>
-        </header>
-
-        <section className="faixa1">
-            <div className="esquerda">
-                <h1> Informações do Post </h1>
-                <div className="import">
-                    <h2> Importar Arquivo </h2>
+        <main className='page-posts'>            
+            <header>
+                <div className="esquerda-he">
+                    <img className="logo-img" src="./images/image 26.png"/>
+                    <h4> PETGUARDIAN </h4>
                 </div>
 
-                <div className="info">
-                <input className="senha" type="text" placeholder="NOME"/>
-                <input className="senha" type="text" placeholder="RAÇA" />
-                <input className="senha" type="text" placeholder="LOCALIZAÇÃO" />
-                <input className="senha" type="text" placeholder="MEIO DE CONTATO" />
-                </div>
-            </div>  
+                <a href="/Feed">
+                    <button className="feed-d">
+                        Feed
+                    </button>
+                </a>
+            </header>
 
-            <div className="direta">
-                <h1 className="titulo"> Pré visualização </h1>
-                <div className="post2">
-
-                    <div className="carol">
-                        <h1> João Carlos </h1>
+            <section className="faixa1">
+                <div className="esquerda">
+                    <h1> Informações do Post </h1>
+                    <div className="import" onClick={escolherimg}>
+                        <h2> Importar Arquivo </h2>
+                        <input type='file' id='imgpet' onChange={e => SetImg (e.target.files[0])}  />
                     </div>
 
-                    <div className="imgn">
-                        <img width="500px" src="./images/image 13.png"/>
+                    <div className="info">
+                    <input  data-ls-module="charCounter"  maxlength="25" className="senha" type="text" placeholder="NOME" value={nome} onChange = {e => Setnome(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="20" className="senha" type="text" placeholder="RAÇA" value={raca} onChange = {e => Setraca(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="25" className="senha" type="text" placeholder="LOCALIZAÇÃO" value={localizacao} onChange = {e => Setlocalizacao(e.target.value)}/>
+                    <input  data-ls-module="charCounter"  maxlength="16" className="senha" type="text" placeholder="MEIO DE CONTATO"value={contato} onChange = {e => Setcontato(e.target.value)} />
+                    <input  data-ls-module="charCounter"  maxlength="5" className="senha" type="text" placeholder="Sexo"value={sexo} onChange = {e => setSexo(e.target.value)} />
+                    <input  data-ls-module="charCounter"  maxlength="25" className='senha' type='text' placeholder="Título" value={titulo} onChange = { e => SetTitulo(e.target.value)}/>
                     </div>
+                </div>  
 
-                    <div className="info-1">
-                        <h1> Gato Sphynx muito fofo </h1>
-                    </div>
-                    <div className="infos">
-                        <div className="esq-1">
-                            <p> Logan </p>
-                            <p> São José </p>
-                            <div className="foto-1">
-                                <img width="50px" src="./images/Instagram.png"/>
-                                <h6> @xzx </h6>
-                            </div>
+                <div className="direta">
+                    <h1 className="titulo"> Pré visualização </h1>
+                    <div className="post2" >
+
+                        <div className="carol">
+                            <h1> {UserLogado} </h1>
+                        </div>
+                        <div className="imgn">
+                            {!img && 
+                            <img className='img-post' src='./images/image 13.png' alt=''/>
+                            }
+                            {img &&
+                            <img className='img-post' src={mostrarImagem()} alt=''/>
+                            }   
                         </div>
 
-                        <div className="dir-1">
-                            <p> Sphynx </p>
-                            <p> Macho </p>
-                            <div className="info-2">
-                                <input className="quadrado" type="checkbox"/>
-                                <h1 className="input"> Interessado </h1>
-                            </div>
+                        <div className="info-1">
+                            {! titulo && 
+                            
+                            <h1>Título </h1>
+                            }              
+                            {titulo &&
+                            <h1> {titulo} </h1>
+                            }         
                         </div>
+                        <div className="infos">
+                            <div className="esq-1">
+                                    {!nome &&
+                                    <p> Nome </p>
+                                    }
+                                    {nome &&
+                                    <p> {nome} </p>
+                                    }
+                                    {! localizacao &&
+                                    <p> Localização </p> 
+                                    }
+                                    {localizacao &&
+                                <p> {localizacao} </p>
+                                    }
+                                <div className="foto-1">
+                                    <img width="30vw" src="./images/Instagram.png"/>
+                                    {!contato &&
+                                    <h6> Contato </h6>
+                                    }
+                                    {contato &&
+                                    <h6> {contato} </h6>
 
+                                    }
+                                </div>
+                            </div>
+
+                            <div className="dir-1">
+                                {!raca &&
+                                <p>  Raça</p>
+                                }
+                                {raca &&
+                                <p id='p1'> {raca} </p>
+                                }
+                                {!sexo &&
+                                
+                                <p className='p1'> Sexo </p>
+
+                                }
+                                {sexo &&
+                                <p> {sexo} </p>
+                                }   
+                                <div className="info-2">
+                                   
+                                </div>
+                                
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div>
-
-
-                    </div>
                 </div>
-
-            </div>
-        </section>
-    </main>
+                <div>
+                                        <button onClick={SalvarClick} className='botao'> Salvar </button>
+                                    </div>
+            </section>
+        </main>
     );
 }

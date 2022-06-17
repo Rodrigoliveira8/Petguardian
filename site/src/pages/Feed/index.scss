@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 .page-feed {
     main{
         display: flex;
@@ -5,124 +6,140 @@
         background-color: rgba(255, 243, 197, 0.27);;
     }
     header{
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       box-shadow: 1px 1px 30px 10px #ECEAE0;
-       background-color: white;
-       height: 17vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10vh;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     
     header link {
-        margin: 0em 2em;
+        margin: 0vh 2vw;
     }
 
     .esquerda-he{
         display: flex;
         flex-direction: row;
         width: auto;
-        margin-left: 5em;
-        margin-top: 1em;
-        
-        margin-bottom: 2em;
+        margin-left: 3vw;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+        height: 9vh;
     }
     
     .esquerda-he h4{
-        margin-top: 2.5em;
-        margin-left: 1em;
+        margin-top: 3.5vh;
+        margin-left: 0.5vw;
         font-family: r1;
-        font-size: 1.7em;
+        font-size: 2.5vh;
+        color: #8E8E8E;
+    }
+    .login-gerenciar {
+        margin-right: vw;
+        width: 10vw;
+        height: 5vh;
+        background-color: #D1A800;
+        border: none;
+        border-radius: 7vh;
         color: #8E8E8E;
     }
     .link{
         font-family: PT ;
-        font-size: 1.7em;
+        font-size: 2.5vh;
         color: #8E8E8E;
         text-decoration: none;
     }
     .direita-he{
-        margin-top: 5em;
-        margin-right: 3em;
+        margin-top: 3vh;
+        margin-right: 10vh;
     }
     
     .faixa-1{
         display: flex;
         flex-direction: row;
-        margin-top: 8em;
+        margin-top: 10vh;
         height: 100vh;
+    }
+    .imgn {
+        height: 30vh;
+        width: 23vw;
     }
     .post1{
         display: flex;
         flex-direction: column;
-        margin-left: 15em;
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
-        width: 350px;
+        margin-left: 15vw;
+        width: 35vw;
         height: fit-content;
-        border-radius: 1.4em;
+        border-radius: 1.4vh;
+        filter: drop-shadow(0vh 10vh 10vh #00000040);
     }
     
     .carol{
         background-color: #F1C40F;
-        width: 350px;
-        height: 40px;
-        padding-top: 14px;
-        padding-bottom: 10px ;
-        border-radius: 1.4em 1.4em 0em 0em ;
+        width: 40.9vh;
+        height: 5vh;
+        padding-bottom: 3vh ;
+        border-radius: 1.4vh 1.4vh 0vh 0vh ;
         display: flex;
         align-items: center;
     }
 
     .carol h1{
-        font-family: pt;
-        font-size: 1.5em;
+        font-family: 'PT Sans Caption', sans-serif;
+        font-size: 3vh;
         color: #6D5D22;  
-        margin-left: 1em;
+        margin-left: 1vw;
         margin-bottom: 0;
     }
     
     .info-1{
         display: flex;
-        background-color: #fff;
+        background-color: rgb(255, 255, 255);
+        margin-top: -1vh;
+        width: 23vw;
     }
     .info-1 h1{
-        font-size: 2em;
-        font-family: pt;
+        font-size: 3vh;
+        font-family: 'PT Sans Caption', sans-serif;
         text-align: center;
         color: #565656;
-        margin: 0em 1em;
-        margin-top: 0.4em;
-        margin-bottom: 0.4em;
+        margin: 0vh 1vw;
+        margin-top: 1vh;
+        margin-bottom: 0.4vh;
+        width: 23vw;
     }
     .infos{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #fff;
-        border-radius: 0em 0em 1.4em 1.4em;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0vh 0vh 1.4vh 1.4vh;
+        width: 23vw;
     }
     
     .esq-1{
         display: flex;
         flex-direction: column;
-        margin-left: 1em;
-        margin-top: -16px;
-        font-family: pt;
-        font-size: 1.2em;
+        margin-left: 1vw;
+        margin-top: 1vh;
+        font-family:'PT Sans Caption', sans-serif;
+        font-size: 3vh;
         color: #565656;
     }
 
     
-    
     .dir-1{
-        font-family: pt;
-        font-size: 1.2em;
+        font-family:'PT Sans Caption', sans-serif;
+        font-size: 3vh;
         color: #565656;
-        margin-right: 1em;
-        height: 1em;
+        margin-right: 1vh;
+        height: 1vh;
+        margin-top: 4vh;
     }
     .dir-1 p{
-        margin-right: 0em;
-        margin-top: 2px;
+        margin-right: 0vw;
+        margin-top: 0.5vh;
     }
     
     .foto-1{
@@ -130,16 +147,14 @@
         flex-direction: row;
         align-items: center;
         color: black;
-        font-size: 1.5em;
-        margin-left: -0.2em;
-        margin-top: -1.5em;
+        font-size: 5vh;
+        margin-top: -8vh;
     }
     
     .quadrado{
-        min-width: 30px;
-        min-height: 30px;
-        margin-right: 10px;
-        margin-top: 0em;
+        min-width: 5vh;
+        min-height: 4vh;
+        margin-left: 10em;
     }
     
     .info-2{
@@ -147,29 +162,158 @@
         flex-direction: row;
         align-items: center;
         color: black;
-        font-size: 1.5em;
-        margin-left: -0.2em;
-        margin-top: 0.7em;
+        font-size: 4vh;
+        margin-top: 3.5vh;
+        margin-left: -10vw;
     }
     
     .input{
         font-family: pt;
         color: #565656;
-        font-size: 0.7em;
+        font-size: 3vh;
+        margin-right: 1vw;
     }
     .post2{
         display: flex;
         flex-direction: column;
-        margin-left: 25em;
-        width: 350px;
-        box-shadow: 1px 1px 30px 10px #ECEAE0;
+        margin-left: 25vh;
+        width: 50vw;
         height: fit-content;
-        border-radius: 1.4em;
+        border-radius: 7vh;
+        filter: drop-shadow(0vh 10vh 10vh #00000040);   
     }
     
     .faixa-2{
         display: flex;
         flex-direction: row;
-        margin-top: 10em;
+        margin-top: 10vh;
+    }
+
+    @media (max-width: 1280px) {
+        header{
+            height: 10vh;
+        }
+        
+        header link {
+            margin: 0vh 2vw;
+        }
+    
+        .esquerda-he{
+            width: auto;
+            margin-left: 3vw;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            height: 9vh;
+        }
+        
+        .esquerda-he h4{
+            margin-top: 3.5vh;
+            margin-left: 0.5vw;
+            font-size: 2.5vh;
+        }
+        .login-gerenciar {
+            width: 10vw;
+            height: 5vh;
+            border-radius: 7vh;
+        }
+        .link{
+            font-size: 2.5vh;
+        }
+        .direita-he{
+            margin-top: 3vh;
+            margin-right: 10vh;
+        }
+        
+        .faixa-1{
+            margin-top: 10vh;
+            height: 1000vh;
+        }
+        .imgn {
+            height: 30vh;
+            width: 23vw;
+        }
+        .post1{
+            margin-left: 15vw;
+            width: 35vw;
+            height: fit-content;
+            border-radius: 1.4vh;
+        }
+        
+        .carol{
+            width: 40.9vh;
+            height: 5vh;
+            padding-bottom: 3vh ;
+            border-radius: 1.4vh 1.4vh 0vh 0vh ;
+        }
+    
+        .carol h1{
+            font-size: 3vh;
+            margin-left: 1vw;
+        }
+        
+        .info-1{
+            margin-top: -1vh;
+            width: 23vw;
+        }
+        .info-1 h1{
+            font-size: 3vh;
+            margin: 0vh 1vw;
+            margin-top: 1vh;
+            margin-bottom: 0.4vh;
+            width: 23vw;
+        }
+        .infos{
+            border-radius: 0vh 0vh 1.4vh 1.4vh;
+            width: 23vw;
+        }
+        
+        .esq-1{
+            margin-left: 1vw;
+            margin-top: 1vh;
+            font-size: 3vh;
+        }
+    
+        
+        .dir-1{
+            font-size: 3vh;
+            margin-right: 1vh;
+            height: 1vh;
+            margin-top: 4vh;
+        }
+        .dir-1 p{
+            margin-right: 0vw;
+            margin-top: 0.5vh;
+        }
+        
+        .foto-1{
+            margin-top: -8vh;
+        }
+        
+        .quadrado{
+            min-width: 5vh;
+            min-height: 4vh;
+            margin-left: 10em;
+        }
+        
+        .info-2{
+            font-size: 4vh;
+            margin-top: 3.5vh;
+            margin-left: -10vw;
+        }
+        
+        .input{
+            font-size: 3vh;
+            margin-right: 1vw;
+        }
+        .post2{
+            margin-left: 25vh;
+            width: 50vw;
+            height: fit-content;
+            border-radius: 7vh;
+        }
+        
+        .faixa-2{
+            margin-top: 10vh;
+        }
     }
 }

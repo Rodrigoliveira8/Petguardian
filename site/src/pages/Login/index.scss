@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
 .page-login {
+
+    height: 100vh;
+
+    * {
+        border: solid 0px green;
+    }
+    
     
     section{
         display: flex;
@@ -6,127 +16,151 @@
         height: 100vh;
     }
     
-    
+    .logo-casinha {
+        width: 12em;
+        
+    }
+
     .Esquerda{
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-image: url('./Cachorro.png');
         background-repeat: no-repeat;
-        background-position: 4em 30em;
+        background-position: 5vw 54vh;
         background-color: #F6FBFF;
-        width: 50%;   
+        width: 50%;
     }
     
     .Direita{
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-color: #AD7343;
         width: 50%;
     }
+    
     .Teste{
-        position: relative;
-        margin-top: 5em;
-        margin-left: 23em;
-        
+        display: flex;
+        justify-content: center;
+        margin-top: 7em;
+    }
+
+    .Esquerda div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .Esquerda p{
-        font-family: One;
+        font-family: 'Text Me One', sans-serif;
         font-size: 3em;
-        line-height: 1em;
-        width: 15em;
-        margin-left: 3em;
-        margin-top: 5em;
+        line-height: 4vh;
+        width: 50vh;
+        text-align: center;
+        margin-top: 4.5em;
     }
-    .conqu{
-        margin-left: 4.5em;
-    }
-    
+
     .Direita h1{
-        font-family: p1;
-        margin-top: 7.5em;
-        margin-left: 9.7em;
-        margin-bottom: 3em;
-        font-size: 2em;
+        font-family: 'Palanquin Dark', sans-serif;
+        margin-top: 27vh;
+        
+        margin-bottom: 7vh;
+        font-size: 5vh;
         color: #ffffff;
     }
     .users{
-        border-radius: 50px;
-        height: 30px;
-        width: 45%;
+        border-radius: 7vh;
+        height: 2vh;
+        width: 25vw;
         outline: none;
-        padding: 14px 30px;
+        padding: 2vh 3vw;
         border: #908787;
-        cursor: pointer;
-        margin-left: 15em;
-        font-family: r1;
-        font-size:1em;
-        margin-bottom: 5em;
+        cursor: auto;
+        
+        font-family: 'Palanquin Dark', sans-serif;
+        font-size:2.5vh;
+        margin-bottom: 2vh;
     }
     
     .users::placeholder{
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;;
         color: #000;
     }
     
     
     .senha{
-        border-radius: 50px;
-        height: 30px;
-        width: 45%;
+        border-radius: 7vh;
+        height: 2vh;
+        width: 25vw;
         outline: none;
-        padding: 14px 30px;
+        padding: 2vh 3vw;
         border: #908787;
-        cursor: pointer;
-        margin-left: 15em;
-        font-family: r1;
-        font-size:1em;
+        cursor: auto;
+        
+        font-family: 'Palanquin Dark', sans-serif;
+        font-size:2.5vh;
+        margin-bottom: 3vh;
     }
     
     .senha::placeholder{
-        font-family: r1;
+        font-family: 'Palanquin Dark', sans-serif;
         color: #000;
     }
     
     
     
     .bolinha{
-        margin-top: 3em;
-        margin-left: 27em;
+        margin-top: 4vh;
+        margin-left: 20vh;
         display: flex;
         flex-direction: row;
-        width: 30vh;
+        width: 30vw;
     }
     .bolinha h6{
+
         font-family: r1;
-        margin-left: 0.5em;
-        font-size: 0.8em;
-        margin-top: 0px;
+        margin-left: 0.5vh;
+        font-size: 2vh;
+        margin-top: 1vh;
+
     }
     
     
     .conect{
         display: flex;
         align-items: center;
-        margin-left: 19em;
-        margin-top: 3em;
+        margin-left: 45vh;
+        margin-top: 3vh;
         background-color: #ffffff;
         width: 13vh;
-        height: 0.2em;
-        padding: 20px;
-        border-radius: 80px;
+        height: 0.2vh;
+        padding: 3vh;
+        border-radius: 7vh;
         font-family: r1;
-        font-size: 1.3em;
+        font-size: 3vh;
         cursor: pointer;
     }
     
     
     .link{
-        margin-left: 1em;
-        font-family: p1;
+        margin-left: 1vh;
+        font-family: 'Roboto Flex', sans-serif;
         text-decoration: none;
         color: #000;
+        background-color: #ffffff;
+        width: fit-content;
+        height: 3em;
+        width: 6em;
+        border-radius: 0.7em;
+        font-family: 'Palanquin Dark', sans-serif;
+        cursor: pointer;
+        margin-top: 3em;
+    }
+
+    .link:hover{
+        background-color: #e4e3da;
     }
     .cad{
         color: blue;
@@ -135,11 +169,55 @@
     }
     
     .cadastro{
-        margin-left: 20em;
-        margin-top: 3em;
-        font-family: p1;
+        
+        margin-top: 5vh;
+        font-family: 'Roboto Flex', sans-serif;
         text-decoration: none;
         color: #000;
 
+    }
+
+    @media (max-width: 1280px) {
+    
+    .logo-casinha {
+        width: 12vh;
+        margin-top: 10vh;
+    }
+
+    .Esquerda{
+        background-position: 0vw 46vh;
+    }
+    
+    
+    .Teste{
+        margin-top: 7vh;
+    }
+    
+    .Esquerda p{
+        font-size: 5vh;
+        margin-top: 5vh;
+    }
+
+    .Direita h1{
+        margin-top: 25vh;
+        margin-bottom: 7vh;
+        font-size: 3vh;
+    }
+    .users{
+        height: 1vh;
+        font-size: 2vh;
+    }
+    
+    .senha{
+        height: 1vh;
+        font-size: 2vh;
+    }    
+    
+    .link{
+        margin-left: 1vh;
+        padding: 1vh;
+        border-radius: 5vh;
+        cursor: pointer;
+    }
     }
 }

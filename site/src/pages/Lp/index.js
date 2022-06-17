@@ -11,12 +11,11 @@ export default function Lp() {
                         PETGUARDIAN
                     </p>
                 </div>
-                <div className="div2-feed">
-                    <Link className="p2-feed" to='/Login'>
+                <a className='p2-feed' href='/Login'>
+                    <button className='div2-feed'>
                         Login
-                    </Link>
-
-                </div>
+                    </button>
+                </a>
             </header>
             <section className="faixa1">
 
@@ -62,12 +61,12 @@ export default function Lp() {
                     </div>
                 </div>
                 <div className="f4-cadastre">
-                    <h1>O que está esperando? <a href="">Cadastre-se</a> agora!</h1>
+                    <h1>O que está esperando? <a href="/Cadastro">Cadastre-se</a> agora!</h1>
                 </div>
             </section>
             <footer>
                 <div className="div1-footer">
-                    <img src="./images/Logo.png" alt="Logo Casinha" />
+                    <img src="./images/Logo.png" alt="Logo Casinha" className='casinha-footer'/>
                     <p className="p1-feed">
                         PETGUARDIAN
                     </p>
