@@ -28,7 +28,7 @@
         align-items: center;
         background-image: url('./Cachorro.png');
         background-repeat: no-repeat;
-        background-position: 3vw 49vh;
+        background-position: 5vw 54vh;
         background-color: #F6FBFF;
         width: 50%;
     }
@@ -44,7 +44,7 @@
     .Teste{
         display: flex;
         justify-content: center;
-        margin-top: 5em;
+        margin-top: 7em;
     }
 
     .Esquerda div {
@@ -59,12 +59,12 @@
         line-height: 4vh;
         width: 50vh;
         text-align: center;
-        margin-top: 3em;
+        margin-top: 4.5em;
     }
 
     .Direita h1{
         font-family: 'Palanquin Dark', sans-serif;
-        margin-top: 15vh;
+        margin-top: 27vh;
         
         margin-bottom: 7vh;
         font-size: 5vh;
@@ -146,15 +146,21 @@
     
     .link{
         margin-left: 1vh;
-        font-family: p1;
+        font-family: 'Roboto Flex', sans-serif;
         text-decoration: none;
         color: #000;
         background-color: #ffffff;
         width: fit-content;
-        padding: 1.5em;
-        border-radius: 4em;
+        height: 3em;
+        width: 6em;
+        border-radius: 0.7em;
         font-family: 'Palanquin Dark', sans-serif;
         cursor: pointer;
+        margin-top: 3em;
+    }
+
+    .link:hover{
+        background-color: #e4e3da;
     }
     .cad{
         color: blue;
