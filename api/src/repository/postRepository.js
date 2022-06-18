@@ -7,7 +7,7 @@ export async function Post (post){
      `
      const [resposta] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato, post.titulo])
      post.id = resposta.insertId;
-     console.log(resposta)
+     
      return post
     }
 

@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+import { EfetuarCadastro } from '../../api/UsuarioAPI'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import storage from 'local-storage'
 
 import './index.scss'
 import { Link } from 'react-router-dom';
@@ -15,19 +17,20 @@ export default function Cadastro() {
     const [nascimento, setNascimento] = useState('');
     const [telefone, setTelefone] = useState('');
     const [endereco, setEndereco] = useState('');
+    const [erro, setErro] = useState('');
 
         async function CadastrarClick(){
-
-            const r = await axios.post('http://localhost:5000/usuario/cadastro', {
-                nome: nome,
-                email: email,
-                senha: senha,
-                nascimento: nascimento,
-                telefone: telefone,
-                endereco: endereco
-
-        })
-        toast.dark('Cadastrado com sucesso ✔️')
+            try {
+                const r = await EfetuarCadastro(nome, email, senha, nascimento, telefone, endereco);
+                storage('usuario-logado', r)
+                toast.dark('Cadastrado com sucesso ✔️')
+            } 
+            catch (err) {
+            if (err.message.status === 400) {
+                setErro(err.response.data.Erro)
+            }
+            }
+            
 
           }
 
@@ -64,6 +67,9 @@ export default function Cadastro() {
                 <div class="div-cadastro2">
                     <img class="key" src="./images//Key.png" alt="" />
                     <input class="input-cadastro" type="password" value={senha} onChange={e => setSenha(e.target.value)} placeholder="Senha" />
+                </div>
+                <div>
+                    {erro}
                 </div>
                 <div class="div-cadastrar">
                     <Link onClick={CadastrarClick} class="bot-cadastrar" to='/feed'>Cadastrar</Link>

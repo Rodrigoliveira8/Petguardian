@@ -2,6 +2,7 @@ create database petguardianDB;
 
 use petguardianDB;
 
+show databases;
 
 -- Tabela de Usuário
 create table tb_usuario (
@@ -23,9 +24,9 @@ create table tb_pet (
     ds_raca            varchar(50),
     ds_localizacao    varchar(100),
     ds_sexo            varchar(10),
-    ds_pet            varchar(300),
     img_pet            varchar(800),
     ds_contato        varchar(100),
+    ds_titulo         varchar(100)
     foreign key (id_usuario) references tb_usuario (id_usuario)
 );
 
