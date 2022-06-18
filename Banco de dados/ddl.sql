@@ -26,7 +26,9 @@ create table tb_pet (
     ds_sexo            varchar(10),
     img_pet            varchar(800),
     ds_contato        varchar(100),
-    ds_titulo         varchar(100)
+    ds_titulo         varchar(100),
     foreign key (id_usuario) references tb_usuario (id_usuario)
 );
+
+drop table tb_pet;
 

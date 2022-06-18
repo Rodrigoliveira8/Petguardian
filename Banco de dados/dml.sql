@@ -27,7 +27,7 @@ AND   ds_senha          ='1234';
 Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato, ds_titulo)
 VALUES (1,'Léu', 'PitBull', 'Rua dos Loucos 55', 'Macho', '(11) 1324-1324', 'doguinho fofo');
 
-
+select * from tb_pet;
 
 -- Cadastrar Imagem
 UPDATE tb_pet
