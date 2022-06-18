@@ -23,5 +23,7 @@ export async function EfetuarCadastro (nome,email,senha,nascimento,telefone,ende
         nascimento: nascimento,
         telefone: telefone,
         endereco: endereco
-    })
+    });
+
+    return r.data;
 }
