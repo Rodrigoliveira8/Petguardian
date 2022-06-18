@@ -25,7 +25,7 @@ export default function publicacao(){
                     <h1 className="h1-cards"> Sexo:<span className="info-p"> Macho </span> </h1>
                     <h1 className="h1-cards"> Localização: <span className="info-p"> Cidade Dutra </span> </h1>
                     <h1 className="h1-cards"> Meio de Contato: <span className="info-p"> @xyz </span> </h1>
-                    <h1 className="h1-cards"> Intereçados: <span className="info-p">27</span> </h1>
+                    <h1 className="h1-cards"> Interessados: <span className="info-p">27</span> </h1>
                     </div>                                
                     </div>
                     <div className="finally">
@@ -47,7 +47,7 @@ export default function publicacao(){
                     <h1 className="h1-cards"> Sexo:<span className="info-p"> Macho </span> </h1>
                     <h1 className="h1-cards"> Localização: <span className="info-p"> Cidade Dutra </span> </h1>
                     <h1 className="h1-cards"> Meio de Contato: <span className="info-p"> @xyz </span> </h1>
-                    <h1 className="h1-cards"> Intereçados: <span className="info-p">27</span> </h1>
+                    <h1 className="h1-cards"> Interessados: <span className="info-p">27</span> </h1>
                     </div>                                
                     </div>
                     <div className="finally">

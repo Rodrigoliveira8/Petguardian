@@ -22,11 +22,12 @@ export default function Cadastro() {
         async function CadastrarClick(){
             try {
                 const r = await EfetuarCadastro(nome, email, senha, nascimento, telefone, endereco);
-                storage('usuario-logado', r)
+                console.log(r);
+                storage('usuario-logado', r)    
                 toast.dark('Cadastrado com sucesso ✔️')
             } 
             catch (err) {
-            if (err.message.status === 400) {
+            if (err.message.status === 400) { 
                 setErro(err.response.data.Erro)
             }
             }
