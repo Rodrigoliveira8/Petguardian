@@ -35,6 +35,7 @@ export default function Publicacao(){
                         Feed
                     </Link>
                 </div>
+                
             </header>
             <div className='container'>
                 

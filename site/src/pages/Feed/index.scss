@@ -55,8 +55,11 @@
         font-size: 2.5vh;
         text-decoration: none;
     }
+    .ooi{
+        margin-top: 1em;
+    }
     .teste{
-        width: 40em;
+        width: 23em;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -81,7 +84,7 @@
         padding: vh;
         color: #8E8E8E;
     }
-.login-gerenciar:focus, .login-gerenciar:hover{
+    .login-gerenciar:focus, .login-gerenciar:hover{
         
         background-color:#e4e3da ;
         color: #4e4e4e;
@@ -105,6 +108,7 @@
         flex-direction: column;
         margin-left: 15vw;
         width: 35vw;
+        margin-top: 5em;
         height: fit-content;
         border-radius: 1.4vh;
         filter: drop-shadow(0vh 10vh 10vh #00000040);

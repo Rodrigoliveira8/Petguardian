@@ -97,9 +97,11 @@ export default function Posts() {
                 </div>
             <div className='dir '>
                 <a href="/Feed">
-                    <button className="feed-d">
-                        Feed
-                    </button>
+                    <span className='oi'>
+                        <button className="feed-d">
+                            Feed
+                        </button>
+                    </span>
                 </a>
                 <a href='/Publicacao'>
                     <button className="feed-d">

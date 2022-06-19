@@ -48,11 +48,11 @@ export default function Feed() {
                 <div className="direita-he">
                     <a href="/Posts">
                         <button className="login-gerenciar">
-                            Gerenciar Posts
+                            Criar Posts
                         </button>
                     </a>
                 </div>
-                <div onClick={sairClick}>  
+                <div className='ooi' onClick={sairClick}>  
                     <a href='/login'> 
                     <button className='login-gerenciar'> Sair </button>
                     </a>
