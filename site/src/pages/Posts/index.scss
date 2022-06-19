@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
 .page-posts {
 
-    * {
-        border: 1px solid greenyellow;
-    }
 
     main{
         display: flex;
@@ -12,25 +9,40 @@
         background-color: #FFFCEF;
     }
     header{
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-       background-color: white;
-       height: 12vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 15vh;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        align-items: center;
+    }
+
+    .direita{
+        width: 40em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .feed-d{
-        width: 8vw;
+        margin-right: vw;
+        background-color: #fff;
+        width: 10vw;
         height: 5vh;
-        background-color: #D1A800;
-        border-radius: 7vh; 
-        margin-right: 8vh;
-        margin-top: 3vh;
         border: none;
-        cursor: pointer;
-        padding: 1vh;
+        border-radius: 7vh;
         color: #8E8E8E;
+    }
+
+    .feed-d:hover, .feed-d:focus{
+        
+        background-color:#e4e3da ;
+        color: #4e4e4e;
+        transform: translateX(0.1px) scale(1.05);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        cursor: pointer;
     }
     .logo-img {
         height: 9vh;
@@ -42,6 +54,7 @@
         width: auto;
         margin-left: 5vh;
         margin-top: 1vh;
+        align-items: center;
     }
     
     .esquerda-he h4{
@@ -95,7 +108,10 @@
         background-image: url('../../../public/images/arquivo.png');
         background-size: 5vh;
     }
-    
+    .import:hover{
+        background-color: #ebc119;
+        cursor: pointer;
+    }
     .import h2{
         margin-left: 8vh;
         margin-top: 3.3vh;

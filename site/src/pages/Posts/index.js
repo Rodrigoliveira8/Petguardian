@@ -95,12 +95,18 @@ export default function Posts() {
                     <img className="logo-img" src="./images/image 26.png" />
                     <h4> PETGUARDIAN </h4>
                 </div>
-
+            <div className='dir '>
                 <a href="/Feed">
                     <button className="feed-d">
                         Feed
                     </button>
                 </a>
+                <a href='/Publicacao'>
+                    <button className="feed-d">
+                            Meus Post
+                    </button>
+                </a>
+            </div>
             </header>
 
             <section className="faixa1">
