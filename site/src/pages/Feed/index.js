@@ -43,7 +43,8 @@ export default function Feed() {
                     <img src="./images/image 26.png"/>
                         <h4> PETGUARDIAN </h4>
                 </div>
-
+            <div className='teste'> 
+            
                 <div className="direita-he">
                     <a href="/Posts">
                         <button className="login-gerenciar">
@@ -56,6 +57,7 @@ export default function Feed() {
                     <button className='login-gerenciar'> Sair </button>
                     </a>
                 </div>
+            </div>
             </header>
 
             <section className="faixa-1">
