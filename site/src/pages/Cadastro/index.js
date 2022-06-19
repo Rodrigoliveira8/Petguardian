@@ -1,13 +1,13 @@
-import axios from 'axios'
 
+import LoadingBar from 'react-top-loading-bar'
 import { EfetuarCadastro } from '../../api/UsuarioAPI'
 import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import storage from 'local-storage'
-
+import { useNavigate } from 'react-router-dom';
 import './index.scss'
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Cadastro() {
 
@@ -18,13 +18,31 @@ export default function Cadastro() {
     const [telefone, setTelefone] = useState('');
     const [endereco, setEndereco] = useState('');
     const [erro, setErro] = useState('');
+    const [carregando, setCarregando] = useState(false);
+    
+    const navigate = useNavigate();
+    const ref = useRef();
+
+    useEffect(() => {
+        if(storage('usuario-logado')){
+            navigate('/feed')
+        }
+    } ,[])
+
 
         async function CadastrarClick(){
+            
+            setCarregando(true);
+
             try {
                 const r = await EfetuarCadastro(nome, email, senha, nascimento, telefone, endereco);
                 console.log(r);
                 storage('usuario-logado', r)    
                 toast.dark('Cadastrado com sucesso ✔️')
+
+                setTimeout(() => {
+                    navigate('/login')
+                }, 3000)
             } 
             catch (err) {
             if (err.message.status === 400) { 
@@ -73,7 +91,7 @@ export default function Cadastro() {
                     {erro}
                 </div>
                 <div class="div-cadastrar">
-                    <Link onClick={CadastrarClick} class="bot-cadastrar" to='/feed'>Cadastrar</Link>
+                    <button onClick={CadastrarClick} class="bot-cadastrar" disabled= {carregando} >Cadastrar</button>
                 </div>
                 <p class="entrar-cad">Já tem uma conta? <Link to='/Login' >Entrar</Link></p>
             </section>
