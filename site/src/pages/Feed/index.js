@@ -1,7 +1,7 @@
 import axios from 'axios'
 import storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
-import { ListarTodosPosts } from '../../api/PostAPI'
+import { ListarTodosPosts, AtualizarInteresse } from '../../api/PostAPI'
 
 
 
@@ -28,6 +28,11 @@ export default function Feed() {
         useEffect (() => {
             CarregarTodosPosts();
         }, [])
+
+        async function Atualizar (){
+            const idPost = post.id;
+            const resp = await AtualizarInteresse(idPost);
+        }
 
     return (
         <main className="page-feed">
@@ -84,8 +89,8 @@ export default function Feed() {
                             <p> {item.raca} </p>
                             <p> {item.sexo} </p>
                             <div className="info-2">
-                                <input className="quadrado" type="checkbox"/>
-                                    <h1 className="input"> Interessado </h1>
+                                <input className="quadrado" type="checkbox" onClick={Atualizar}/>
+                                    <h1 className="input" > Interessado </h1>
                             </div>
                         </div>
 

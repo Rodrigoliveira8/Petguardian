@@ -23,6 +23,7 @@ create table tb_pet (
     nm_pet            varchar(50),
     ds_raca            varchar(50),
     ds_localizacao    varchar(100),
+    in_interesse      int(500),
     ds_sexo            varchar(10),
     img_pet            varchar(800),
     ds_contato        varchar(100),
