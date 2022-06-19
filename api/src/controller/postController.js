@@ -130,13 +130,15 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
     }
 })
 
-server.put('/interesse', async (req,resp) =>{
+server.put('/interesse/:id', async (req,resp) =>{
     try {
 
-    const {id} = req.body 
+    const {id} = req.params 
     const resposta = await Interesse(id);
     
-    resp.status(204).send();
+    resp.status(204).send(
+        resposta
+    );
 
     } 
     

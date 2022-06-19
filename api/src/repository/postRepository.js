@@ -1,5 +1,6 @@
 import {con} from './connection.js'
 
+
 export async function Post (post){
     const comando = `
     Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato, ds_titulo)
@@ -84,11 +85,15 @@ export async function inserirImagem (imagem, id) {
 }
 
 
+
 export async function Interesse (id){
+    const teste = +1;
+
+
     const comando = 
     `Update tb_pet
-    set in_interesse       =+1
-    WHERE id_pet           =?
+    SET in_interesse       = ${teste}
+        WHERE id_pet       = ?
     `
     const [resposta] = await con.query(comando, [id]);
     return resposta;

@@ -11,6 +11,13 @@ import { useEffect, useState } from 'react';
 
 export default function Feed() {
     const [post, setPost] = useState([])
+    const [teste, SetTeste] = useState(false);
+
+    if(teste === true){
+        const IdPost = storage('usuario-logado').id;
+        AtualizarInteresse(IdPost)
+    }
+
 
     const navigate = useNavigate()
 
@@ -28,11 +35,6 @@ export default function Feed() {
         useEffect (() => {
             CarregarTodosPosts();
         }, [])
-
-        async function Atualizar (){
-            const idPost = post.id;
-            const resp = await AtualizarInteresse(idPost);
-        }
 
     return (
         <main className="page-feed">
@@ -65,7 +67,7 @@ export default function Feed() {
                     <div key={item.id} className="post1">
 
                     <div className="carol">
-                        <h1> Carol Fernanda </h1>
+                        <h1> {item.usuario} </h1>
                     </div>
 
                     <div>
@@ -89,7 +91,7 @@ export default function Feed() {
                             <p> {item.raca} </p>
                             <p> {item.sexo} </p>
                             <div className="info-2">
-                                <input className="quadrado" type="checkbox" onClick={Atualizar}/>
+                                <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
                                     <h1 className="input" > Interessado </h1>
                             </div>
                         </div>
