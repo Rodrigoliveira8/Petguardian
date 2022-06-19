@@ -37,7 +37,7 @@ export async function listarPosts (id) {
         ds_raca          Raca,
         ds_localizacao   Localizacao,
         ds_sexo          Sexo,
-        ds_pet           Descricao,
+        ds_titulo        Titulo,
         img_pet          Imagem,
         ds_contato       Contato
     FROM tb_pet           

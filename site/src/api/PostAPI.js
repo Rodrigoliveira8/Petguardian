@@ -51,3 +51,9 @@ export async function ListarTodosPosts(){
     const resposta = await api.get('/feed');
     return resposta.data;
 }
+
+
+export async function ListarPostsUsuario (id){
+    const resposta = await api.get(`/usuario/${id}/post`);
+    return resposta.data;
+}
