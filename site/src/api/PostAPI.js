@@ -58,7 +58,7 @@ export async function ListarPostsUsuario (id){
     return resposta.data;
 }
 
-export async function AtualizarInteresse (){
-    const resposta = await api.put(`/interessa`);
+export async function AtualizarInteresse (id){
+    const resposta = await api.put(`/interessa/${id}`);
     return resposta.data;
 }

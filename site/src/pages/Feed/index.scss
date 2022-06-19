@@ -15,8 +15,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 10vh;
+        height: 15vh;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        align-items: center;
     }
     
     header link {
@@ -42,9 +43,9 @@
     }
     .login-gerenciar {
         margin-right: vw;
+        background-color: #fff;
         width: 10vw;
         height: 5vh;
-        background-color: #D1A800;
         border: none;
         border-radius: 7vh;
         color: #8E8E8E;
@@ -52,12 +53,40 @@
     .link{
         font-family: PT ;
         font-size: 2.5vh;
-        color: #8E8E8E;
         text-decoration: none;
+    }
+    .teste{
+        width: 40em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
     }
     .direita-he{
         margin-top: 3vh;
         margin-right: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 6vw;
+        background-color: #fff;
+        transition: background 1s;
+        transition: color 0.6s;
+        border-radius: 7px; 
+        margin-right: 8vh;
+        margin-top: 3vh;
+        padding: 1.5vh;
+        border: none;
+        cursor: pointer;
+        padding: vh;
+        color: #8E8E8E;
+    }
+.login-gerenciar:focus, .login-gerenciar:hover{
+        
+        background-color:#e4e3da ;
+        color: #4e4e4e;
+        transform: translateX(0.1px) scale(1.05);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
     
     .faixa-1{
