@@ -130,15 +130,15 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
     }
 })
 
-server.put('/interesse/:id', async (req,resp) =>{
+server.put('/post/:id/interessado', async (req,resp) =>{
     try {
 
-    const {id} = req.params 
-    const resposta = await Interesse(id);
+    const {interessado, id} = req.body 
+    const resposta = await Interesse(interessado, id);
+
+    if (resposta != 1) throw new Error('Não foi possível declarar interessado')
     
-    resp.status(204).send(
-        resposta
-    );
+    resp.status(204).send();
 
     } 
     

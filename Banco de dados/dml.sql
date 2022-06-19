@@ -15,6 +15,10 @@ FROM tb_pet;
 Insert INTO tb_usuario (nm_usuario,ds_email,ds_senha,dt_nascimento,ds_telefone,ds_endereco)
 VALUES('Pedro', 'pedro@pedro@gmail', '1234', '2006-05-29', '(11) 1234-1234', 'Rua dos Loucos 55');
 
+select * from tb_usuario;
+
+drop table tb_usuario;
+
 -- Login
 SELECT id_usuario       id,
        nm_usuario       Nome
@@ -62,8 +66,12 @@ SELECT id_pet           id,
        ds_raca          Raca,
        ds_localizacao   Localizacao,
        ds_sexo          Sexo,
-       ds_pet           Descricao,
        img_pet          Imagem,
        ds_contato       Contato
 FROM tb_pet
 WHERE id_usuario        =1;
+
+-- Interesse
+Update tb_pet
+    set int_interesse       = true
+    WHERE id_pet           = 1;
