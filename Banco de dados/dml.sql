@@ -5,15 +5,19 @@ SELECT id_pet           id,
        ds_raca          Raca,
        ds_localizacao   Localizacao,
        ds_sexo          Sexo,
-       ds_pet           Descricao,
        img_pet          Imagem,
-       ds_contato       Contato
+       ds_contato       Contato,
+       ds_titulo        titulo
 FROM tb_pet;
 
 
 -- Cadastrar Conta
 Insert INTO tb_usuario (nm_usuario,ds_email,ds_senha,dt_nascimento,ds_telefone,ds_endereco)
 VALUES('Pedro', 'pedro@pedro@gmail', '1234', '2006-05-29', '(11) 1234-1234', 'Rua dos Loucos 55');
+
+select * from tb_usuario;
+
+drop table tb_usuario;
 
 -- Login
 SELECT id_usuario       id,
@@ -24,10 +28,10 @@ AND   ds_senha          ='1234';
 
 
 -- Criar Post
-Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato)
-VALUES (1,'Léu', 'PitBull', 'Rua dos Loucos 55', 'Macho', '(11) 1324-1324');
+Insert INTO tb_pet(id_usuario,nm_pet,ds_raca,ds_localizacao,ds_sexo,ds_contato, ds_titulo)
+VALUES (1,'Léu', 'PitBull', 'Rua dos Loucos 55', 'Macho', '(11) 1324-1324', 'doguinho fofo');
 
-
+select * from tb_pet;
 
 -- Cadastrar Imagem
 UPDATE tb_pet
@@ -62,8 +66,12 @@ SELECT id_pet           id,
        ds_raca          Raca,
        ds_localizacao   Localizacao,
        ds_sexo          Sexo,
-       ds_pet           Descricao,
        img_pet          Imagem,
        ds_contato       Contato
 FROM tb_pet
 WHERE id_usuario        =1;
+
+-- Interesse
+Update tb_pet
+    set int_interesse       = true
+    WHERE id_pet           = 1;

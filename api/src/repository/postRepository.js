@@ -7,7 +7,7 @@ export async function Post (post){
      `
      const [resposta] = await con.query (comando, [post.usuario,post.nome,post.raca,post.localizacao,post.sexo,post.contato, post.titulo])
      post.id = resposta.insertId;
-     console.log(resposta)
+     
      return post
     }
 
@@ -22,6 +22,7 @@ SELECT id_pet           id,
        ds_localizacao   localizacao,
        ds_sexo          sexo,
        img_pet          imagem,
+       ds_titulo        titulo,
        ds_contato       contato
 FROM tb_pet`
 const [linhas] = await con.query(comando);
@@ -36,7 +37,7 @@ export async function listarPosts (id) {
         ds_raca          Raca,
         ds_localizacao   Localizacao,
         ds_sexo          Sexo,
-        ds_pet           Descricao,
+        ds_titulo        Titulo,
         img_pet          Imagem,
         ds_contato       Contato
     FROM tb_pet           
@@ -79,6 +80,16 @@ export async function inserirImagem (imagem, id) {
     WHERE id_pet            = ?`
 
     const [resposta] = await con.query(comando, [imagem, id]);
-    console.log(imagem)
+    return resposta.affectedRows;
+}
+
+
+export async function Interesse (interessado, id){
+    const comando = 
+    `Update tb_pet
+    set int_interesse       =?
+    WHERE id_pet           =?
+    `
+    const [resposta] = await con.query(comando, [interessado, id]);
     return resposta.affectedRows;
 }

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Post, Feed, listarPosts, deletarPosts, editarPost, inserirImagem} from "../repository/postRepository.js";
+import { Post, Feed, listarPosts, deletarPosts, editarPost, inserirImagem, Interesse} from "../repository/postRepository.js";
 import multer from 'multer'
 
 const server = Router();
@@ -113,7 +113,6 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
         if(!req.file) throw new Error('Não foi possível alterar/inserir a imagem') 
         const {id} = req.params;
         const imagem = req.file.path
-        console.log(imagem)
 
         const resposta = await inserirImagem(imagem, id);
 
@@ -128,5 +127,25 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
         resp.status(400).send({
             erro: err.message
         })
+    }
+})
+
+server.put('/post/:id/interessado', async (req,resp) =>{
+    try {
+
+    const {interessado, id} = req.body 
+    const resposta = await Interesse(interessado, id);
+
+    if (resposta != 1) throw new Error('Não foi possível declarar interessado')
+    
+    resp.status(204).send();
+
+    } 
+    
+    catch (err) {
+        resp.status(400).send({
+            Erro: err.message
+        })
+        
     }
 })

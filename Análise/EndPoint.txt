@@ -49,19 +49,19 @@ request
     "raca":,
     "localizacao":,
     "sexo":,
-    "contato":
+    "contato": "",
+    "titulo": ""
 }
 
-responce
+response
 {
-  "resposta": {
     "usuario":,
     "nome": "",
     "raca": "",
     "localizacao": "",
     "sexo": "",
-    "desc": "",
-    "contato": ""
+    "contato": "",
+    "titulo": ""
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 

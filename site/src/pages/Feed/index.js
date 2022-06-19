@@ -1,7 +1,7 @@
 import axios from 'axios'
 import storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
-import { ListarTodosPosts } from '../../api/PostAPI'
+import { ListarTodosPosts, AtualizarInteresse } from '../../api/PostAPI'
 
 
 
@@ -11,6 +11,13 @@ import { useEffect, useState } from 'react';
 
 export default function Feed() {
     const [post, setPost] = useState([])
+    const [teste, SetTeste] = useState(false);
+
+    if(teste === true){
+        const IdPost = storage('usuario-logado').id;
+        AtualizarInteresse(IdPost)
+    }
+
 
     const navigate = useNavigate()
 
@@ -22,7 +29,6 @@ export default function Feed() {
 
        async function CarregarTodosPosts (){
             const resp = await ListarTodosPosts();
-            
             setPost(resp);
         }
 
@@ -37,7 +43,8 @@ export default function Feed() {
                     <img src="./images/image 26.png"/>
                         <h4> PETGUARDIAN </h4>
                 </div>
-
+            <div className='teste'> 
+            
                 <div className="direita-he">
                     <a href="/Posts">
                         <button className="login-gerenciar">
@@ -50,39 +57,44 @@ export default function Feed() {
                     <button className='login-gerenciar'> Sair </button>
                     </a>
                 </div>
+            </div>
             </header>
 
             <section className="faixa-1">
+                <div className='feed'> 
 
-                <div className="post1">
+                
+                {post.map(item =>
+
+                    <div key={item.id} className="post1">
 
                     <div className="carol">
-                        <h1> Carol Fernanda </h1>
+                        <h1> {item.usuario} </h1>
                     </div>
 
                     <div>
-                        <img className="imgn" src="./images/image 5.png"/>
+                        <img className="imgn" src={item.imagem}/>
                     </div>
 
                     <div className="info-1">
-                        <h1> Coelho bege de 2 anos de idade </h1>
+                        <h1>{item.titulo} </h1>
                     </div>
                     <div className="infos">
                         <div className="esq-1">
-                            <p> Cleber </p>
-                            <p> São José </p>
+                            <p> {item.nome} </p>
+                            <p> {item.localizacao} </p>
                             <div className="foto-1">
                                 <img width="30px" height='30px' src="./images/Instagram.png"/>
-                                    <h6> @xzx </h6>
+                                    <h6>{item.contato} </h6>
                             </div>
                         </div>
 
                         <div className="dir-1">
-                            <p> Rex </p>
-                            <p> Macho </p>
+                            <p> {item.raca} </p>
+                            <p> {item.sexo} </p>
                             <div className="info-2">
-                                <input className="quadrado" type="checkbox"/>
-                                    <h1 className="input"> Interessado </h1>
+                                <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
+                                    <h1 className="input" > Interessado </h1>
                             </div>
                         </div>
 
@@ -94,41 +106,14 @@ export default function Feed() {
                     </div>
 
                 </div>
-                <div className="post2">
+                    
+                    
+                    
+                )}
 
-                    <div className="carol">
-                        <h1> João Carlos </h1>
-                    </div>
-
-                    <div>
-                        <img className="imgn" src="./images/image 13.png"/>
-                    </div>
-
-                    <div className="info-1">
-                        <h1> Gato Sphynx muito fofo  </h1>
-                    </div>
-                    <div className="infos">
-                        <div className="esq-1">
-                            <p> Logan </p>
-                            <p> São José </p>
-                            <div className="foto-1">
-                                <img width="30px" height='30px' src="./images/Instagram.png"/>
-                                    <h6> @xzx </h6>
-                            </div>
-                        </div>
-
-                        <div className="dir-1">
-                            <p> Sphynx </p>
-                            <p> Macho </p>
-                            <div className="info-2">
-                                <input class="quadrado" type="checkbox"/>
-                                    <h1 className="input"> Interessado </h1>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+                        
+                       
+                </div>        
 
 
             </section>
