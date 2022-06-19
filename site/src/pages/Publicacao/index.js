@@ -59,7 +59,7 @@ export default function Publicacao(){
                                 <tr>
                                     <td>{item.Titulo}</td>
                                     <td>{item.NomePet}</td>
-                                    <td>Undefineld</td>
+                                    <td>Undefined</td>
                                     <td>{item.Raca}</td>
                                     <td>{item.Localizacao}</td>
                                     <td>{item.Sexo} </td>

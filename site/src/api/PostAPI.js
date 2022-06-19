@@ -57,3 +57,8 @@ export async function ListarPostsUsuario (id){
     const resposta = await api.get(`/usuario/${id}/post`);
     return resposta.data;
 }
+
+export async function AtualizarInteresse (){
+    const resposta = await api.put(`/interessa`);
+    return resposta.data;
+}

@@ -80,6 +80,16 @@ export async function inserirImagem (imagem, id) {
     WHERE id_pet            = ?`
 
     const [resposta] = await con.query(comando, [imagem, id]);
-    console.log(imagem)
     return resposta.affectedRows;
+}
+
+
+export async function Interesse (id){
+    const comando = 
+    `Update tb_pet
+    set in_interesse       =+1
+    WHERE id_pet           =?
+    `
+    const [resposta] = await con.query(comando, [id]);
+    return resposta;
 }
