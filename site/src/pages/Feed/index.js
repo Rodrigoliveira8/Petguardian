@@ -36,6 +36,9 @@ export default function Feed() {
             CarregarTodosPosts();
         }, [])
 
+
+        
+
     return (
         <main className="page-feed">
             <header>
@@ -66,10 +69,10 @@ export default function Feed() {
                 
                 {post.map(item =>
 
-                    <div key={item.id} className="post1">
+                    <div key= {item.id} className="post1">
 
                     <div className="carol">
-                        <h1> {item.usuario} </h1>
+                        <h1> {item.id.nome} </h1>
                     </div>
 
                     <div>

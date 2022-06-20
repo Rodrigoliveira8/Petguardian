@@ -146,10 +146,10 @@ export default function Posts() {
                     </div>
 
                     <div className="info">
-                        <input data-ls-module="charCounter" maxlength="25" className='senha' type='text' placeholder="Título" value={titulo} onChange={e => SetTitulo(e.target.value)} />
-                        <input data-ls-module="charCounter" maxlength="25" className="senha" type="text" placeholder="Nome" value={nome} onChange={e => Setnome(e.target.value)} />
+                        <input data-ls-module="charCounter" maxlength="20" className='senha' type='text' placeholder="Título" value={titulo} onChange={e => SetTitulo(e.target.value)} />
+                        <input data-ls-module="charCounter" maxlength="10" className="senha" type="text" placeholder="Nome" value={nome} onChange={e => Setnome(e.target.value)} />
                         <input data-ls-module="charCounter" maxlength="20" className="senha" type="text" placeholder="Raça" value={raca} onChange={e => Setraca(e.target.value)} />
-                        <input data-ls-module="charCounter" maxlength="25" className="senha" type="text" placeholder="Localização" value={localizacao} onChange={e => Setlocalizacao(e.target.value)} />
+                        <input data-ls-module="charCounter" maxlength="15" className="senha" type="text" placeholder="Localização" value={localizacao} onChange={e => Setlocalizacao(e.target.value)} />
                         <input data-ls-module="charCounter" maxlength="5" className="senha" type="text" placeholder="Sexo" value={sexo} onChange={e => setSexo(e.target.value)} />
                         <input data-ls-module="charCounter" maxlength="16" className="senha" type="text" placeholder="Meio de Contato" value={contato} onChange={e => Setcontato(e.target.value)} />
                     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 .page-feed {
     main{
         display: flex;
@@ -194,16 +194,15 @@
         min-width: 5vh;
         min-height: 4vh;
         margin-left: 10em;
-    }
-    
+    }    
     .info-2{
         display: flex;
         flex-direction: row;
         align-items: center;
         color: black;
         font-size: 4vh;
-        margin-top: 3.5vh;
-        margin-left: -10vw;
+        margin-top: 10vh;
+        margin-left: -24vw;
     }
     
     .input{
@@ -232,67 +231,60 @@
         header{
             height: 10vh;
         }
-        
-        header link {
-            margin: 0vh 2vw;
-        }
     
         .esquerda-he{
             width: auto;
             margin-left: 3vw;
             margin-top: 1vh;
             margin-bottom: 2vh;
-            height: 9vh;
+            height: 6vh;
         }
         
         .esquerda-he h4{
-            margin-top: 3.5vh;
+            margin-top: 2.5vh;
             margin-left: 0.5vw;
-            font-size: 2.5vh;
+            font-size: 2vh;
         }
         .login-gerenciar {
-            width: 10vw;
-            height: 5vh;
+            width: 9vw;
+            height: 3vh;
             border-radius: 7vh;
-        }
-        .link{
-            font-size: 2.5vh;
+            margin-top: -5vh;
         }
         .direita-he{
-            margin-top: 3vh;
-            margin-right: 10vh;
+            margin-right: 5vh;
         }
         
         .faixa-1{
-            margin-top: 10vh;
+            margin-top: 7vh;
             height: 1000vh;
         }
         .imgn {
-            height: 30vh;
-            width: 23vw;
+            height: 35vh;
+            width: 35vw;
         }
         .post1{
             margin-left: 15vw;
             width: 35vw;
-            height: fit-content;
+            height: 100vh;
             border-radius: 1.4vh;
         }
         
         .carol{
-            width: 40.9vh;
-            height: 5vh;
+            width: 35vw;
+            height: 3vh;
             padding-bottom: 3vh ;
             border-radius: 1.4vh 1.4vh 0vh 0vh ;
         }
     
         .carol h1{
-            font-size: 3vh;
+            font-size: 2vh;
             margin-left: 1vw;
         }
         
         .info-1{
             margin-top: -1vh;
-            width: 23vw;
+            width: 35vw;
         }
         .info-1 h1{
             font-size: 3vh;
@@ -303,7 +295,7 @@
         }
         .infos{
             border-radius: 0vh 0vh 1.4vh 1.4vh;
-            width: 23vw;
+            width: 35vw;
         }
         
         .esq-1{
@@ -331,7 +323,8 @@
         .quadrado{
             min-width: 5vh;
             min-height: 4vh;
-            margin-left: 10em;
+            margin-left: -15vw;
+            margin-top: 7vh;
         }
         
         .info-2{
@@ -342,7 +335,7 @@
         
         .input{
             font-size: 3vh;
-            margin-right: 1vw;
+            margin-top: 10vh;
         }
         .post2{
             margin-left: 25vh;
