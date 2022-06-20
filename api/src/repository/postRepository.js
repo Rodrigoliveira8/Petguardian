@@ -93,3 +93,21 @@ export async function Interesse (interessado, id){
     const [resposta] = await con.query(comando, [interessado, id]);
     return resposta.affectedRows;
 }
+
+export async function buscarPorId(id) {
+    const comando =
+        `SELECT id_pet 		id,
+                nm_pet		nome,
+                img_pet         imagem,
+                ds_raca     	raca,
+                dS_titulo   	titulo,
+                ds_localizacao	localizacao,
+                ds_sexo         sexo,
+                ds_contato      contato,
+                id_usuario      id
+           FROM tb_pet
+          WHERE id_pet = ? `;
+    
+    const [linhas] = await con.query(comando, [id]);
+    return linhas[0];
+}

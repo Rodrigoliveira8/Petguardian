@@ -7,8 +7,9 @@ import { useEffect, useState } from 'react'
 
 import { toast } from 'react-toastify'
 
+import { useParams } from 'react-router-dom'
 
-import { cadastraPet, enviarimagem, AlterarPet } from '../../api/PostAPI.js'
+import { cadastraPet, enviarimagem, AlterarPet, buscarPorId, buscarimagem } from '../../api/PostAPI.js'
 
 import storage, { set } from 'local-storage'
 
@@ -31,6 +32,27 @@ export default function Posts() {
     const UserLogado = storage('usuario-logado').Nome;
     const [id, SetId] = useState(0);
 
+
+    const { idParam } = useParams();
+
+    useEffect(() =>{    
+        if(idParam){
+            carregarPost();
+        }
+    }, [])
+
+   async function carregarPost(){
+        const resposta = await buscarPorId(idParam);
+        Setnome(resposta.nome)
+        SetTitulo(resposta.titulo)
+        Setraca(resposta.raca)
+        Setlocalizacao(resposta.localizacao)
+        Setcontato(resposta.contato)
+        setSexo(resposta.sexo)
+        SetId(resposta.id)
+        SetImg(resposta.imagem)
+    }
+
     async function SalvarClick() {
         try {
             if (!img) throw new Error("Escolha a imagem do Post")
@@ -50,6 +72,8 @@ export default function Posts() {
             else {
                 const NovoPost = await AlterarPet(id, nome, raca, localizacao, contato, sexo, usuario, titulo)
                 const r = await enviarimagem(id, img)
+
+                if (typeof(img) == 'object')
                 toast.dark("O pet foi Alterardo 🐶")
             }
 
@@ -71,7 +95,9 @@ export default function Posts() {
     }
 
     function mostrarImagem() {
+        if(typeof (img) == 'object'){ 
         return URL.createObjectURL(img);
+        }
     }
 
 
