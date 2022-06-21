@@ -68,53 +68,53 @@ export default function Feed() {
             <section className="faixa-1">
                 <div className='feed'> 
 
-                
-                {post.map(item =>
+                    
+                    {post.map(item =>
 
-                    <div key= {item.id} className="post1">
+                        <div key= {item.id} className="post1">
 
-                    <div className="carol">
-                        <h1> {item.id.nome} </h1>
-                    </div>
-
-                    <div>
-                        <img className="imgn" src={item.imagem}/>
-                    </div>
-
-                    <div className="info-1">
-                        <h1>{item.titulo} </h1>
-                    </div>
-                    <div className="infos">
-                        <div className="esq-1">
-                            <p> {item.nome} </p>
-                            <p> {item.localizacao} </p>
-                            <div className="foto-1">
-                                <img width="30px" height='30px' src="./images/Instagram.png"/>
-                                    <h6>{item.contato} </h6>
-                            </div>
+                        <div className="carol">
+                            <h1> {item.id.nome} </h1>
                         </div>
 
-                        <div className="dir-1">
-                            <p> {item.raca} </p>
-                            <p> {item.sexo} </p>
-                            <div className="info-2">
-                                <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
-                                    <h1 className="input" > Interessado </h1>
+                        <div>
+                            <img className="imgn" src={item.imagem}/>
+                        </div>
+
+                        <div className="info-1">
+                            <h1>{item.titulo} </h1>
+                        </div>
+                        <div className="infos">
+                            <div className="esq-1">
+                                <p> {item.nome} </p>
+                                <p> {item.localizacao} </p>
+                                <div className="foto-1">
+                                    <img width="30px" height='30px' src="./images/Instagram.png"/>
+                                        <h6>{item.contato} </h6>
+                                </div>
                             </div>
+
+                            <div className="dir-1">
+                                <p> {item.raca} </p>
+                                <p> {item.sexo} </p>
+                                <div className="info-2">
+                                    <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
+                                        <h1 className="input" > Interessado </h1>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div>
+
+
                         </div>
 
                     </div>
-
-                    <div>
-
-
-                    </div>
-
-                </div>
-                    
-                    
-                    
-                )}
+                        
+                        
+                        
+                    )}
 
                         
                        

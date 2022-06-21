@@ -49,14 +49,16 @@ function editarPost (id){
     navigate(`/alterar/${id}`);
 }
 
-
+function Lp(){
+    navigate('/Lp')
+}
 
 
     return(
         <main class="page-publi">
             <header>
                 <div className="esquerda-he">
-                    <img src="./images/image 26.png"/>
+                    <img src="./images/image 26.png" onClick={() => Lp()}/>
                     <h4> PETGUARDIAN </h4>
                 </div>
                 <div className="direita-he">

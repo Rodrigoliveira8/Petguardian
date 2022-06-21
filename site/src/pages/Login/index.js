@@ -51,7 +51,9 @@ export default function Login() {
 
     }
 
-
+    function Lp (){
+        navigate('/Lp')
+    }
 
     return (
         <main className="page-login">
@@ -62,7 +64,7 @@ export default function Login() {
                 <div className="Esquerda">
                     <div>
                         <div className="Teste">
-                            <img className="logo-casinha" width="180px" src="./images/image 26.png" />
+                            <img className="logo-casinha" width="180px" src="./images/image 26.png" onClick={() => Lp ()}/>
                         </div>
                         <p> Amor não se compra, amor se conquista!</p>
                     </div>
