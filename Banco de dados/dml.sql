@@ -1,6 +1,6 @@
 -- Feed
 SELECT id_pet           id,
-       id_usuario       Usuário,
+       nm_usuario      usuario,
        nm_pet           NomePet,
        ds_raca          Raca,
        ds_localizacao   Localizacao,
@@ -8,7 +8,8 @@ SELECT id_pet           id,
        img_pet          Imagem,
        ds_contato       Contato,
        ds_titulo        titulo
-FROM tb_pet;
+FROM tb_pet
+JOIN tb_usuario ON tb_pet.id_usuario = tb_usuario.id_usuario;
 
 
 -- Cadastrar Conta

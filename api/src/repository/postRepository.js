@@ -15,16 +15,17 @@ export async function Post (post){
 
 export async function Feed (){
     const comando = `
-SELECT id_pet           id,
-       id_usuario       usuario,
-       nm_pet           nome,
-       ds_raca          raca,
-       ds_localizacao   localizacao,
-       ds_sexo          sexo,
-       img_pet          imagem,
-       ds_titulo        titulo,
-       ds_contato       contato
-FROM tb_pet`
+    SELECT id_pet           id,
+    nm_usuario      usuario,
+    nm_pet           NomePet,
+    ds_raca          Raca,
+    ds_localizacao   Localizacao,
+    ds_sexo          Sexo,
+    img_pet          Imagem,
+    ds_contato       Contato,
+    ds_titulo        titulo
+FROM tb_pet
+JOIN tb_usuario ON tb_pet.id_usuario = tb_usuario.id_usuario`
 const [linhas] = await con.query(comando);
 return linhas;
 }

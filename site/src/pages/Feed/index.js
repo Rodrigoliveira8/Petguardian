@@ -34,7 +34,7 @@ export default function Feed() {
 
         useEffect (() => {
             CarregarTodosPosts();
-        }, [])
+        }, []);
 
         function Lp (){
             navigate('/LP')
@@ -74,11 +74,11 @@ export default function Feed() {
                     <div key= {item.id} className="post1">
 
                     <div className="carol">
-                        <h1> {item.id.nome} </h1>
+                        <h1> {item.usuario} </h1>
                     </div>
 
                     <div>
-                        <img className="imgn" src={item.imagem}/>
+                        <img className="imgn" src= {`http://localhost:5000/${item.Imagem}`} />
                     </div>
 
                     <div className="info-1">
@@ -86,17 +86,17 @@ export default function Feed() {
                     </div>
                     <div className="infos">
                         <div className="esq-1">
-                            <p> {item.nome} </p>
-                            <p> {item.localizacao} </p>
+                            <p> {item.NomePet} </p>
+                            <p> {item.Localizacao} </p>
                             <div className="foto-1">
                                 <img width="30px" height='30px' src="./images/Instagram.png"/>
-                                    <h6>{item.contato} </h6>
+                                    <h6>{item.Contato} </h6>
                             </div>
                         </div>
 
                         <div className="dir-1">
-                            <p> {item.raca} </p>
-                            <p> {item.sexo} </p>
+                            <p> {item.Raca} </p>
+                            <p> {item.Sexo} </p>
                             <div className="info-2">
                                 <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
                                     <h1 className="input" > Interessado </h1>
