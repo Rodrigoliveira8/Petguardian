@@ -138,6 +138,7 @@ export default function Posts() {
             </header>
 
             <section className="faixa1">
+                <div>
                 <div className="esquerda">
                     <h1> Informações do Post </h1>
                     <div className="import" onClick={escolherimg}>
@@ -231,6 +232,7 @@ export default function Posts() {
                         </div>
                     </div>
 
+                </div>
                 </div>
                     <div>
                         <button onClick={SalvarClick} className='botao'> {id === 0 ? 'Salvar' : 'Alterar'} </button> &nbsp; &nbsp;
