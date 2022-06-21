@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,  } from "react-router-dom";
 import { ListarPostsUsuario, DeletarPost } from "../../api/PostAPI";
 import storage from 'local-storage'
 import './index.scss';
@@ -10,6 +10,7 @@ import  { toast } from 'react-toastify'
 export default function Publicacao(){
     const [post, setPost] = useState([]);
     const navigate = useNavigate('');
+
 
     async function teste (){
         const IdUsuario = storage('usuario-logado').id;

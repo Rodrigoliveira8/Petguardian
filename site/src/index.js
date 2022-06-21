@@ -28,7 +28,7 @@ root.render(
         <Route path='/Login' element= {<Login />} />
         <Route path='/Cadastro' element= {<Cadastro />} />
 
-        <Route path='/alterar/:idParam' element={<Cadastro/>}/>
+        <Route path='/alterar/:idParam' element={<Posts />}/>
 
         <Route path='/Feed' element= {<Feed />} />
         <Route path='/Posts' element= {<Posts />} />

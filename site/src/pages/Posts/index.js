@@ -43,14 +43,14 @@ export default function Posts() {
 
    async function carregarPost(){
         const resposta = await buscarPorId(idParam);
-        Setnome(resposta.nome)
-        SetTitulo(resposta.titulo)
-        Setraca(resposta.raca)
-        Setlocalizacao(resposta.localizacao)
-        Setcontato(resposta.contato)
-        setSexo(resposta.sexo)
+        Setnome(resposta.NomePet)
+        SetTitulo(resposta.Titulo)
+        Setraca(resposta.Raca)
+        Setlocalizacao(resposta.Localizacao)
+        Setcontato(resposta.Contato)
+        setSexo(resposta.Sexo)
         SetId(resposta.id)
-        SetImg(resposta.imagem)
+        //SetImg(resposta.imagem)
     }
 
     async function SalvarClick() {
