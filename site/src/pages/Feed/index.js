@@ -104,7 +104,7 @@ export default function Feed() {
                                     <div className="info-2">
                                         {/* <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} /> */}
                                         <h1 className="input" onClick={() => marcarInteresse(item.id)} > Interessado </h1>
-                                    </div>
+                                    </div> 
 
 
                                 </div>

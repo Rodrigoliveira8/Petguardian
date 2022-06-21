@@ -348,7 +348,8 @@
 
             margin-left: 5vw;
             width: 5vw;
-            height: fit-content;
+            height: fit-conten
+            t;
             border-radius: 1.4vh;
         }   
         
@@ -378,16 +379,21 @@
         .infos{
             width: 23vw;
             border-radius: 0vh 0vh 1.4vh 1.4vh ;
+            padding-bottom: 1.5em;
         }
         
         .esq-1{
             margin-left: 1vh;
             font-size: 2vh;
+            position: absolute;
+        }
+        .esq-1 p{
+            width: fit-content(20px);
         }
         
         .dir-1{
             font-size: 2vh;
-            margin-left: 10vh;
+            margin-left: 10em;
         }
         .dir-1 p{
             margin-right: -15vh;
@@ -395,8 +401,9 @@
         
         .foto-1{
             font-size: 4vh;
-            margin-left: -0.2vw;
-            margin-top: 0.5vw;
+            margin-left: 1vw;
+            margin-top: 10vw;
+            position: absolute;
         }
         
         .quadrado{

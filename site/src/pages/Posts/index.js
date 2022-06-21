@@ -204,6 +204,9 @@ export default function Posts() {
                                 {localizacao &&
                                     <p> {localizacao} </p>
                                 }
+                                
+                            </div>
+                            
                                 <div className="foto-1">
                                     <img width="30vw" src="./images/contato.png" />
                                     
@@ -215,11 +218,10 @@ export default function Posts() {
 
                                     }
                                 </div>
-                            </div>
 
                             <div className="dir-1">
                                 {!raca &&
-                                    <p>  Raça</p>
+                                    <p >  Raça</p>
                                 }
                                 {raca &&
                                     <p id='p1'> {raca} </p>
