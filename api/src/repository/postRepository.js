@@ -61,15 +61,16 @@ export async function deletarPosts (id) {
 export async function editarPost (pet, id) {
     const comando = 
     `UPDATE tb_pet
-    SET    nm_pet           =?,
-           ds_raca          =?,
-           ds_localizacao   =?,
-           ds_sexo          =?,
-           ds_contato       =?,
-           id_usuario       =?
+    SET    nm_pet           = ?,
+           ds_raca          = ?,
+           ds_localizacao   = ?,
+           ds_sexo          = ?,
+           ds_contato       = ?,
+           id_usuario       = ?,
+           ds_titulo		= ?
     WHERE id_pet = ?`
 
-    const [linhas] = await con.query(comando, [pet.nome, pet.raca, pet.localizacao, pet.sexo, pet.descricao, pet.contato,pet.usuario, id]);
+    const [linhas] = await con.query(comando, [pet.nome, pet.raca, pet.localizacao, pet.sexo, pet.contato,pet.usuario,pet.titulo, id]);
     
     return linhas.affectedRows;
 }
@@ -108,7 +109,7 @@ export async function buscarPorId(id) {
                 ds_contato      contato,
                 id_usuario      id
            FROM tb_pet
-          WHERE id_pet = ? `;
+          WHERE id_pet = ? `
     
     const [linhas] = await con.query(comando, [id]);
     return linhas[0];

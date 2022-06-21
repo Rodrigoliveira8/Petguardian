@@ -1,6 +1,6 @@
 -- Feed
 SELECT id_pet           id,
-       nm_usuario      usuario,
+       nm_usuario      	usuario,
        nm_pet           NomePet,
        ds_raca          Raca,
        ds_localizacao   Localizacao,
@@ -47,9 +47,9 @@ SET    nm_pet           ='Léu',
        ds_raca          ='PitBull',
        ds_localizacao   ='Rua dos Loucos 55',
        ds_sexo          ='Macho',
-       ds_pet           ='ruf ruf',
        ds_contato       ='(11) 1234-1234',
-       id_usuario       = 1
+       id_usuario       = 1,
+       ds_titulo		= 'legal'
 WHERE id_pet = 1;
 
 
@@ -61,16 +61,18 @@ WHERE id_pet = 1;
 select * from tb_pet;
 
 -- Listar Post
-SELECT id_pet           id,
-       id_usuario       Usuário,
-       nm_pet           NomePet,
-       ds_raca          Raca,
-       ds_localizacao   Localizacao,
-       ds_sexo          Sexo,
-       img_pet          Imagem,
-       ds_contato       Contato
-FROM tb_pet
-WHERE id_usuario        =1;
+SELECT id_pet       id,
+        id_usuario       Usuário,
+        nm_pet           NomePet,
+        ds_raca          Raca,
+        ds_localizacao   Localizacao,
+        ds_sexo          Sexo,
+        ds_titulo        Titulo,
+        img_pet          Imagem,
+        int_interesse   Interesse,
+        ds_contato       Contato
+    FROM tb_pet           
+    WHERE id_usuario     = 1;
 
 -- Interesse
 Update tb_pet
