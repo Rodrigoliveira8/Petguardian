@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
 .page-posts {
-
-
+    
     main{
         display: flex;
         flex-direction: row;
@@ -302,7 +301,6 @@
     }
 
     @media (max-width: 1280px) {
-
         header{
         height: 10vh;
         }
@@ -318,7 +316,6 @@
         .logo-img {
             height: 7vh;
         }
-        
         .esquerda-he{
             width: auto;
             margin-left: 5vh;
@@ -331,10 +328,6 @@
         }
         .link{
             font-size: 2vh;
-        }
-        
-        .faixa1{
-            height: 70px;
         }
         
         .esquerda h1{
