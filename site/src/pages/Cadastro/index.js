@@ -64,22 +64,22 @@ export default function Cadastro() {
                     </section>
                     <section class="sec-2">
                         <h1 class="h1-divs">Criar nova conta</h1>
-                        <div class="div-cadastro2">
+                        <div >
                             <input class="input-cadastro" type='text' value={nome} onChange={e => setNome(e.target.value)} placeholder="Nome de usuário" />
                         </div>
-                        <div class="div-cadastro2">
+                        <div >
                             <input class="input-cadastro" type='date' value={nascimento} onChange={e => setNascimento(e.target.value)} placeholder="Nascimento" />
                         </div>
-                        <div class="div-cadastro2">
+                        <div >
                             <input class="input-cadastro" type='text' value={endereco} onChange={e => setEndereco(e.target.value)} placeholder="Endereço" />
                         </div>
-                        <div className='div-cadastro2'>
+                        <div >
                             <input className="input-cadastro" type='number' value={telefone} onChange={e => setTelefone(e.target.value)} placeholder="Telefone"/>
                         </div>
-                        <div class="div-cadastro2">
+                        <div >
                             <input class="input-cadastro" type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder="Endereço de Email" />
                         </div>
-                        <div class="div-cadastro2">
+                        <div >
                             <input class="input-cadastro" type="password" value={senha} onChange={e => setSenha(e.target.value)} placeholder="Senha" />
                         </div>
                         <div>
