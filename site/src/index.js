@@ -32,7 +32,7 @@ root.render(
 
         <Route path='/Feed' element= {<Feed />} />
         <Route path='/Posts' element= {<Posts />} />
-        <Route path='/alterar/:idParam' element={<Posts />}/>
+        <Route path='/usuario/post/:idParam' element={<Posts />}/>
         <Route path='/Publicacao' element= {<Publicacao />} />
 
       </Routes>

@@ -65,7 +65,6 @@ export async function editarPost (pet, id) {
            ds_raca          =?,
            ds_localizacao   =?,
            ds_sexo          =?,
-           ds_pet           =?,
            ds_contato       =?,
            id_usuario       =?
     WHERE id_pet = ?`

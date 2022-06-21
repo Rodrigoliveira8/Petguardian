@@ -73,11 +73,12 @@ export default function Posts() {
             }
 
             else {
-                const NovoPost = await AlterarPet(id, nome, raca, localizacao, contato, sexo, usuario, titulo)
-                const r = await enviarimagem(id, img)
+                await AlterarPet(idParam, nome, raca, localizacao, contato, sexo, usuario, titulo)
+                 await enviarimagem(idParam, img)
 
                 if (typeof(img) == 'object')
                 toast.dark("O pet foi Alterardo 🐶")
+
             }
 
 
