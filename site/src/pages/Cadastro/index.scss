@@ -205,4 +205,29 @@
         margin-top: 5vh;
     }
     }
+    @media (max-width: 414px){
+        main{ 
+            display: flex;
+            flex-direction: column;
+        }
+        .oii{
+            display: flex;
+            flex-direction: column;
+        }
+        .sec-1{
+            margin-left: 0;
+            height: 50%;
+            width: 100%;
+        }
+        .img-cat{
+            opacity: 0;
+        }
+        .h1-sec1{
+            font-size: 1em;
+        }
+        .sec-2{
+            height: 50%;
+            width: 100%;
+        }
+    }
 }
