@@ -40,6 +40,7 @@ export async function listarPosts (id) {
         ds_sexo          Sexo,
         ds_titulo        Titulo,
         img_pet          Imagem,
+        int_interesse   Interesse,
         ds_contato       Contato
     FROM tb_pet           
     WHERE id_usuario     = ?`
@@ -85,13 +86,13 @@ export async function inserirImagem (imagem, id) {
 }
 
 
-export async function Interesse (interessado, id){
+export async function Interesse (id){
     const comando = 
     `Update tb_pet
-    set int_interesse       =?
+    set int_interesse       = ifnull(int_interesse,0) + 1
     WHERE id_pet           =?
     `
-    const [resposta] = await con.query(comando, [interessado, id]);
+    const [resposta] = await con.query(comando, [id]);
     return resposta.affectedRows;
 }
 
@@ -100,6 +101,7 @@ export async function buscarPorId(id) {
         `SELECT id_pet 		id,
                 nm_pet		nome,
                 img_pet         imagem,
+                int_interesse    Interesse,
                 ds_raca     	raca,
                 dS_titulo   	titulo,
                 ds_localizacao	localizacao,

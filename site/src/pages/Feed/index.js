@@ -32,6 +32,10 @@ export default function Feed() {
         setPost(resp);
     }
 
+    async function marcarInteresse(id) {
+        await AtualizarInteresse(id);
+    }
+
     useEffect(() => {
         CarregarTodosPosts();
     }, []);
@@ -98,8 +102,8 @@ export default function Feed() {
                                     <p> {item.Raca} </p>
                                     <p> {item.Sexo} </p>
                                     <div className="info-2">
-                                        <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} />
-                                        <h1 className="input" > Interessado </h1>
+                                        {/* <input className="quadrado" type="checkbox" checked={teste} onChange={e => SetTeste(e.target.checked)} /> */}
+                                        <h1 className="input" onClick={() => marcarInteresse(item.id)} > Interessado </h1>
                                     </div>
 
 

@@ -85,7 +85,7 @@ server.put('/usuario/post/:id', async (req, resp) => {
     try {
         const {id} = req.params;
         const pet = req.body;
-
+        
         if(!pet.usuario) throw new Error("Usuário é OBRIGATÓRIO!")
         if(!pet.titulo) throw new Error("Título é OBRIGATÓRIO!")
         if(!pet.nome) throw new Error("Nome é OBRIGATÓRIO!")
@@ -133,8 +133,9 @@ server.put('/post/:id/imagem', upload.single('imgpet'), async (req, resp) => {
 server.put('/post/:id/interessado', async (req,resp) =>{
     try {
 
-    const {interessado, id} = req.body 
-    const resposta = await Interesse(interessado, id);
+    const id = req.params.id; 
+    console.log(id)
+    const resposta = await Interesse(id);
 
     if (resposta != 1) throw new Error('Não foi possível declarar interessado')
     

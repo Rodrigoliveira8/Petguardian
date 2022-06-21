@@ -93,7 +93,7 @@ function Lp(){
                                 <tr>
                                     <td>{item.Titulo}</td>
                                     <td>{item.NomePet}</td>
-                                    <td>Undefined</td>
+                                    <td>{item.Interesse}</td>
                                     <td>{item.Raca}</td>
                                     <td>{item.Localizacao}</td>
                                     <td>{item.Sexo} </td>
