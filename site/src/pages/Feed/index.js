@@ -36,11 +36,16 @@ export default function Feed() {
             CarregarTodosPosts();
         }, [])
 
+        function Lp (){
+            navigate('/LP')
+        }
+        
+
     return (
         <main className="page-feed">
             <header>
                 <div className="esquerda-he">
-                    <img src="./images/image 26.png"/>
+                    <img src="./images/image 26.png" onClick={() => Lp()}/>
                         <h4> PETGUARDIAN </h4>
                 </div>
             <div className='teste'> 
@@ -48,11 +53,11 @@ export default function Feed() {
                 <div className="direita-he">
                     <a href="/Posts">
                         <button className="login-gerenciar">
-                            Gerenciar Posts
+                            Criar Posts
                         </button>
                     </a>
                 </div>
-                <div onClick={sairClick}>  
+                <div className='ooi' onClick={sairClick}>  
                     <a href='/login'> 
                     <button className='login-gerenciar'> Sair </button>
                     </a>
@@ -66,10 +71,10 @@ export default function Feed() {
                 
                 {post.map(item =>
 
-                    <div key={item.id} className="post1">
+                    <div key= {item.id} className="post1">
 
                     <div className="carol">
-                        <h1> {item.usuario} </h1>
+                        <h1> {item.id.nome} </h1>
                     </div>
 
                     <div>

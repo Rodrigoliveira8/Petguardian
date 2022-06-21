@@ -62,3 +62,17 @@ export async function AtualizarInteresse (id){
     const resposta = await api.put(`/interessa/${id}`);
     return resposta.data;
 }
+
+export async function DeletarPost (id){
+    const resposta = await api.delete(`/usuario/post/${id}`);
+    return resposta.status;
+}
+
+export async function buscarPorId(id){
+    const resposta = await api.get(`/post/${id}`);
+    return resposta.data;
+}
+
+export function buscarimagem(imagem){
+    return `${api.getUri()}/${imagem}`
+}

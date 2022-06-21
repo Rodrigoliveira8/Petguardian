@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ListarPostsUsuario } from "../../api/PostAPI";
+import { ListarPostsUsuario, DeletarPost } from "../../api/PostAPI";
 import storage from 'local-storage'
 import './index.scss';
-
-
+import { confirmAlert } from 'react-confirm-alert'
+import  { toast } from 'react-toastify'
 
 
 export default function Publicacao(){
     const [post, setPost] = useState([]);
+    const navigate = useNavigate('');
 
     async function teste (){
         const IdUsuario = storage('usuario-logado').id;
@@ -19,6 +20,34 @@ export default function Publicacao(){
     useEffect(() => {
         teste();
     }, [])
+
+
+async function ExcluirPost (id,nome){
+
+    confirmAlert({
+        title: "REMOVER POST",
+        message: `Deseja remover o Post ${nome}?`,
+        buttons: [
+            {
+                label:'Sim',
+                onClick: async () => {
+                    const resposta = await DeletarPost (id,nome);
+                    teste()
+                    toast.dark("Post Removido!")
+                }
+            },
+            {
+                label:'Não'
+            }
+        ]
+    })
+
+    
+}
+
+function editarPost (id){
+    navigate(`/alterar/${id}`);
+}
 
 
 
@@ -35,6 +64,7 @@ export default function Publicacao(){
                         Feed
                     </Link>
                 </div>
+                
             </header>
             <div className='container'>
                 
@@ -51,6 +81,7 @@ export default function Publicacao(){
                                 <th>Localização</th>
                                 <th> Sexo </th>
                                 <th> Meio de Contato </th>
+                                <th> Opções </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,6 +95,10 @@ export default function Publicacao(){
                                     <td>{item.Localizacao}</td>
                                     <td>{item.Sexo} </td>
                                     <td> {item.Contato} </td>
+                                    <td>
+                                        <img src='./images/icons8-lixo-24.png' onClick={ () => ExcluirPost(item.id, item.NomePet)}/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <img src ='./images/canetinha.png' onClick={() => editarPost (item.id)}/>
+                                    </td>
                                 </tr>
                                 
                                 )}

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Post, Feed, listarPosts, deletarPosts, editarPost, inserirImagem, Interesse} from "../repository/postRepository.js";
+import { Post, Feed, listarPosts, deletarPosts, editarPost, inserirImagem, Interesse, buscarPorId} from "../repository/postRepository.js";
 import multer from 'multer'
 
 const server = Router();
@@ -147,5 +147,22 @@ server.put('/post/:id/interessado', async (req,resp) =>{
             Erro: err.message
         })
         
+    }
+})
+
+server.get('/post/:id', async (req, resp) => {
+    try {
+        const id = Number(req.params.id);
+        
+        const resposta = await buscarPorId(id);
+
+        if (!resposta)
+            resp.status(404).send([])
+        else
+            resp.send(resposta);
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
     }
 })

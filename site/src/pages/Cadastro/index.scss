@@ -89,10 +89,19 @@
     }
     
     .input-cadastro {
-        width: 73vh;
         border-radius: 7vh;
-        border-style: none;
+        height: 1.5vh;
+        width: 25vw;
+        outline: none;
+        padding: 2vh 3vw;
+        border: #908787;
+        cursor: auto;
+        font-family: 'Palanquin Dark', sans-serif;
+        font-size:2vh;
+        margin-bottom: 2vh;
+        color: #908787;
     }
+
     
     .div-cadastro2 {
         height: 8vh;
@@ -195,5 +204,30 @@
     .entrar-cad {
         margin-top: 5vh;
     }
+    }
+    @media (max-width: 414px){
+        main{ 
+            display: flex;
+            flex-direction: column;
+        }
+        .oii{
+            display: flex;
+            flex-direction: column;
+        }
+        .sec-1{
+            margin-left: 0;
+            height: 50%;
+            width: 100%;
+        }
+        .img-cat{
+            opacity: 0;
+        }
+        .h1-sec1{
+            font-size: 1em;
+        }
+        .sec-2{
+            height: 50%;
+            width: 100%;
+        }
     }
 }
