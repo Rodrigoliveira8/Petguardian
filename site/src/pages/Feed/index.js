@@ -1,7 +1,7 @@
 import axios from 'axios'
 import storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
-import { ListarTodosPosts, AtualizarInteresse } from '../../api/PostAPI'
+import { ListarTodosPosts, AtualizarInteresse, buscarimagem } from '../../api/PostAPI'
 
 
 
@@ -40,7 +40,7 @@ export default function Feed() {
         navigate('/LP')
     }
 
-
+    console.log(post);
     return (
         <main className="page-feed">
             <header>
@@ -78,7 +78,7 @@ export default function Feed() {
                             </div>
 
                             <div>
-                                <img className="imgn" src={`http://localhost:5000/${item.Imagem}`} />
+                                <img className="imgn" src={buscarimagem(item.Imagem)} />
                             </div>
 
                             <div className="info-1">
