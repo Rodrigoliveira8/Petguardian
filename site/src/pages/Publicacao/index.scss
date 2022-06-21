@@ -148,5 +148,16 @@
     tr:hover td:nth-last-child(1) img {
         visibility: visible;
     }
+    @media (max-width: 414px){
+        header{
+            height: 10vh;
+        }
+        .esquerda-he h4{
+            opacity: 0;
+        }
+        tr{
+            width: 100%;
+        }
+    }
 
 }

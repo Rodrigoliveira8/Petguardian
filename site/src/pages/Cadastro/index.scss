@@ -214,20 +214,51 @@
             display: flex;
             flex-direction: column;
         }
-        .sec-1{
-            margin-left: 0;
-            height: 50%;
-            width: 100%;
+        .sec-1 {
+            height: 90vh;
+            width: 43vh;
         }
-        .img-cat{
-            opacity: 0;
+        
+        .sec-2 {
+            height: 100vh;
+            width: 100vw;            
         }
-        .h1-sec1{
-            font-size: 1em;
+        
+        .logo-sec1 {
+            width: 10vh;
+            margin-top: 7vh;
+            margin-left: 4vh;
         }
-        .sec-2{
-            height: 50%;
-            width: 100%;
+        
+        .h1-sec1 {
+            font-size: 3vh;
+            margin-top: 4vh;
+        }
+        
+        .img-cat {
+            margin-top: 4.5vh;
+            margin-left: 9vh;
+            height: 30vh;
+        }
+        
+        .h1-divs {
+            margin-top: 10vh;
+            font-size: 2vh;
+        }
+        
+        .input-cadastro {
+            width: 40vh;
+            border-radius: 7vh;
+            margin-left: 2vh;
+        }
+        
+        .entrar-cad {
+            margin-top: 5vh;
+        }
+
+        .bot-cadastrar {
+            height: 3vh;
+            width: 15vw;
         }
     }
 }
