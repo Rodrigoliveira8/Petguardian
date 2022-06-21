@@ -218,5 +218,41 @@
         cursor: pointer;
     }
     }
+    @media (max-width: 414px){
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+        .faixa{
+            display: flex;
+            flex-direction: column;
+        }
+        .Esquerda{
+            height:50%;
+            width: 100%;
+        }
+        .Direita{
+            height: 100%;
+            width: 100%;
+        }
+        .Esquerda p{
+            width: 400px;
+            font-size: 2em;
+        }
+        .Direita h1{
+            margin-top: 1em;
+        }
+        .users{
+            width: 270px;
+        }
+        .senha{
+            width: 270px;
+        }
+        .link{
+            padding-bottom: 3em;
+            width: 7em;
+            margin-top: 1em;
+        }
+    }
     
 }

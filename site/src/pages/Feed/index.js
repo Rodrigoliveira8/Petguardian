@@ -36,14 +36,16 @@ export default function Feed() {
             CarregarTodosPosts();
         }, [])
 
-
+        function Lp (){
+            navigate('/LP')
+        }
         
 
     return (
         <main className="page-feed">
             <header>
                 <div className="esquerda-he">
-                    <img src="./images/image 26.png"/>
+                    <img src="./images/image 26.png" onClick={() => Lp()}/>
                         <h4> PETGUARDIAN </h4>
                 </div>
             <div className='teste'> 
