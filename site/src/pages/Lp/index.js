@@ -19,7 +19,7 @@ export default function Lp() {
             </header>
             <section className="faixa1">
 
-                <h1>Seu futuro companheiro precisa de você! Adote!</h1>
+                <h1> <span className='teste '> Seu futuro</span> companheiro precisa de você! Adote!</h1>
                 <Link to= '/Feed'>Acesse o feed</Link>
             </section>
             <section className="faixa2">
@@ -44,7 +44,7 @@ export default function Lp() {
             </section>
             <section className="faixa4">
                 <div className="f4-title">
-                    <h1>Veja como é simples para começar a navegar pelo PETGUARDIAN</h1>
+                    <h1>Veja como é simples para começar a navegar pelo <span className='teste2'>PETGUARDIAN</span></h1>
                 </div>
                 <div className="f4-steps">
                     <div>
