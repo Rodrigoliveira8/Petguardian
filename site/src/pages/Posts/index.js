@@ -43,14 +43,17 @@ export default function Posts() {
 
    async function carregarPost(){
         const resposta = await buscarPorId(idParam);
-        Setnome(resposta.NomePet)
-        SetTitulo(resposta.Titulo)
-        Setraca(resposta.Raca)
-        Setlocalizacao(resposta.Localizacao)
-        Setcontato(resposta.Contato)
-        setSexo(resposta.Sexo)
         SetId(resposta.id)
-        //SetImg(resposta.imagem)
+        Setnome(resposta.nome)
+        SetImg(resposta.imagem)
+        Setraca(resposta.raca)
+        SetTitulo(resposta.titulo)
+        Setlocalizacao(resposta.localizacao)
+        setSexo(resposta.sexo)
+        Setcontato(resposta.contato)
+        
+        
+        
     }
 
     async function SalvarClick() {
@@ -97,6 +100,9 @@ export default function Posts() {
     function mostrarImagem() {
         if(typeof (img) == 'object'){ 
         return URL.createObjectURL(img);
+        } 
+        else {
+            return buscarimagem(img)
         }
     }
 
@@ -167,7 +173,7 @@ export default function Posts() {
                         </div>
                         <div className="imgn">
                             {!img &&
-                                <img className='img-post' src='./images/image 13.png' alt='' />
+                                <img className='img-post' src='./images/a.png' alt='' />
                             }
                             {img &&
                                 <img className='img-post' src={mostrarImagem()} alt='' />
