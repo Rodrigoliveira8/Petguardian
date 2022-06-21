@@ -231,6 +231,7 @@
     @media (max-width: 1280px) {
         header{
             height: 10vh;
+            margin-bottom: 0px;
         }
     
         .esquerda-he{
@@ -257,35 +258,39 @@
         }
         
         .faixa-1{
-            margin-top: 7vh;
-            height: 1000vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: -1em;
+            height: 100vh;
         }
         .imgn {
-            height: 35vh;
-            width: 35vw;
+            height: 30vh;
+            width: 28.7vw;
         }
         .post1{
-            margin-left: 15vw;
-            width: 35vw;
-            height: 100vh;
+            margin-left: 5vw;
+            margin-right: 50vh;
+            width: 5vw;
+            height: fit-content;
             border-radius: 1.4vh;
         }
         
         .carol{
-            width: 35vw;
+            width: 40vh;
             height: 3vh;
             padding-bottom: 3vh ;
             border-radius: 1.4vh 1.4vh 0vh 0vh ;
         }
     
         .carol h1{
-            font-size: 2vh;
+            font-size: 3vh;
             margin-left: 1vw;
         }
         
         .info-1{
+            width: 28.7vw;
             margin-top: -1vh;
-            width: 35vw;
         }
         .info-1 h1{
             font-size: 3vh;
@@ -295,8 +300,8 @@
             width: 23vw;
         }
         .infos{
-            border-radius: 0vh 0vh 1.4vh 1.4vh;
-            width: 35vw;
+            width: 28.7vw;
+            border-radius: 0vh 0vh 1.4vh 1.4vh ;
         }
         
         .esq-1{
@@ -324,8 +329,8 @@
         .quadrado{
             min-width: 5vh;
             min-height: 4vh;
-            margin-left: -15vw;
-            margin-top: 7vh;
+            margin-left: -5.90vw;
+            margin-top: 6vh;
         }
         
         .info-2{
@@ -336,7 +341,8 @@
         
         .input{
             font-size: 3vh;
-            margin-top: 10vh;
+            font-family: 'PT Sans Caption', sans-serif;
+            margin-top: 8vh;
         }
         .post2{
             margin-left: 25vh;
